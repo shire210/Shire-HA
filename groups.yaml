@@ -1,0 +1,78 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - updater.updater
+#    - group.lights
+#    - group.Ecobee
+#    - group.battery
+#    - group.network
+
+Main:
+  name: Main
+  view: yes
+  entities:
+    - sensor.plex_watch
+    - group.network
+    - group.all_lights
+    - group.devices
+    - group.harmony
+    - group.lock
+    - input_select.living_room_tv
+
+Climate:
+  name: Climate
+  view: yes
+  entities:
+    - group.weather
+    - group.ecobee
+
+Automate:
+  name: Automate
+  view: yes
+  entities:
+    - group.all_automations
+    - group.all_scripts
+    - group.all_switches
+    - scene.good_night
+ 
+network:
+   - sensor.speedtest_download
+   - sensor.speedtest_upload
+   - sensor.speedtest_ping
+   
+devices:
+   - device_tracker.michaeliphone
+   - sensor.battery_iphone
+   - device_tracker.ipad
+   - sensor.battery_ipad
+
+weather:
+   - sun.sun
+   - sensor.dark_sky_apparent_temperature
+   - sensor.dark_sky_summary
+   - sensor.dark_sky_cloud_coverage
+   - sensor.dark_sky_precip_probability
+   - sensor.dark_sky_precip_intensity
+   - sensor.dark_sky_wind_speed
+   - sensor.dark_sky_humidity
+   - sensor.dark_sky_daily_high_apparent_temperature
+   - sensor.dark_sky_daily_low_apparent_temperature
+
+Ecobee:
+   - binary_sensor.thermostat_occupancy
+   - binary_sensor.office_occupancy
+   - sensor.thermostat_temperature
+   - sensor.office_temperature
+   - sensor.thermostat_humidity
+   - climate.thermostat
+
+Lock:
+   - binary_sensor.mike
+   - binary_sensor.parents
+   - sensor.battery_front_door
+   - lock.front_door
+
+Harmony:
+   - remote.living_room
+   - sensor.living_room
+

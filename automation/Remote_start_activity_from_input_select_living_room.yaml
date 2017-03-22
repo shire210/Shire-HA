@@ -1,0 +1,7 @@
+alias: 'Remote start activity from input select living room tv'
+trigger:
+  platform: state
+  entity_id: input_select.living_room_tv
+action:
+  service: script.turn_on
+  entity_id: script.input_select_harmony

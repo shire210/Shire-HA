@@ -1,0 +1,94 @@
+##Weather Site
+  - platform: darksky
+    api_key: !secret darksky_api
+    name: "Dark Sky"
+    monitored_conditions:
+      - summary
+      - precip_intensity
+      - precip_probability
+      - apparent_temperature
+      - cloud_cover
+      - humidity
+      - hourly_summary
+      - daily_summary
+      - apparent_temperature_max
+      - apparent_temperature_min
+      
+
+##SpeedTest
+  - platform: speedtest
+#    minute: 30
+#    hour:
+#      - 0
+#      - 6
+#      - 12
+#      - 18
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+      
+##Plex Monitor
+  - platform: plex
+    name: Plex Watch
+    host: 192.168.1.250
+    port: 32400
+    username: !secret plexuser
+    password: !secret plexpw
+    server: ShireVision
+
+#Lock Battery
+  - platform: template
+    sensors:
+      battery_front_door:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.lock.front_door.attributes.battery_level %}
+                {{ states.lock.front_door.attributes.battery_level|round(1) }}
+            {% else %}
+                {{ states.sensor.battery_front_door.state }}
+            {%- endif %}
+
+##Battery Life
+  - platform: template
+    sensors:
+      battery_iphone:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.michaeliphone.attributes.battery %}
+                {{ states.device_tracker.michaeliphone.attributes.battery|round(1) }}
+            {% else %}
+                {{ states.sensor.battery_iphone.state }}
+            {%- endif %}
+  - platform: template
+    sensors:
+      battery_ipad:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.ipad.attributes.battery %}
+                {{ states.device_tracker.ipad.attributes.battery|round(1) }}
+            {% else %}
+                {{ states.sensor.battery_ipad.state }}
+            {%- endif %}
+  - platform: template
+    sensors:
+      battery_test:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.phone_phone.attributes.battery %}
+                {{ states.device_tracker.phone_phone.attributes.battery|round(1) }}
+            {% else %}
+                {{ states.sensor.battery_test.state }}
+            {%- endif %}
+            
+##Current TV activity
+  - platform: template
+    sensors:
+      living_room:
+        value_template: '{{ states.remote.living_room.attributes.current_activity }}'
+        friendly_name: "Living Room TV"
+
+##Xbox Live
+  - platform: xbox_live
+    api_key: !secret xbox_api_key
+    xuid: xbox_uid

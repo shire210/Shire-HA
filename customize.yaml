@@ -1,0 +1,93 @@
+######## CUSTOMIZE SENSORS ########
+
+#### WEATHER ####
+     sensor.dark_sky_cloud_coverage:
+        friendly_name: Cloud Coverage
+        icon: mdi:cloud
+     sensor.dark_sky__humidity:
+        friendly_name: Humidity
+        icon: mdi:water
+     sensor.dark_sky__wind_speed:
+        icon: mdi:weather-windy
+        friendly_name: Wind Speed
+     sensor.dark_sky__summary:
+        friendly_name: Condition
+     sensor.dark_sky__precip_probability:
+        icon: mdi:water-percent
+        friendly_name: Precipitation Probability
+     sensor.dark_sky__precip_intensity:
+        icon: mdi:weather-rainy
+        friendly_name: Precipitation Intensity
+     sensor.dark_sky__apparent_temperature:
+        icon: mdi:thermometer
+        friendly_name: Real Feel
+        
+#### NETWORK ####
+     sensor.speedtest_download:
+        icon: mdi:cloud-download
+     sensor.speedtest_upload:
+        icon: mdi:cloud-upload
+
+######## MEDIA PLAYERS ########
+     media_player.roku_2l644w201017:
+        friendly_name: Main Roku
+     media_player.shires_roku:
+        friendly_name: Roku Plex
+     
+######## LOCK ########
+     sensor.battery_front_door:
+        icon: mdi:battery-70
+        friendly_name: Front Door Battery
+     input_boolean.lock_boolean:
+        emulated_hue: true
+        emulated_hue_name: "Front Lock"
+        
+######## THERMOSTAT ########
+     sensor.office_temperature_2:
+       hidden: true
+     climate.thermostat_2:
+       hidden: true
+        
+######## APPLE ########
+     sensor.battery_iphone:
+        friendly_name: iPhone Battery
+     sensor.battery_ipad:
+        friendly_name: iPad Battery
+        
+######## LIGHTS ########
+     light.kitchen:
+        emulated_hue: true
+        emulated_hue_name: "Kitchen"
+     light.lamp:
+        emulated_hue: true
+        emulated_hue_name: "TV Lamp"
+     light.cabinet:
+        emulated_hue: true
+        emulated_hue_name: "Cabinet"
+
+######## SCENES ########
+     scene.good_night:
+       emulated_hue: true
+       emulated_hue_name: "Good Night"
+     scene.movie_mode:
+       emulated_hue: true
+       emulated_hue_name: "Movie Mode"
+
+######## SWITCHES ########
+     switch.front_lock:
+       emulated_hue: true
+       emulated_hue_name: "Front lock"
+       homebridge_hidden: true
+     switch.main_floor:
+       emulated_hue: true
+       emulated_hue_name: "Main Floor"
+       
+######## Groups ########
+     group.all_automations:
+       hidden: false
+     group.all_scripts:
+       hidden: false
+     group.all_lights:
+       hidden: false
+     group.all_switches:
+       hidden: false

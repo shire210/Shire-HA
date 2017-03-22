@@ -1,0 +1,15 @@
+alias: TV on when home
+trigger:
+  platform: state
+  entity_id: binary_sensor.mike
+  from: 'off'
+  to: 'on'
+condition:
+  condition: state
+  entity_id: remote.living_room
+  state: 'off'
+action:
+  service: remote.turn_on
+  data:
+    entity_id: remote.living_room
+    activity: 21316292

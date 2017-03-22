@@ -1,0 +1,10 @@
+alias: 'Remote external update living room'
+trigger:
+  platform: state
+  entity_id: remote.living_room
+action:
+  service: input_select.select_option
+  data_template:
+    entity_id: input_select.living_room_tv
+    option: >
+      {{ states.remote.living_room.attributes.current_activity }}

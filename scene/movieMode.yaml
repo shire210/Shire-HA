@@ -1,0 +1,10 @@
+name: Movie Mode
+entities:
+  light.kitchen: off
+  light.cabinet: on
+  light.lamp:
+    state: on
+    brightness: 100
+  lock.front_door: locked
+  remote.living_room:
+    activity: 22568347 

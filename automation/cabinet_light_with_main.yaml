@@ -1,0 +1,16 @@
+alias: Cabinet light with main
+trigger:
+  platform: state
+  entity_id: light.kitchen
+  from: 'off'
+  to: 'on'
+condition:
+  condition: state
+  entity_id: light.cabinet
+  state: 'off'
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.cabinet
+    brightness: 255
+    color_temp: 240

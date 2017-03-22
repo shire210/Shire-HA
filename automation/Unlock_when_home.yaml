@@ -1,0 +1,11 @@
+alias: Lock When Away
+trigger:
+  platform: state
+  entity_id: device_tracker.phone_phone
+  from: 'not_home'
+  to: 'home'
+action:
+  - service: notify.notify
+    data:
+      message: 'Unlock Front Door - test'
+      title: 'Home Assistant'

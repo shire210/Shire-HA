@@ -1,0 +1,10 @@
+alias: Cabinet light off with main
+trigger:
+  platform: state
+  entity_id: light.kitchen
+  from: 'on'
+  to: 'off'
+action:
+  service: light.turn_off
+  data:
+    entity_id: light.cabinet
