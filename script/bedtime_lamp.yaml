@@ -1,0 +1,15 @@
+bedtime_lamp:
+  alias: " Bed time lamp"
+  sequence:
+    - alias: Lamp turn on
+      service: light.turn_on
+      data:
+        entity_id: light.lamp
+        brightness: 125
+        color_temp: 200
+    - delay:
+        seconds: 30
+    - alias: Lamp turn off
+      service: light.turn_off
+      data:
+        entity_id: light.lamp

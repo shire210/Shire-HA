@@ -1,0 +1,15 @@
+main_level_off:
+  alias: "Turn off main floor"
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.lamp
+    - service: light.turn_off
+      data:
+        entity_id: light.kitchen
+    - service: light.turn_off
+      data:
+        entity_id: light.cabinet
+    - service: remote.turn_off
+      data_template:
+        entity_id: remote.living_room

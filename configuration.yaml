@@ -53,6 +53,8 @@ switch: !include devices/switch.yaml
 media_player: !include devices/media_players.yaml
 group: !include groups.yaml
 scene: !include_dir_list scene/
+script: !include_dir_merge_named script/
+
 light:
   platform: lifx
   broadcast: 192.168.1.159
@@ -109,78 +111,3 @@ input_select:
       - Xbox 360
     initial: Powered Off
     icon: mdi:monitor
-############################################
-## Scripts ##
-############################################
-script:
-  input_select_harmony:
-    alias: "Start activity from input select"
-    sequence:
-      - service: remote.turn_on
-        data_template:
-          entity_id: remote.living_room
-          activity: >
-            {% if is_state("input_select.living_room_tv", "PowerOff") %}
-                -1
-            {% elif is_state("input_select.living_room_tv", "Watch TV") %}
-                21316292
-            {% elif is_state("input_select.living_room_tv", "Plex Media Player") %}
-                22568347          
-            {% elif is_state("input_select.living_room_tv", "Netflix") %}
-                22568399
-            {% elif is_state("input_select.living_room_tv", "Xbox One") %}
-                21325006
-            {% elif is_state("input_select.living_room_tv", "Xbox 360") %}
-                22567878               
-            {% endif %}
-  bedtime_lamp:
-    alias: " Bed time lamp"
-    sequence:
-      - alias: Lamp turn on
-        service: light.turn_on
-        data:
-          entity_id: light.lamp
-          brightness: 125
-          color_temp: 200
-      - delay:
-           seconds: 30
-      - alias: Lamp turn off
-        service: light.turn_off
-        data:
-          entity_id: light.lamp
-  main_level_on:
-    alias: "Turn on main floor"
-    sequence:
-      - service: light.turn_on
-        data:
-          entity_id: light.lamp
-          brightness: 255
-          color_temp: 200
-      - service: light.turn_on
-        data:
-          entity_id: light.kitchen
-          brightness: 200
-      - service: light.turn_on
-        data:
-          entity_id: light.cabinet
-          brightness: 255
-          color_temp: 240
-      - service: remote.turn_on
-        data_template:
-          entity_id: remote.living_room
-          activity: 21316292
-  main_level_off:
-    alias: "Turn off main floor"
-    sequence:
-      - service: light.turn_off
-        data:
-          entity_id: light.lamp
-      - service: light.turn_off
-        data:
-          entity_id: light.kitchen
-      - service: light.turn_off
-        data:
-          entity_id: light.cabinet
-      - service: remote.turn_off
-        data_template:
-          entity_id: remote.living_room
