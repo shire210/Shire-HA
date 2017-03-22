@@ -91,4 +91,4 @@
 ##Xbox Live
   - platform: xbox_live
     api_key: !secret xbox_api_key
-    xuid: xbox_uid
+    xuid: !secret xbox_uid
