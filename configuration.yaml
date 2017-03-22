@@ -12,7 +12,9 @@ http:
   api_password: !secret api_password
   ssl_certificate: /config/encrypt/fullchain.pem
   ssl_key: /config/encrypt/privkey.pem
-  
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+
 ############################################
 ##Zones##
 ############################################
@@ -38,11 +40,16 @@ updater:
 frontend:
 conversation:
 history:
+  exclude:
+    domains:
+      - automation
 logbook:
 logger:
 sun:
 recorder:
-  purge_days: 14
+  purge_days: 10
+tts:
+  - platform: google
 
 ############################################
 ##Include##
@@ -63,7 +70,11 @@ remote:
   name: Living Room
   host: 192.168.1.158
   activity: Watch TV
-############################################
+ecobee:
+  api_key: !secret ecobee_key
+  hold_temp: True
+
+  ############################################
 ## Services ##
 ############################################
 wink:
@@ -71,9 +82,7 @@ wink:
   password: !secret wink_password
   client_id: !secret wink_client_id
   client_secret: !secret wink_client_secret
-ecobee:
-  api_key: !secret ecobee_key
-  hold_temp: True
+
 ifttt:
   key: !secret ifttt_key
 notify:

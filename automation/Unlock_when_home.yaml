@@ -1,4 +1,4 @@
-alias: Lock When Away
+alias: Unlock When Home
 trigger:
   platform: state
   entity_id: device_tracker.phone_phone
