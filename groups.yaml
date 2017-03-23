@@ -34,6 +34,7 @@ Automate:
     - group.all_scripts
     - group.all_switches
     - scene.good_night
+    - scene.movie_mode
  
 network:
    - sensor.speedtest_download
