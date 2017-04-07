@@ -13,8 +13,20 @@
       - daily_summary
       - apparent_temperature_max
       - apparent_temperature_min
-      
 
+##Sonarr
+  - platform: sonarr
+    api_key: !secret sonarr_api
+    host: 192.168.1.250
+    port: 8989
+    monitored_conditions:
+      - upcoming
+      - queue
+      - diskspace
+    included_paths:
+      - /config
+
+      
 ##SpeedTest
   - platform: speedtest
 #    minute: 30
