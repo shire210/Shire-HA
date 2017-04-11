@@ -11,8 +11,8 @@ Main:
   name: Main
   view: yes
   entities:
-    - sensor.plex_watch
     - group.network
+    - group.shirevision
     - group.all_lights
     - group.devices
     - group.harmony
@@ -77,3 +77,8 @@ Harmony:
    - remote.living_room
    - sensor.living_room
 
+Shirevision:
+   - sensor.plex_watch
+   - sensor.sonarr_disk_space
+   - sensor.sonarr_queue
+   - sensor.sonarr_upcoming
