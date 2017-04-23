@@ -9,8 +9,8 @@
       - apparent_temperature
       - cloud_cover
       - humidity
-      - hourly_summary
-      - daily_summary
+#      - hourly_summary
+#      - daily_summary
       - apparent_temperature_max
       - apparent_temperature_min
       

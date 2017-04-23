@@ -47,7 +47,10 @@ devices:
    - device_tracker.michael_iphone
    - sensor.michael_iphone_battery_level
    - sensor.michael_iphone_battery_state
-
+   - device_tracker.ipad
+   - sensor.ipad_battery_level
+   - sensor.ipad_battery_state
+   
 weather:
    - sun.sun
    - sensor.dark_sky_apparent_temperature
