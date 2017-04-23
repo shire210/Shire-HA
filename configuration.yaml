@@ -36,6 +36,7 @@ zone 2:
 ##Initialize##
 ############################################
 discovery:
+ios:
 updater:
 frontend:
 conversation:
@@ -88,12 +89,12 @@ notify:
   platform: pushover
   api_key: !secret pushover_api
   user_key: !secret pushover_user
-device_tracker:
-  - platform: icloud
-    username: !secret icloud_user
-    password: !secret icloud_pw 
-  - platform: owntracks
-    max_gps_accuracy: 200
+#device_tracker:
+  #- platform: icloud
+  # username: !secret icloud_user
+  #  password: !secret icloud_pw 
+  #- platform: owntracks
+  #  max_gps_accuracy: 200
 emulated_hue:
   expose_by_default: false
 mqtt:

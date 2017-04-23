@@ -20,3 +20,10 @@
         turn_off:
           service: lock.unlock
           entity_id: lock.front_door
+          
+##Wink Update
+  - platform: command_line
+    switches:
+      wink_update:
+        command_on: "python3 /config/WinkTest.py"
+        command_off: ""

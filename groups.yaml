@@ -23,6 +23,8 @@ Climate:
   name: Climate
   view: yes
   entities:
+    - sensor.thermostat_temperature
+    - sensor.dark_sky_apparent_temperature
     - group.weather
     - group.ecobee
 
@@ -42,10 +44,9 @@ network:
    - sensor.speedtest_ping
    
 devices:
-   - device_tracker.michaeliphone
-   - sensor.battery_iphone
-   - device_tracker.ipad
-   - sensor.battery_ipad
+   - device_tracker.michael_iphone
+   - sensor.michael_iphone_battery_level
+   - sensor.michael_iphone_battery_state
 
 weather:
    - sun.sun

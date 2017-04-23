@@ -1,7 +1,7 @@
 alias: Lock When Away
 trigger:
   platform: state
-  entity_id: device_tracker.phone_phone
+  entity_id: device_tracker.michael_iphone
   from: 'home'
   to: 'not_home'
 condition:

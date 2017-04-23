@@ -48,12 +48,6 @@
      climate.thermostat_2:
        hidden: true
         
-######## APPLE ########
-     sensor.battery_iphone:
-        friendly_name: iPhone Battery
-     sensor.battery_ipad:
-        friendly_name: iPad Battery
-        
 ######## LIGHTS ########
      light.kitchen:
         emulated_hue: true

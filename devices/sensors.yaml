@@ -13,6 +13,13 @@
       - daily_summary
       - apparent_temperature_max
       - apparent_temperature_min
+      
+## Commute Home Distance
+  - platform: google_travel_time
+    api_key: !secret google_maps_api
+    origin: device_tracker.michael_iphone
+    destination: zone.home
+    name: "Commute Home Time"
 
 ##Sonarr
   - platform: sonarr
@@ -59,38 +66,6 @@
                 {{ states.lock.front_door.attributes.battery_level|round(1) }}
             {% else %}
                 {{ states.sensor.battery_front_door.state }}
-            {%- endif %}
-
-##Battery Life
-  - platform: template
-    sensors:
-      battery_iphone:
-        unit_of_measurement: '%'
-        value_template: >-
-            {%- if states.device_tracker.michaeliphone.attributes.battery %}
-                {{ states.device_tracker.michaeliphone.attributes.battery|round(1) }}
-            {% else %}
-                {{ states.sensor.battery_iphone.state }}
-            {%- endif %}
-  - platform: template
-    sensors:
-      battery_ipad:
-        unit_of_measurement: '%'
-        value_template: >-
-            {%- if states.device_tracker.ipad.attributes.battery %}
-                {{ states.device_tracker.ipad.attributes.battery|round(1) }}
-            {% else %}
-                {{ states.sensor.battery_ipad.state }}
-            {%- endif %}
-  - platform: template
-    sensors:
-      battery_test:
-        unit_of_measurement: '%'
-        value_template: >-
-            {%- if states.device_tracker.phone_phone.attributes.battery %}
-                {{ states.device_tracker.phone_phone.attributes.battery|round(1) }}
-            {% else %}
-                {{ states.sensor.battery_test.state }}
             {%- endif %}
             
 ##Current TV activity
