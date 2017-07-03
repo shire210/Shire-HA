@@ -65,8 +65,14 @@
             {%- if states.lock.front_door.attributes.battery_level %}
                 {{ states.lock.front_door.attributes.battery_level|round(1) }}
             {% else %}
-                {{ states.sensor.battery_front_door.state }}
+                {{ states.sensor.battery_front_door.state|round(2) }}
             {%- endif %}
+#Floor Difference
+  - platform: template
+    sensors:
+      climate_difference:
+        unit_of_measurement: 'degrees'
+        value_template: '{{ (states.sensor.office_temperature.state|round(2) - states.sensor.thermostat_temperature.state|round(2))|round(2) }}'
             
 ##Current TV activity
   - platform: template

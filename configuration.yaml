@@ -22,20 +22,27 @@ zone:
   name: Work
   latitude: !secret latitude_work
   longitude: !secret longitude_work
-  radius: 250
+  radius: 300
   icon: mdi:worker
 
 zone 2:
   name: Parents
   latitude: !secret latitude_parents
   longitude: !secret longitude_parents
+  radius: 300
+  icon: mdi:home
+
+zone 3:
+  name: Home
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
   radius: 200
   icon: mdi:home
 
 ############################################
 ##Initialize##
 ############################################
-discovery:
+#discovery:
 ios:
 updater:
 frontend:
@@ -45,7 +52,7 @@ history:
     domains:
       - automation
 logbook:
-logger:
+#logger:
 sun:
 recorder:
   purge_days: 10
@@ -57,6 +64,7 @@ tts:
 ############################################
 automation: !include_dir_list automation/
 sensor: !include devices/sensors.yaml
+binary_sensor: !include devices/binary_sensors.yaml
 switch: !include devices/switch.yaml
 media_player: !include devices/media_players.yaml
 group: !include groups.yaml
@@ -89,20 +97,15 @@ notify:
   platform: pushover
   api_key: !secret pushover_api
   user_key: !secret pushover_user
-#device_tracker:
-  #- platform: icloud
-  # username: !secret icloud_user
-  #  password: !secret icloud_pw 
-  #- platform: owntracks
-  #  max_gps_accuracy: 200
+  
 emulated_hue:
   expose_by_default: false
-mqtt:
-  broker: !secret mqtt_broker
-  port: 12681
-  client_id: home-assistant-1
-  username: !secret mqtt_user
-  password: !secret mqtt_password
+#mqtt:
+#  broker: !secret mqtt_broker
+#  port: 12681
+#  client_id: home-assistant-1
+#  username: !secret mqtt_user
+#  password: !secret mqtt_password
 
   
 ############################################

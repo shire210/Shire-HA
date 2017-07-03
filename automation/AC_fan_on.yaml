@@ -1,0 +1,11 @@
+alias: AC Fan On
+trigger:
+  platform: state
+  entity_id: binary_sensor.temp_balance
+  from: 'off'
+  to: 'on'
+action:
+  service: climate.ecobee_set_fan_min_on_time
+  data:
+    entity_id: climate.thermostat
+    fan_min_on_time: 55
