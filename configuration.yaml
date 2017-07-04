@@ -115,11 +115,11 @@ input_select:
   living_room_tv:
     name: Living Room TV
     options:
-      - Powered Off
+      - PowerOff
       - Watch TV
       - Plex Media Player
       - Netflix
       - Xbox One
       - Xbox 360
-    initial: Powered Off
+    initial: PowerOff
     icon: mdi:monitor

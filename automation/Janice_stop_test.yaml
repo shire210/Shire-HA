@@ -1,0 +1,33 @@
+# This will stop the media player for Janice when 2 other streams are running
+alias: Janice Limit Test
+initial_state: True
+trigger:
+  - platform: state
+    entity_id: media_player.plex_web_chrome
+    to: 'playing'
+#  - platform: state
+#    entity_id: media_player.plex_rasplexmb
+#    to: 'playing'
+condition:
+  condition: and
+  conditions:
+    ########################################################################
+    # The session_username attribute is currently available as custom component of Plex
+    ########################################################################
+    - condition: template
+      value_template: '{{ trigger.to_state.attributes.session_username == "shire210" }}'
+    - condition: state
+      entity_id: binary_sensor.plex_for_janice
+      state: 'off'
+action:
+  # Stop the media
+  - service: media_player.media_stop
+    data_template:
+      entity_id: '{{trigger.entity_id}}'
+    
+  # Talk to Kid
+  - service: notify.notify
+    data:
+      message: 'Test Stop'
+      title: 'Plex Test'
+

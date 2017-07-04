@@ -4,6 +4,10 @@ trigger:
   entity_id: binary_sensor.temp_balance
   from: 'on'
   to: 'off'
+condition:
+  condition: time
+  after: '6:00:00'
+  before: '23:00:00'  
 action:
   service: climate.ecobee_set_fan_min_on_time
   data:

@@ -1,0 +1,10 @@
+alias: iPad Battery Update
+trigger:
+  platform: time
+  hours: '/2'
+  minutes: 1
+  seconds: 00
+action:
+  service: notify.ios_ipad
+  data:
+    message: "request_location_update"

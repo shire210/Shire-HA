@@ -5,3 +5,9 @@
         value_template: '{{ (states.sensor.climate_difference.state | float) | abs > 3.0 }}'
         friendly_name: 'Temp Imbalance'
         device_class: heat
+  - platform: template
+    sensors:
+      plex_for_janice:
+        value_template: '{{ states.sensor.plex_watch.state | int < 2 }}'
+        friendly_name: 'Plex for Janice'
+        device_class: connectivity
