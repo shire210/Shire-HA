@@ -1,0 +1,16 @@
+alias: AC Fan Balance
+trigger:
+  platform: time
+  hours: '/2'
+  minutes: 00
+  seconds: 00
+action:
+  service: climate.ecobee_set_fan_min_on_time
+  data_template:
+    entity_id: climate.thermostat
+    fan_min_on_time: >
+      {%- if is_state("binary_sensor.temp_balance", "on") -%}
+        55
+      {%- else -%}
+        0
+      {%- endif %}
