@@ -1,0 +1,16 @@
+
+michael_iphone:
+  hide_if_away: false
+  mac:
+  name: michael iphone
+  picture: /local/Logo.jpg
+  track: true
+  vendor:
+
+ipad:
+  hide_if_away: false
+  mac:
+  name: ipad
+  picture:
+  track: true
+  vendor:
