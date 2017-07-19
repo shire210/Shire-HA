@@ -4,7 +4,7 @@ bedtime_lamp:
     - alias: Lamp turn on
       service: light.turn_on
       data:
-        entity_id: light.lamp
+        entity_id: light.living_room
         brightness: 125
         color_temp: 200
     - delay:
@@ -12,4 +12,4 @@ bedtime_lamp:
     - alias: Lamp turn off
       service: light.turn_off
       data:
-        entity_id: light.lamp
+        entity_id: light.living_room

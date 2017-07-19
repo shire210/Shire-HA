@@ -16,7 +16,7 @@ condition:
 action:
   service: light.turn_on
   data:
-    entity_id: light.lamp
+    entity_id: light.living_room
     brightness: 255
     transition: 7
     color_temp: 200

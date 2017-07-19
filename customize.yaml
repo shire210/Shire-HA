@@ -57,9 +57,9 @@
      light.kitchen:
         emulated_hue: true
         emulated_hue_name: "Kitchen"
-     light.lamp:
+     light.living_room:
         emulated_hue: true
-        emulated_hue_name: "TV Lamp"
+        emulated_hue_name: "Living Room"
      light.cabinet:
         emulated_hue: true
         emulated_hue_name: "Cabinet"

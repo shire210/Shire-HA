@@ -6,7 +6,7 @@ homeassistant:
   unit_system: imperial
   time_zone: America/New_York
   customize: !include customize.yaml
-  
+  packages: !include_dir_named packages
 http:
   base_url: !secret url
   api_password: !secret api_password
@@ -14,7 +14,6 @@ http:
   ssl_key: /config/encrypt/privkey.pem
   ip_ban_enabled: True
   login_attempts_threshold: 5
-
 ############################################
 ##Zones##
 ############################################
@@ -24,25 +23,22 @@ zone:
   longitude: !secret longitude_work
   radius: 300
   icon: mdi:worker
-
 zone 2:
   name: Parents
   latitude: !secret latitude_parents
   longitude: !secret longitude_parents
   radius: 300
   icon: mdi:home
-
 zone 3:
   name: Home
   latitude: !secret latitude_home
   longitude: !secret longitude_home
   radius: 200
   icon: mdi:home
-
 ############################################
 ##Initialize##
 ############################################
-#discovery:
+discovery:
 ios:
 updater:
 frontend:
@@ -51,14 +47,13 @@ history:
   exclude:
     domains:
       - automation
+    entities:
+      - sensor.time
 logbook:
 #logger:
 sun:
 recorder:
   purge_days: 10
-tts:
-  - platform: google
-
 ############################################
 ##Include##
 ############################################
@@ -72,7 +67,9 @@ scene: !include_dir_list scene/
 script: !include_dir_merge_named script/
 
 light:
-  platform: lifx
+  - platform: lifx
+  - platform: hue
+    host: 192.168.1.193
 remote:
   platform: harmony
   name: Living Room
@@ -81,8 +78,17 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
+#camera:
+#  platform: mjpeg
+#  mjpeg_url: http://192.168.1.192:2971/camera/stream
 
-  ############################################
+panel_custom: 
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+############################################
 ## Services ##
 ############################################
 wink:
@@ -90,24 +96,22 @@ wink:
   password: !secret wink_password
   client_id: !secret wink_client_id
   client_secret: !secret wink_client_secret
-
 ifttt:
   key: !secret ifttt_key
 notify:
   platform: pushover
   api_key: !secret pushover_api
   user_key: !secret pushover_user
-  
 emulated_hue:
   expose_by_default: false
-#mqtt:
-#  broker: !secret mqtt_broker
-#  port: 12681
-#  client_id: home-assistant-1
-#  username: !secret mqtt_user
-#  password: !secret mqtt_password
-
-  
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+tts:
+  - platform: google
 ############################################
 ## Input Select ##
 ############################################
