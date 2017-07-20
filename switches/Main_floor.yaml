@@ -1,0 +1,9 @@
+platform: template
+switches:
+  main_floor:
+    friendly_name: "Main Floor"
+    value_template: "{{ is_state('light.kitchen', 'on') }}"
+    turn_on:
+      service: script.main_level_on
+    turn_off:
+      service: script.main_level_off
