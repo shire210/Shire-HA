@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  plex_limit:
+    value_template: '{{ states.sensor.plex_watch.state | int < 2 }}'
+    friendly_name: 'Plex for all'
+    device_class: connectivity

@@ -59,9 +59,8 @@ recorder:
 ############################################
 automation: !include_dir_list automation/
 sensor: !include devices/sensors.yaml
-binary_sensor: !include devices/binary_sensors.yaml
+binary_sensor: !include_dir_list binary_sensors/
 switch: !include_dir_list switches/
-#switch: !include devices/switch.yaml
 group: !include groups.yaml
 scene: !include_dir_list scene/
 script: !include_dir_merge_named script/

@@ -52,6 +52,7 @@ devices:
    - device_tracker.ipad
    - sensor.ipad_battery_level
    - sensor.ipad_battery_state
+   - sensor.wallpanel_battery
    
 weather:
    - sun.sun
@@ -72,6 +73,7 @@ Ecobee:
    - sensor.office_temperature
    - sensor.thermostat_humidity
    - climate.thermostat
+   - binary_sensor.temp_balance
 
 Lock:
    - binary_sensor.mike
@@ -85,6 +87,7 @@ Harmony:
 
 Shirevision:
    - sensor.plex_watch
+   - binary_sensor.plex_limit
    - sensor.sonarr_disk_space
    - sensor.sonarr_queue
    - sensor.sonarr_upcoming
