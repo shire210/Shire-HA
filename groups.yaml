@@ -1,93 +1,87 @@
-#default_view:
-#  view: yes
-#  entities:
-#    - updater.updater
-#    - group.lights
-#    - group.Ecobee
-#    - group.battery
-#    - group.network
-
 Main:
   name: Main
-  view: yes
+  view: true
   entities:
-    - sensor.thermostat_temperature
-    - group.network
-    - group.shirevision
-    - group.all_lights
-    - group.devices
-    - group.harmony
-    - group.lock
-    - input_select.living_room_tv
-
+  - sensor.thermostat_temperature
+  - group.network
+  - group.shirevision
+  - group.all_lights
+  - group.devices
+  - group.harmony
+  - group.lock
+  - input_select.living_room_tv
 Climate:
   name: Climate
-  view: yes
+  view: true
   entities:
-    - sensor.thermostat_temperature
-    - sensor.dark_sky_apparent_temperature
-    - group.weather
-    - group.ecobee
-
+  - sensor.thermostat_temperature
+  - sensor.dark_sky_apparent_temperature
+  - group.weather
+  - group.ecobee
 Automate:
   name: Automate
-  view: yes
+  view: true
   entities:
-    - group.all_automations
-    - group.all_scripts
-    - group.all_switches
-    - scene.good_night
-    - scene.movie_mode
- 
+  - group.all_automations
+  - group.all_scripts
+  - group.all_switches
+  - scene.good_night
+  - scene.movie_mode
 network:
-   - sensor.speedtest_download
-   - sensor.speedtest_upload
-   - sensor.speedtest_ping
-   - switch.wake_on_lan
-   
+- sensor.speedtest_download
+- sensor.speedtest_upload
+- sensor.speedtest_ping
+- switch.wake_on_lan
 devices:
-   - device_tracker.michael_iphone
-   - sensor.michael_iphone_battery_level
-   - sensor.michael_iphone_battery_state
-   - device_tracker.ipad
-   - sensor.ipad_battery_level
-   - sensor.ipad_battery_state
-   - sensor.wallpanel_battery
-   
+- device_tracker.michael_iphone
+- sensor.michael_iphone_battery_level
+- sensor.michael_iphone_battery_state
+- device_tracker.ipad
+- sensor.ipad_battery_level
+- sensor.ipad_battery_state
+- sensor.wallpanel_battery
 weather:
-   - sun.sun
-   - sensor.dark_sky_apparent_temperature
-   - sensor.dark_sky_summary
-   - sensor.dark_sky_cloud_coverage
-   - sensor.dark_sky_precip_probability
-   - sensor.dark_sky_precip_intensity
-   - sensor.dark_sky_wind_speed
-   - sensor.dark_sky_humidity
-   - sensor.dark_sky_daily_high_apparent_temperature
-   - sensor.dark_sky_daily_low_apparent_temperature
-
+- sun.sun
+- sensor.dark_sky_apparent_temperature
+- sensor.dark_sky_summary
+- sensor.dark_sky_cloud_coverage
+- sensor.dark_sky_precip_probability
+- sensor.dark_sky_precip_intensity
+- sensor.dark_sky_wind_speed
+- sensor.dark_sky_humidity
+- sensor.dark_sky_daily_high_apparent_temperature
+- sensor.dark_sky_daily_low_apparent_temperature
 Ecobee:
-   - binary_sensor.thermostat_occupancy
-   - binary_sensor.office_occupancy
-   - sensor.thermostat_temperature
-   - sensor.office_temperature
-   - sensor.thermostat_humidity
-   - climate.thermostat
-   - binary_sensor.temp_balance
-
+- binary_sensor.thermostat_occupancy
+- binary_sensor.office_occupancy
+- sensor.thermostat_temperature
+- sensor.office_temperature
+- sensor.thermostat_humidity
+- climate.thermostat
+- binary_sensor.temp_balance
 Lock:
-   - binary_sensor.mike
-   - binary_sensor.parents
-   - sensor.battery_front_door
-   - lock.front_door
-
+- binary_sensor.mike
+- binary_sensor.parents
+- sensor.battery_front_door
+- lock.front_door
 Harmony:
-   - remote.living_room
-   - sensor.living_room
-
+- remote.living_room
+- sensor.living_room
 Shirevision:
-   - sensor.plex_watch
-   - binary_sensor.plex_limit
-   - sensor.sonarr_disk_space
-   - sensor.sonarr_queue
-   - sensor.sonarr_upcoming
+- sensor.plex_watch
+- binary_sensor.plex_limit
+- sensor.sonarr_disk_space
+- sensor.sonarr_queue
+- sensor.sonarr_upcoming
+main:
+  entities:
+  - sensor.thermostat_temperature
+  - group.all_lights
+  - group.network
+  - group.shirevision
+  - group.devices
+  - group.harmony
+  - group.lock
+  - input_select.living_room_tv
+  name: Main
+  view: true
