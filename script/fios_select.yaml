@@ -1,0 +1,7 @@
+start_fios:
+  alias: "Start Fios"
+  sequence:
+    - service: remote.turn_on
+      data_template:
+        entity_id: remote.living_room
+        activity: 21316292

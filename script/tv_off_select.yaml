@@ -1,0 +1,7 @@
+tv_off:
+  alias: "TV Off"
+  sequence:
+    - service: remote.turn_on
+      data_template:
+        entity_id: remote.living_room
+        activity: -1

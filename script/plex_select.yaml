@@ -1,0 +1,7 @@
+start_plex:
+  alias: "Start Plex"
+  sequence:
+    - service: remote.turn_on
+      data_template:
+        entity_id: remote.living_room
+        activity: 23903903

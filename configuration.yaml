@@ -70,7 +70,9 @@ scene: !include_dir_list scene/
 script: !include_dir_merge_named script/
 
 media_player:
-  platform: plex
+  - platform: plex
+#  - platform: tts_floorplan_speaker
+#    name: Entry Kiosk
 light:
   - platform: lifx
   - platform: hue
@@ -83,9 +85,6 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
-#camera:
-#  platform: mjpeg
-#  mjpeg_url: http://192.168.1.192:2971/camera/stream
 
 panel_custom: 
   - name: floorplan

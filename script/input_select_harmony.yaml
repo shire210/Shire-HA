@@ -10,9 +10,9 @@ input_select_harmony:
           {% elif is_state("input_select.living_room_tv", "Watch TV") %}
               21316292
           {% elif is_state("input_select.living_room_tv", "Plex Media Player") %}
-              22568347          
+              23903903          
           {% elif is_state("input_select.living_room_tv", "Netflix") %}
-              22568399
+              23904038
           {% elif is_state("input_select.living_room_tv", "Xbox One") %}
               21325006
           {% elif is_state("input_select.living_room_tv", "Xbox 360") %}
