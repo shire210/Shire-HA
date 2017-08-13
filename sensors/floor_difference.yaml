@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  climate_difference:
+    unit_of_measurement: 'degrees'
+    value_template: '{{ (states.sensor.office_temperature.state|round(2) - states.sensor.thermostat_temperature.state|round(2))|round(2) }}'

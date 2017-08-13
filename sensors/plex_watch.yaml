@@ -1,0 +1,7 @@
+platform: plex
+name: Plex Watch
+host: 192.168.1.250
+port: 32400
+username: !secret plexuser
+password: !secret plexpw
+server: ShireVision
