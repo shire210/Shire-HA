@@ -1,3 +1,1 @@
-Read Me file
-test update
-test 2
+Home Assistant configuration files

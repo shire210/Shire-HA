@@ -68,17 +68,33 @@
           action:
             domain: switch
             service: toggle
-
-        - name: Scripts
+        
+        - name: Switches
+          entities:
+             - switch.main_floor
+          states:
+            - state: 'on'
+              class: 'switch-on'
+            - state: 'off'
+              class: 'switch-off'
+          action:
+            domain: switch
+            service: toggle
+            
+        - name: Buttons
           entities:
             - script.start_plex
             - script.start_netflix
             - script.start_fios
             - script.start_xbox
             - script.tv_off
+            - script.all_lights_on
+            - script.all_lights_off
+            - scene.good_night
           action:
             service: toggle
-            
+        
+    #### TEMPLATES ####
         - name: TV
           entities:
             - remote.living_room
@@ -89,23 +105,18 @@
               case "PowerOff":
                 imageName = "tv_off";
                 break;
-
               case "Watch TV":
                 imageName = "fios_tv";
                 break;
-
               case "Watch Plex":
                 imageName = "plex_tv";
                 break;
-
               case "Watch Netflix":
                 imageName = "netflix_tv";
                 break;
-
               case "Play Xbox One":
                 imageName = "xbox_tv";
                 break;
-                
               case "Play Xbox 360":
                 imageName = "xbox_tv";
                 break;
@@ -113,8 +124,40 @@
 
             return "/local/custom_ui/floorplan/images/tv/" + imageName + ".svg";
             '
-        
-        #### ELEMENTS ####
+            
+        - name: Dark Sky Icon
+          entities:
+            - sensor.dark_sky_icon
+          image_template: '
+            var imageName = "";
+
+            switch (entity.state) {
+              case "clear-day":
+                imageName = "day";
+                break;
+              case "clear-night":
+                imageName = "night";
+                break;
+              case "partly-cloudy-day":
+                imageName = "cloudy-day-1";
+                break;
+              case "partly-cloudy-night":
+                imageName = "cloudy-night-1";
+                break;
+              case "cloudy":
+                imageName = "cloudy";
+                break;
+              case "rain":
+                imageName = "rainy-1";
+                break;
+              case "snow":
+                imageName = "snowy-1";
+                break;
+            }
+
+            return "/local/custom_ui/floorplan/images/weather/" + imageName + ".svg";
+            '
+    #### ELEMENTS ####
         - name: TV Selection
           elements:
             - tv_select_button

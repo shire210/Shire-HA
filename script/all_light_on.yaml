@@ -1,0 +1,7 @@
+all_lights_on:
+  alias: "All Lights On"
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: group.all_lights
+        brightness: 255
