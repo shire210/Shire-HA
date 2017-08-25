@@ -4,6 +4,7 @@ Main:
   entities:
   - sensor.thermostat_temperature
   - group.network
+  - group.commute
   - group.shirevision
   - group.all_lights
   - group.devices
@@ -73,3 +74,6 @@ Shirevision:
 - sensor.sonarr_disk_space
 - sensor.sonarr_queue
 - sensor.sonarr_upcoming
+Commute:
+- sensor.home_to_work_time
+- binary_sensor.alternate_route

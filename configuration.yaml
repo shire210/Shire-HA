@@ -57,7 +57,10 @@ logbook:
 #logger:
 sun:
 recorder:
-  purge_days: 10
+  purge_days: 8
+  exclude:
+    domains:
+      - media_player
 ############################################
 ##Include##
 ############################################

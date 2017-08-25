@@ -79,26 +79,34 @@ svg, svg * {
 
 /* Light */
 .light-off {
-  fill: #c3c3c3 !important;
+  fill: #677077 !important;
+  fill-opacity: 1.0;
+  stroke: black !important;
+  stroke-width: 1;
+  stroke-opacity:0.1;
 }
 .light-on {
-  fill: #fff37b !important;
+  fill: #f2b632 !important;
+  fill-opacity: 1.0;
+  stroke: #FFFFA6 !important;
+  stroke-width: 10;
+  stroke-opacity: 0.25;
 }
 
 /* Switch */
 .switch-off {
-  fill: #c3c3c3 !important;
+  fill: #000000 !important;
 }
 .switch-on {
-  fill: #fff37b !important;
+  fill: #ffffff !important;
 }
 
 /* Lock */
 .lock-off {
-  fill: #c3c3c3 !important;
+  fill: #677077 !important;
 }
 .lock-on {
-  fill: #cc0000 !important;
+  fill: #cd5554 !important;
 }
 
 /* Doorbell */

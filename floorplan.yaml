@@ -17,19 +17,20 @@
       
       groups:
       
-        - name: Time
+        - name: Text
           entities:
              - sensor.floorplan_time
-          text_template: '${entity.state ? entity.state : "undefined"}'
-          class_template: 'return "static-text-time";'
-        
-        - name: Date
-          entities:
              - sensor.floorplan_date
+             - sensor.plex_watch
           text_template: '${entity.state ? entity.state : "undefined"}'
-          class_template: 'return "static-text-date";'
+        
+        - name: Speed
+          entities:
+             - sensor.speedtest_download
+             - sensor.speedtest_upload
+          text_template: '${entity.state ? Math.ceil(entity.state) : "undefined"}'
           
-        - name: Sensors
+        - name: Weather
           entities:
              - sensor.dark_sky_apparent_temperature
              - sensor.dark_sky_daily_high_apparent_temperature
@@ -39,13 +40,18 @@
           #text_template: '${entity.state ? entity.state : "unknown"}'
           # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
           text_template: '${entity.state ? Math.ceil(entity.state) + " °F" : "undefined"}'  
-          class_template: 'return "static-temp";'
+        
+        - name: minutes
+          entities:
+            - sensor.home_to_work_time
+          text_template: '${entity.state ? Math.ceil(entity.state) + " min" : "undefined"}'  
 
         - name: Lights
           entities:
              - light.right_sofa_lamp
              - light.left_sofa_lamp
              - light.tv_lamp
+             - light.living_room
              - light.kitchen
              - light.cabinet
           states:
@@ -57,6 +63,10 @@
             domain: light
             service: toggle
             
+        - name: Thermostat
+          entities:
+             - climate.thermostat
+             
         - name: Locks
           entities:
              - switch.front_lock
