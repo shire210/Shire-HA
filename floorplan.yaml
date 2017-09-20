@@ -22,7 +22,8 @@
              - sensor.floorplan_time
              - sensor.floorplan_date
              - sensor.plex_watch
-          text_template: '${entity.state ? entity.state : "undefined"}'
+             - sensor.plex_list
+          text_template: '${entity.state ? entity.state : "Empty"}'
         
         - name: Speed
           entities:
@@ -103,7 +104,7 @@
             - scene.good_night
           action:
             service: toggle
-        
+              
     #### TEMPLATES ####
         - name: TV
           entities:
@@ -133,6 +134,24 @@
             }
 
             return "/local/custom_ui/floorplan/images/tv/" + imageName + ".svg";
+            '
+            
+        - name: Commute
+          entities:
+            - binary_sensor.alternate_route
+          image_template: '
+            var imageName = "";
+
+            switch (entity.state) {
+              case "on":
+                imageName = "Issue";
+                break;
+              case "off":
+                imageName = "Good";
+                break;
+            }
+
+            return "/local/custom_ui/floorplan/images/commute/" + imageName + ".svg";
             '
             
         - name: Dark Sky Icon
@@ -177,6 +196,20 @@
             data:
               elements:
                 - tv_select_layer
+              classes:
+                - layer-visible
+                - layer-hidden
+              default_class: layer-hidden
+        
+        - name: Plex List View
+          elements:
+            - plex_list_button
+          action:
+            domain: class
+            service: toggle
+            data:
+              elements:
+                - plex_list_layer
               classes:
                 - layer-visible
                 - layer-hidden

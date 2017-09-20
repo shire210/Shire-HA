@@ -74,6 +74,7 @@ Shirevision:
 - sensor.sonarr_disk_space
 - sensor.sonarr_queue
 - sensor.sonarr_upcoming
+- sensor.plex_list
 Commute:
 - sensor.home_to_work_time
 - binary_sensor.alternate_route

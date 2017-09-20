@@ -11,6 +11,5 @@ ipad:
   hide_if_away: false
   mac:
   name: ipad
-  picture:
   track: true
   vendor:

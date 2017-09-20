@@ -9,12 +9,12 @@ input_select_harmony:
               -1
           {% elif is_state("input_select.living_room_tv", "Watch TV") %}
               21316292
-          {% elif is_state("input_select.living_room_tv", "Plex Media Player") %}
+          {% elif is_state("input_select.living_room_tv", "Watch Plex") %}
               23903903          
-          {% elif is_state("input_select.living_room_tv", "Netflix") %}
+          {% elif is_state("input_select.living_room_tv", "Watch Netflix") %}
               23904038
-          {% elif is_state("input_select.living_room_tv", "Xbox One") %}
+          {% elif is_state("input_select.living_room_tv", "Play Xbox One") %}
               21325006
-          {% elif is_state("input_select.living_room_tv", "Xbox 360") %}
-            22567878               
+          {% elif is_state("input_select.living_room_tv", "Play Xbox 360") %}
+              22567878              
           {% endif %}

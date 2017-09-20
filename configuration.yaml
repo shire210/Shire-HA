@@ -128,9 +128,9 @@ input_select:
     options:
       - PowerOff
       - Watch TV
-      - Plex Media Player
-      - Netflix
-      - Xbox One
-      - Xbox 360
+      - Watch Plex
+      - Watch Netflix
+      - Play Xbox One
+      - Play Xbox 360
     initial: PowerOff
     icon: mdi:monitor
