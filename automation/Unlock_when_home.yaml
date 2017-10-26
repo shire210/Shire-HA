@@ -2,10 +2,11 @@ alias: Unlock When Home
 trigger:
   platform: state
   entity_id: device_tracker.michael_iphone
-  from: 'not_home'
   to: 'home'
 action:
-  - service: notify.notify
-    data:
-      message: 'Unlock Front Door - test'
-      title: 'Home Assistant'
+  - service: notify.ios_michael_iphone
+    data_template:
+      message: 'Unlock Front Door?'
+      data:
+        push:
+          category: 'lock'

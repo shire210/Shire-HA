@@ -33,7 +33,7 @@ sensor.speedtest_upload:
 switch.wake_on_lan:
   friendly_name: Desktop
   icon: mdi:desktop-tower
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: My Computer
 media_player.roku_2l644w201017:
   friendly_name: Main Roku
@@ -43,7 +43,7 @@ sensor.battery_front_door:
   icon: mdi:battery-70
   friendly_name: Front Door Battery
 input_boolean.lock_boolean:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Front Lock
 binary_sensor.hub:
   hidden: true
@@ -52,26 +52,26 @@ sensor.office_temperature_2:
 climate.thermostat_2:
   hidden: true
 light.kitchen:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Kitchen
 light.living_room:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Living Room
 light.cabinet:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Cabinet
 scene.good_night:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Good Night
 scene.movie_mode:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Movie Mode
 switch.front_lock:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Front lock
   homebridge_hidden: true
 switch.main_floor:
-  emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: Main Floor
 group.all_automations:
   hidden: false

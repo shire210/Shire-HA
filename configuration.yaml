@@ -40,10 +40,28 @@ zone 3:
 ############################################
 discovery:
 ios:
+  push:
+    categories:
+      - name: door
+        identifier: 'lock'
+        actions:
+          - identifier: 'UNLOCK_DOOR'
+            title: 'Yes'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: yes
+            behavior: 'default'
+          - identifier: 'DISMISS'
+            title: 'Dismiss'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'
 config:
 updater:
 frontend:
 conversation:
+map:
 history:
   exclude:
     domains:
@@ -57,7 +75,8 @@ logbook:
 #logger:
 sun:
 recorder:
-  purge_days: 8
+  purge_interval: 4
+  purge_keep_days: 8
   exclude:
     domains:
       - media_player

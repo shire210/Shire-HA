@@ -43,11 +43,11 @@
      showgrid="false"
      inkscape:zoom="1.3857898"
      inkscape:cx="389.95141"
-     inkscape:cy="298.75928"
+     inkscape:cy="298.75927"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      units="px">
     <inkscape:grid
        type="xygrid"
@@ -938,7 +938,7 @@
      style="display:inline">
     <rect
        style="fill:#252839;fill-opacity:1;stroke-width:1.49493468"
-       id="sensor.dark_sky_icon"
+       id="sensor.dark_sky_icon1"
        width="92.12603"
        height="88.763779"
        x="190.72945"
@@ -1785,22 +1785,22 @@
      style="display:none">
     <rect
        inkscape:label="box3"
-       style="display:inline;fill:#b5b5b7;fill-opacity:1;stroke-width:1.23346853"
-       y="395.71722"
-       x="842.91101"
-       height="96.108421"
-       width="173.66774"
+       style="display:inline;fill:#b5b5b7;fill-opacity:1;stroke-width:1.25700414"
+       y="540.69861"
+       x="353.82413"
+       height="47.038929"
+       width="368.50247"
        id="box3-8" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="848.48889"
-       y="418.39349"
+       x="359.9588"
+       y="572.09644"
        id="sensor.plex_list"><tspan
          sodipodi:role="line"
          id="tspan4970"
-         x="848.48889"
-         y="418.39349">xxxxxx</tspan></text>
+         x="359.9588"
+         y="572.09644">xxxxxx</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

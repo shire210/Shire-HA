@@ -4,7 +4,7 @@
 homeassistant:
   customize_glob:
     "sensor.floorplan_*":
-      emulated_hue: False
+      emulated_hue_hidden: True
       hidden: True
 #---Sensor for Time and Date.-----------------------------
 sensor:
@@ -13,7 +13,7 @@ sensor:
       floorplan_date:
         friendly_name: 'Date'
         value_template: >-
-          {{now().strftime("%A")}}, {{now().strftime("%B")}} {{now().strftime("%d")}}
+          {{now().strftime("%A")}}, {{now().strftime("%b")}} {{now().strftime("%d")}}
   - platform: template
     sensors:
       floorplan_time:
