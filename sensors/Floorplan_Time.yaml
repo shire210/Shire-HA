@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  floorplan_time:
+    friendly_name: 'Time'
+    value_template: >-
+      {{now().strftime("%-I")}}:{{now().strftime("%M")}} {{now().strftime("%p")}}

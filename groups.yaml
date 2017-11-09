@@ -3,37 +3,38 @@ Main:
   view: true
   entities:
   - sensor.thermostat_temperature
-  - group.network
+  - group.Network
+  - group.Deluge
   - group.commute
-  - group.shirevision
+  - group.Shirevision
   - group.all_lights
-  - group.devices
-  - group.harmony
-  - group.lock
-  - input_select.living_room_tv
+  - group.Devices
+  - group.Harmony
+  - group.Lock
 Climate:
   name: Climate
   view: true
   entities:
   - sensor.thermostat_temperature
   - sensor.dark_sky_apparent_temperature
-  - group.weather
-  - group.ecobee
+  - group.Weather
+  - group.Ecobee
 Automate:
   name: Automate
   view: true
   entities:
-  - group.all_automations
+  - group.Light_Automations
+  - group.lock_Automations
+  - group.TV_Automations
+  - group.Other_Automations
   - group.all_scripts
   - group.all_switches
-  - scene.good_night
-  - scene.movie_mode
-network:
+Network:
 - sensor.speedtest_download
 - sensor.speedtest_upload
 - sensor.speedtest_ping
 - switch.wake_on_lan
-devices:
+Devices:
 - device_tracker.michael_iphone
 - sensor.michael_iphone_battery_level
 - sensor.michael_iphone_battery_state
@@ -41,7 +42,7 @@ devices:
 - sensor.ipad_battery_level
 - sensor.ipad_battery_state
 - sensor.wallpanel_battery
-weather:
+Weather:
 - sun.sun
 - sensor.dark_sky_apparent_temperature
 - sensor.dark_sky_summary
@@ -68,6 +69,7 @@ Lock:
 Harmony:
 - remote.living_room
 - sensor.living_room
+- input_select.living_room_tv
 Shirevision:
 - sensor.plex_watch
 - binary_sensor.plex_limit
@@ -78,3 +80,36 @@ Shirevision:
 Commute:
 - sensor.home_to_work_time
 - binary_sensor.alternate_route
+Deluge:
+- switch.deluge_switch
+- sensor.deluge_status
+- sensor.deluge_down_speed
+- sensor.deluge_up_speed
+Light_Automations:
+  name: Light Automations
+  control: hidden
+  entities:
+    - automation.cabinet_light_with_main
+    - automation.cabinet_light_off_with_main
+    - automation.night_light
+Lock_Automations:
+  name: Lock Automations
+  control: hidden
+  entities:
+    - automation.ios_unlock_door_from_event
+    - automation.lock_at_11_pm
+    - automation.lock_when_away
+    - automation.unlock_when_home
+TV_Automations:
+  name: TV Automations
+  control: hidden
+  entities:
+    - automation.tv_on_when_home
+    - automation.remote_external_update_living_room
+    - automation.remote_start_activity_from_input_select_living_room_tv
+Other_Automations:
+  name: Other Automations
+  control: hidden
+  entities:
+    - automation.ac_fan_balance
+    - automation.janice_limit_test

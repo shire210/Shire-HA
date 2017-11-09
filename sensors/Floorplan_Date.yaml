@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  floorplan_date:
+    friendly_name: 'Date'
+    value_template: >-
+      {{now().strftime("%A")}}, {{now().strftime("%b")}} {{now().strftime("%d")}}

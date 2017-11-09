@@ -101,7 +101,7 @@
             - script.tv_off
             - script.all_lights_on
             - script.all_lights_off
-            - scene.good_night
+            - script.good_night
           action:
             service: toggle
               

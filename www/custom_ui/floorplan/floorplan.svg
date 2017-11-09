@@ -42,12 +42,12 @@
      id="namedview4395"
      showgrid="false"
      inkscape:zoom="1.3857898"
-     inkscape:cx="389.95141"
+     inkscape:cx="512.98594"
      inkscape:cy="298.75927"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="tv_select_layer"
      units="px">
     <inkscape:grid
        type="xygrid"
@@ -898,38 +898,6 @@
        id="path2"
        inkscape:connector-curvature="0"
        style="display:inline;fill:#677077;fill-opacity:1;stroke-width:0.56252366" />
-    <g
-       style="display:inline"
-       id="g4975">
-      <rect
-         y="279.6051"
-         x="196.99957"
-         height="23.813135"
-         width="34.637287"
-         id="rect4969"
-         style="opacity:1;fill:#000000;fill-opacity:1" />
-      <switch
-         style="fill:#008000"
-         id="switch6"
-         transform="matrix(0.46509474,0,0,0.46509474,632.8739,-174.97831)">
-        <foreignObject
-           height="1"
-           width="1"
-           y="0"
-           x="0"
-           requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" />
-        <g
-           style="fill:#008000"
-           id="g4"
-           i:extraneous="self">
-          <path
-             style="fill:#008000"
-             inkscape:connector-curvature="0"
-             id="path2-2"
-             d="m -899,953.5 c -26.2,0 -47.5,21.3 -47.5,47.5 0,26.2 21.3,47.5 47.5,47.5 26.2,0 47.5,-21.3 47.5,-47.5 0,-26.2 -21.3,-47.5 -47.5,-47.5 z m 27.6,37.7 -30.5,30.5 c -0.7,0.7 -1.6,1.1 -2.5,1.1 -0.9,0 -1.8,-0.4 -2.5,-1.1 l -16.8,-16.8 c -1.4,-1.4 -1.4,-3.7 0,-5.1 1.4,-1.4 3.7,-1.4 5.1,0 l 14.2,14.2 28,-28 c 1.4,-1.4 3.7,-1.4 5.1,0 1.3,1.5 1.3,3.8 -0.1,5.2 z" />
-        </g>
-      </switch>
-    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -938,7 +906,7 @@
      style="display:inline">
     <rect
        style="fill:#252839;fill-opacity:1;stroke-width:1.49493468"
-       id="sensor.dark_sky_icon1"
+       id="sensor.dark_sky_icon"
        width="92.12603"
        height="88.763779"
        x="190.72945"
@@ -1251,8 +1219,8 @@
       </g>
     </g>
     <g
-       id="scene.good_night"
-       inkscape:label="scene.good_night"
+       id="script.good_night"
+       inkscape:label="script.good_night"
        transform="translate(1.4432203,-287.19703)">
       <rect
          inkscape:label="box3"
@@ -1330,24 +1298,27 @@
          d="m 83.205467,525.97003 h -58.26 c -0.829,0 -1.5,0.671 -1.5,1.5 v 39.339 c 0,0.828 0.671,1.5 1.5,1.5 h 13.921 l -1.752,3.379 c -0.381,0.736 -0.094,1.641 0.641,2.023 0.221,0.113 0.457,0.168 0.689,0.168 0.542,0 1.066,-0.295 1.333,-0.811 l 2.468,-4.76 h 23.398 l 2.471,4.76 c 0.267,0.516 0.79,0.811 1.332,0.811 0.232,0 0.469,-0.055 0.689,-0.17 0.735,-0.381 1.022,-1.285 0.641,-2.021 l -1.752,-3.379 h 14.181 c 0.828,0 1.5,-0.672 1.5,-1.5 v -39.339 c 0,-0.828 -0.672,-1.5 -1.5,-1.5 z m -1.5,39.34 h -55.26 v -36.34 h 55.26 z"
          id="path4009-0" />
     </g>
-    <rect
-       id="rect3787-77-6-9-4"
-       width="173.66774"
-       height="37.657997"
-       x="842.15656"
-       y="203.6721"
-       style="display:inline;fill:#b5b5b7;fill-opacity:1;stroke-width:0.77210426" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="881.86652"
-       y="230.63115"
-       id="text4172-1-0-1-3"><tspan
-         sodipodi:role="line"
-         id="tspan4170-0-9-5-0"
-         x="881.86652"
+    <g
+       id="g4844">
+      <rect
+         style="display:inline;fill:#b5b5b7;fill-opacity:1;stroke-width:0.77210426"
+         y="203.6721"
+         x="842.15656"
+         height="37.657997"
+         width="173.66774"
+         id="rect3787-77-6-9-4" />
+      <text
+         id="text4172-1-0-1-3"
          y="230.63115"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.66666603px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">Goodbye</tspan></text>
+         x="881.86652"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.66666603px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="230.63115"
+           x="881.86652"
+           id="tspan4170-0-9-5-0"
+           sodipodi:role="line">Goodbye</tspan></text>
+    </g>
     <text
        xml:space="preserve"
        x="142.05386"
@@ -1777,6 +1748,35 @@
          inkscape:connector-curvature="0"
          style="fill:#464866;fill-opacity:1;stroke-width:0.47829691" />
     </g>
+    <ellipse
+       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.99504375"
+       id="path4803-6"
+       cx="955.41187"
+       cy="464.33734"
+       rx="34.99995"
+       ry="35" />
+    <ellipse
+       style="display:inline;opacity:1;fill:#c18a16;fill-opacity:1;stroke-width:0.85289466"
+       id="path4803-8-13"
+       cx="955.41187"
+       cy="464.33734"
+       rx="29.999958"
+       ry="30" />
+    <g
+       transform="matrix(0.59049,0,0,0.59049,926.50024,434.38028)"
+       id="g6"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         inkscape:connector-curvature="0"
+         d="M 27.984,42.838 C 45.23,25.729 47.746,11.361 41.939,4.395 c 0,0 43.898,18.04 18.077,59.882 -4.42,7.105 -15.459,15.498 -9.688,32.793 -0.001,0 -55.236,-15.465 -22.344,-54.232 z"
+         id="path2-3" />
+      <path
+         style="fill:#000000"
+         inkscape:connector-curvature="0"
+         d="m 54.645,96.217 c -0.944,-3.51 -5.154,-11.154 7.686,-26.359 6.861,-8.104 11.557,-25.906 9.27,-30.157 0,0 21.914,28.944 -3.447,46.278 C 53.117,96.283 54.645,96.217 54.645,96.217 Z"
+         id="path4-40" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1803,75 +1803,9 @@
          y="572.09644">xxxxxx</tspan></text>
   </g>
   <g
-     inkscape:groupmode="layer"
-     id="layer6"
-     inkscape:label="Scene"
-     style="display:none">
-    <g
-       id="g4966"
-       transform="translate(46.18305,31.029237)">
-      <circle
-         r="41.507236"
-         cy="413.56992"
-         cx="923.19409"
-         id="path4859"
-         style="display:inline;opacity:1;fill:#464866;fill-opacity:1;stroke-width:1.09054232" />
-      <switch
-         style="display:inline;fill:#dd983f;fill-opacity:1"
-         id="switch12"
-         transform="matrix(0.729,0,0,0.729,1574.7163,-316.62734)">
-        <foreignObject
-           height="1"
-           width="1"
-           y="0"
-           x="0"
-           requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" />
-        <g
-           style="fill:#dd983f;fill-opacity:1"
-           id="g10"
-           i:extraneous="self">
-          <g
-             style="fill:#dd983f;fill-opacity:1"
-             id="g8">
-            <path
-               style="fill:#dd983f;fill-opacity:1"
-               inkscape:connector-curvature="0"
-               id="path2-4"
-               d="m -861.5,1034 c -3.6,-0.1 -7.1,-0.7 -10.7,-1.8 -22.7,-6.8 -35.6,-30.8 -28.7,-53.5 2.8,-9.2 8.3,-16.7 15.4,-22 1.2,-0.9 0.7,-2.7 -0.7,-2.9 -22.5,-2.7 -44.2,11.1 -51,33.5 -7.6,25.1 6.7,51.6 31.8,59.2 16.2,4.9 33.1,0.7 44.9,-9.7 1.1,-1 0.5,-2.7 -1,-2.8 z" />
-            <path
-               style="fill:#dd983f;fill-opacity:1"
-               inkscape:connector-curvature="0"
-               id="path4-1"
-               d="m -859.9,968 -3.7,-0.4 c -0.5,-0.1 -1,-0.4 -1.1,-1 l -0.8,-3.7 c -0.3,-1.2 -1.8,-1.3 -2.3,-0.2 l -1.5,3.4 c -0.2,0.5 -0.7,0.8 -1.2,0.7 l -3.7,-0.3 c -1.2,-0.1 -1.8,1.3 -0.9,2.1 l 2.8,2.5 c 0.4,0.4 0.5,0.9 0.3,1.4 l -1.5,3.4 c -0.5,1.1 0.7,2.1 1.7,1.6 l 3.2,-1.9 c 0.5,-0.3 1,-0.2 1.4,0.1 l 2.8,2.5 c 0.9,0.8 2.3,0 2,-1.2 l -0.8,-3.7 c -0.1,-0.5 0.1,-1 0.6,-1.3 l 3.2,-1.9 c 1,-0.5 0.7,-2 -0.5,-2.1 z" />
-            <path
-               style="fill:#dd983f;fill-opacity:1"
-               inkscape:connector-curvature="0"
-               id="path6-0"
-               d="m -888.7,1001.1 6.3,3.4 c 0.6,0.3 0.9,1 0.8,1.7 l -1.2,7.1 c -0.3,1.5 1.6,2.5 2.7,1.4 l 5.2,-4.9 c 0.5,-0.5 1.2,-0.6 1.9,-0.3 l 6.3,3.3 c 1.4,0.7 2.9,-0.7 2.2,-2.1 l -3.1,-6.4 c -0.3,-0.6 -0.2,-1.4 0.3,-1.8 l 5.1,-5 c 1.1,-1.1 0.2,-2.9 -1.3,-2.7 l -7.1,1 c -0.7,0.1 -1.3,-0.3 -1.7,-0.9 l -3.2,-6.4 c -0.7,-1.4 -2.7,-1.1 -3,0.4 l -1.3,7 c -0.1,0.7 -0.7,1.2 -1.3,1.3 l -7.1,1.1 c -1.5,0 -1.9,2.1 -0.5,2.8 z" />
-          </g>
-        </g>
-      </switch>
-    </g>
-    <g
-       id="g4970"
-       transform="translate(-45.46144,139.99237)">
-      <circle
-         r="41.507236"
-         cy="305.58307"
-         cx="924.38263"
-         id="path4859-4"
-         style="display:inline;opacity:1;fill:#464866;fill-opacity:1;stroke-width:1.09054232" />
-      <path
-         style="fill:#dd983f;fill-opacity:1;stroke-width:0.65610003"
-         id="path4-8"
-         d="m 917.95264,315.42466 v -6.62661 h -14.76225 v -7.8732 h 14.76225 v -6.62661 a 3.188646,3.188646 0 0 1 5.31441,-2.36852 l 11.04872,9.93991 a 4.021893,4.021893 0 0 1 0,5.97707 l -11.04872,9.94648 a 3.188646,3.188646 0 0 1 -5.31441,-2.36852 z m -14.76225,11.08809 a 7.8732,7.8732 0 0 0 7.8732,7.8732 h 29.5245 a 7.8732,7.8732 0 0 0 7.8732,-7.8732 v -43.3026 a 7.8732,7.8732 0 0 0 -7.8732,-7.8732 h -29.5245 a 7.8732,7.8732 0 0 0 -7.8732,7.8732 v 9.8415 h 7.8732 v -9.8415 h 29.5245 v 43.3026 h -29.5245 v -9.8415 h -7.8732 z"
-         inkscape:connector-curvature="0" />
-    </g>
-  </g>
-  <g
      id="tv_select_layer"
      inkscape:label="tv_select_layer"
-     style="display:none;opacity:0.81099997"
+     style="display:none;opacity:1"
      inkscape:groupmode="layer"
      sodipodi:insensitive="true">
     <g

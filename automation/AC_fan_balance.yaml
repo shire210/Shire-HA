@@ -4,6 +4,9 @@ trigger:
   hours: '/2'
   minutes: 00
   seconds: 00
+condition:
+  condition: template
+  value_template: "{{ not is_state('climate.thermostat', 'off') }}"
 action:
   service: climate.ecobee_set_fan_min_on_time
   data_template:
