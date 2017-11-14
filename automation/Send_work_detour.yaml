@@ -1,0 +1,24 @@
+alias: Send work detour
+trigger:
+  platform: state
+  entity_id: input_boolean.ios_home
+  to: 'off'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '06:30:00'
+      before: '07:00:00'
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+    - condition: state
+      entity_id: binary_sensor.alternate_route
+      state: 'on'
+action:
+  service: notify.ios_michael_iphone
+  data:
+    title: "Work Detour"
+    message: "waze://?favorite=work"

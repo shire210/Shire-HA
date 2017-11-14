@@ -1,27 +1,29 @@
 bedtime_lamp:
-  alias: " Bed time lamp"
+  alias: " Bed time light"
   sequence:
-    - alias: Living room turn on
-      service: light.turn_on
+    - service: light.turn_on
       data:
         entity_id: light.living_room
         brightness: 125
         color_temp: 200
-    - alias: Bedroom turn on
-      service: light.turn_on
+    - service: light.turn_on
       data:
         entity_id: light.bedroom
-        brightness: 225
+        brightness: 255
         color_temp: 250
+    - service: light.turn_on
+      data:
+        entity_id: light.foyer
+        brightness: 200
     - delay:
         seconds: 30
-    - alias: Living room turn off
-      service: light.turn_off
-      data:
-        entity_id: light.living_room
+    - service: light.turn_off
+      entity_id: light.living_room
+    - delay:
+        seconds: 30
+    - service: light.turn_off
+      entity_id: light.foyer
     - delay:
         minutes: 5
-    - alias: Bedroom turn off
-      service: light.turn_off
-      data:
-        entity_id: light.bedroom
+    - service: light.turn_off
+      entity_id: light.bedroom

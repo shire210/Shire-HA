@@ -1,0 +1,7 @@
+alias: Porch Off 11pm
+trigger:
+  platform: time
+  at: "23:00:00"
+action:
+  service: light.turn_off
+  entity_id: light.porch

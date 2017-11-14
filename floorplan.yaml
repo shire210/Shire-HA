@@ -55,6 +55,8 @@
              - light.living_room
              - light.kitchen
              - light.cabinet
+             - light.porch
+             - light.foyer
           states:
             - state: 'on'
               class: 'light-on'
