@@ -8,6 +8,9 @@ light.living_room:
 light.cabinet:
   emulated_hue_hidden: false
   emulated_hue_name: Cabinet
+light.bedroom:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom
   
 ######SCRIPTS######
 script.good_night:
@@ -28,6 +31,9 @@ switch.main_floor:
 switch.deluge_switch:
   friendly_name: Paused / Active
   icon: mdi:play-pause
+switch.fireplace:
+  emulated_hue_hidden: false
+  icon: mdi:fire
 
 ######WEATHER######
 sensor.dark_sky_cloud_coverage:

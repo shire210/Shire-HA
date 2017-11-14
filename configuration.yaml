@@ -88,6 +88,8 @@ recorder:
 automation: !include_dir_list automation/
 sensor: !include_dir_list sensors/
 binary_sensor: !include_dir_list binary_sensors/
+input_boolean: !include_dir_merge_named input_boolean/
+input_select: !include_dir_merge_named input_select/
 switch: !include_dir_list switches/
 group: !include groups.yaml
 scene: !include_dir_list scene/
@@ -138,18 +140,3 @@ mqtt:
   password: !secret mqtt_password
 tts:
   - platform: google
-############################################
-## Input Select ##
-############################################
-input_select:
-  living_room_tv:
-    name: Living Room TV
-    options:
-      - PowerOff
-      - Watch TV
-      - Watch Plex
-      - Watch Netflix
-      - Play Xbox One
-      - Play Xbox 360
-    initial: PowerOff
-    icon: mdi:monitor

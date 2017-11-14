@@ -1,0 +1,11 @@
+living_room_tv:
+  name: Living Room TV
+  options:
+    - PowerOff
+    - Watch TV
+    - Watch Plex
+    - Watch Netflix
+    - Play Xbox One
+    - Play Xbox 360
+  initial: PowerOff
+  icon: mdi:monitor

@@ -1,12 +1,9 @@
-alias: Unlock When Home
+alias: Leave Test
 trigger:
   platform: state
   entity_id: input_boolean.ios_home
-  to: 'on'
+  to: 'off'
 action:
   - service: notify.ios_michael_iphone
     data_template:
-      message: 'Unlock Front Door?'
-      data:
-        push:
-          category: 'lock'
+      message: 'Mike has left home'

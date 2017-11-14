@@ -1,0 +1,11 @@
+alias: Morning for Home
+trigger:
+  platform: time
+  at: '07:00:00'
+condition:
+  condition: state
+  entity_id: input_select.alarm_schedule
+  state: 'Home'
+action:
+  service: script.turn_on
+  entity_id: script.good_morning

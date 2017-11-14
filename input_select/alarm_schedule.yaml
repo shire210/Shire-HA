@@ -1,0 +1,7 @@
+alarm_schedule:
+  name: Alarm Schedule
+  options:
+    - Home
+    - Office
+    - Weekend
+  initial: Home

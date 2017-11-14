@@ -11,6 +11,7 @@ Main:
   - group.Devices
   - group.Harmony
   - group.Lock
+  - switch.fireplace
 Climate:
   name: Climate
   view: true
@@ -19,6 +20,7 @@ Climate:
   - sensor.dark_sky_apparent_temperature
   - group.Weather
   - group.Ecobee
+  - switch.fireplace
 Automate:
   name: Automate
   view: true

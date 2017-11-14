@@ -83,6 +83,7 @@
         - name: Switches
           entities:
              - switch.main_floor
+             - switch.fireplace
           states:
             - state: 'on'
               class: 'switch-on'
@@ -102,6 +103,7 @@
             - script.all_lights_on
             - script.all_lights_off
             - script.good_night
+            - script.goodbye
           action:
             service: toggle
               
