@@ -1,0 +1,8 @@
+alias: Lock When Away
+trigger:
+  platform: state
+  entity_id: input_boolean.ios_home
+  to: 'off'
+action:
+  - service: script.lock_when_gone
+  - service: script.main_level_off

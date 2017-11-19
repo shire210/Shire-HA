@@ -1,9 +1,0 @@
-alias: Leave Test
-trigger:
-  platform: state
-  entity_id: input_boolean.ios_home
-  to: 'off'
-action:
-  - service: notify.ios_michael_iphone
-    data_template:
-      message: 'Mike has left home'

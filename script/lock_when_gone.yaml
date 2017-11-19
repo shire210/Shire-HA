@@ -1,0 +1,20 @@
+lock_when_gone:
+  alias: Lock when gone
+  sequence:
+    - condition:
+      condition: state
+      entity_id: lock.front_door
+      state: 'unlocked'
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 255
+        transition: 7
+        color_temp: 200
+    - service: notify.notify
+      data:
+        message: 'Locked Front Door'
+        title: 'Home Assistant'
+    - service: lock.lock
+      data:
+        entity_id: lock.front_door

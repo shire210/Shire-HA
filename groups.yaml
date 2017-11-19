@@ -94,6 +94,10 @@ Light_Automations:
     - automation.cabinet_light_with_main
     - automation.cabinet_light_off_with_main
     - automation.night_light
+    - automation.morning_for_home
+    - automation.morning_for_office
+    - automation.porch_on_sunset
+    - automation.porch_off_11pm
 Lock_Automations:
   name: Lock Automations
   control: hidden
@@ -115,3 +119,4 @@ Other_Automations:
   entities:
     - automation.ac_fan_balance
     - automation.janice_limit_test
+    - automation.send_work_detour

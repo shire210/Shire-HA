@@ -1,0 +1,14 @@
+alias: iOS entry home
+trigger:
+  platform: event
+  event_type: ios.notification_action_fired
+  event_data:
+    actionName: UNLOCK_DOOR
+action:
+  - service: lock.unlock
+    entity_id: lock.front_door
+  - service: remote.turn_on
+    data:
+      entity_id: remote.living_room
+      activity: 21316292
+  - service: script.night_light_home

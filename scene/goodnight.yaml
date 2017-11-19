@@ -1,7 +1,0 @@
-name: Good Night
-entities:
-  light.kitchen: off
-  light.cabinet: off
-  lock.front_door: locked
-  remote.living_room: off
-  script.bedtime_lamp: on

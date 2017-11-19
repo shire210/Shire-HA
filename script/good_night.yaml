@@ -5,11 +5,11 @@ good_night:
       entity_id:
         - light.kitchen
         - light.cabinet
+    - service: script.turn_on
+      entity_id: script.bedtime_lamp
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: lock.lock
       entity_id: lock.front_door
     - service: switch.turn_off
       entity_id: switch.fireplace
-    - service: script.turn_on
-      entity_id: script.bedtime_lamp

@@ -1,0 +1,22 @@
+night_light_home:
+  alias: Night light
+  sequence:
+    - condition:
+      condition: or
+      conditions:
+        - condition: sun
+          after: sunset
+          after_offset: "-0:20:00"
+        - condition: sun
+          before: sunrise
+          after_offset: "0:20:00"
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 255
+        transition: 7
+        color_temp: 200
+    - service: light.turn_on
+      data:
+        entity_id: light.foyer
+        brightness: 255

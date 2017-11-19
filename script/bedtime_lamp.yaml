@@ -10,7 +10,7 @@ bedtime_lamp:
       data:
         entity_id: light.bedroom
         brightness: 255
-        color_temp: 250
+        color_temp: 200
     - service: light.turn_on
       data:
         entity_id: light.foyer

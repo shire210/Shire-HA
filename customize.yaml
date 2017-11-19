@@ -11,6 +11,9 @@ light.cabinet:
 light.bedroom:
   emulated_hue_hidden: false
   emulated_hue_name: Bedroom
+light.foyer:
+  emulated_hue_hidden: false
+  emulated_hue_name: Foyer
   
 ######SCRIPTS######
 script.good_night:

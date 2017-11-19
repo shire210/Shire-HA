@@ -1,4 +1,4 @@
-alias: TV on when home
+alias: Code entry home
 trigger:
   platform: state
   entity_id: binary_sensor.mike
@@ -9,7 +9,8 @@ condition:
   entity_id: remote.living_room
   state: 'off'
 action:
-  service: remote.turn_on
-  data:
-    entity_id: remote.living_room
-    activity: 21316292
+  - service: remote.turn_on
+    data:
+      entity_id: remote.living_room
+      activity: 21316292
+  - service: script.night_light_home
