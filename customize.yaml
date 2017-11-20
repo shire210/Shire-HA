@@ -101,8 +101,6 @@ sensor.deluge_status:
   icon: mdi:water
 
 ######GROUPS######
-group.all_scripts:
-  hidden: false
 group.all_switches:
   hidden: false
 

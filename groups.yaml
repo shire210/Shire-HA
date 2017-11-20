@@ -1,21 +1,26 @@
 Main:
-  name: Main
   view: true
+  icon: mdi:home
   entities:
   - sensor.thermostat_temperature
   - group.alarm
-  - group.Network
-  - group.Deluge
   - group.commute
-  - group.Shirevision
   - group.Lights
-  - group.Devices
+  - group.Location
   - group.Harmony
   - group.Lock
   - group.fireplace
-Climate:
-  name: Climate
+Internet:
   view: true
+  icon: mdi:access-point-network
+  entities:
+  - group.Network
+  - group.Deluge
+  - group.Shirevision
+  - group.Devices
+Climate:
+  view: true
+  icon: mdi:thermometer-lines
   entities:
   - sensor.thermostat_temperature
   - sensor.dark_sky_apparent_temperature
@@ -23,14 +28,17 @@ Climate:
   - group.Ecobee
   - switch.fireplace
 Automate:
-  name: Automate
   view: true
+  icon: mdi:home-automation
   entities:
   - group.Light_Automations
   - group.lock_Automations
   - group.TV_Automations
   - group.Other_Automations
-  - group.all_scripts
+  - group.Light_Scripts
+  - group.Lock_Scripts
+  - group.TV_Scripts
+  - group.Other_Scripts
   - group.all_switches
 Network:
 - sensor.speedtest_download
@@ -45,14 +53,15 @@ Lights:
 - light.bedroom
 - light.porch
 Devices:
-- input_boolean.ios_home
 - device_tracker.michael_iphone
 - sensor.michael_iphone_battery_level
 - sensor.michael_iphone_battery_state
 - device_tracker.ipad
 - sensor.ipad_battery_level
 - sensor.ipad_battery_state
-- sensor.wallpanel_battery
+Location:
+- input_boolean.ios_home
+- device_tracker.michael_iphone
 Weather:
 - sun.sun
 - sensor.dark_sky_apparent_temperature
@@ -108,6 +117,7 @@ Hue_Lights:
     - light.left_sofa_lamp
     - light.right_sofa_lamp
     - light.tv_lamp
+####Automations
 Light_Automations:
   name: Light Automations
   control: hidden
@@ -141,3 +151,36 @@ Other_Automations:
     - automation.ac_fan_balance
     - automation.janice_limit_test
     - automation.send_work_detour
+####Scripts
+Light_Scripts:
+  name: Light Scripts
+  control: hidden
+  entities:
+    - script.all_lights_on
+    - script.all_lights_off
+    - script.bed_time_light
+    - script.good_morning
+    - script.good_night
+Lock_Scripts:
+  name: Lock Scripts
+  control: hidden
+  entities:
+    - script.goodbye
+    - script.lock_when_gone
+    - script.night_light
+TV_Scripts:
+  name: TV Scripts
+  control: hidden
+  entities:
+    - script.start_fios
+    - script.start_plex
+    - script.start_netflix
+    - script.start_xbox
+    - script.input_select_harmony
+    - script.tv_off
+Other_Scripts:
+  name: Other Scripts
+  control: hidden
+  entities:
+    - script.turn_on_main_floor
+    - script.turn_off_main_floor
