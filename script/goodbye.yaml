@@ -22,7 +22,5 @@ goodbye:
         seconds: 30
     - service: light.turn_off
       entity_id: light.living_room
-    - delay:
-        seconds: 30
     - service: light.turn_off
       entity_id: light.foyer

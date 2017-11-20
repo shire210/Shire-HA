@@ -1,8 +1,7 @@
 lock_when_gone:
   alias: Lock when gone
   sequence:
-    - condition:
-      condition: state
+    - condition: state
       entity_id: lock.front_door
       state: 'unlocked'
     - service: light.turn_on

@@ -3,15 +3,16 @@ Main:
   view: true
   entities:
   - sensor.thermostat_temperature
+  - group.alarm
   - group.Network
   - group.Deluge
   - group.commute
   - group.Shirevision
-  - group.all_lights
+  - group.Lights
   - group.Devices
   - group.Harmony
   - group.Lock
-  - switch.fireplace
+  - group.fireplace
 Climate:
   name: Climate
   view: true
@@ -36,7 +37,15 @@ Network:
 - sensor.speedtest_upload
 - sensor.speedtest_ping
 - switch.wake_on_lan
+Lights:
+- light.living_room
+- light.kitchen
+- light.cabinet
+- light.foyer
+- light.bedroom
+- light.porch
 Devices:
+- input_boolean.ios_home
 - device_tracker.michael_iphone
 - sensor.michael_iphone_battery_level
 - sensor.michael_iphone_battery_state
@@ -87,13 +96,24 @@ Deluge:
 - sensor.deluge_status
 - sensor.deluge_down_speed
 - sensor.deluge_up_speed
+Alarm:
+- input_select.alarm_schedule
+Fireplace:
+- switch.fireplace
+Hue_Lights:
+  name: Hue Lights
+  control: hidden
+  entities:
+    - light.all_hue_lights
+    - light.left_sofa_lamp
+    - light.right_sofa_lamp
+    - light.tv_lamp
 Light_Automations:
   name: Light Automations
   control: hidden
   entities:
     - automation.cabinet_light_with_main
     - automation.cabinet_light_off_with_main
-    - automation.night_light
     - automation.morning_for_home
     - automation.morning_for_office
     - automation.porch_on_sunset
@@ -102,15 +122,16 @@ Lock_Automations:
   name: Lock Automations
   control: hidden
   entities:
-    - automation.ios_unlock_door_from_event
     - automation.lock_at_11_pm
     - automation.lock_when_away
     - automation.unlock_when_home
+    - automation.code_entry_home
+    - automation.ios_entry_home
+    - automation.home_exit
 TV_Automations:
   name: TV Automations
   control: hidden
   entities:
-    - automation.tv_on_when_home
     - automation.remote_external_update_living_room
     - automation.remote_start_activity_from_input_select_living_room_tv
 Other_Automations:

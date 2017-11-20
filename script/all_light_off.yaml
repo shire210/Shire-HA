@@ -2,5 +2,10 @@ all_lights_off:
   alias: "All Lights Off"
   sequence:
     - service: light.turn_off
-      data:
-        entity_id: group.all_lights
+      entity_id: light.living_room
+    - service: light.turn_off
+      entity_id: light.kitchen
+    - service: light.turn_off
+      entity_id: light.cabinet
+    - service: light.turn_off
+      entity_id: light.foyer

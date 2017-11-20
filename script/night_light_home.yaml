@@ -1,8 +1,7 @@
 night_light_home:
   alias: Night light
   sequence:
-    - condition:
-      condition: or
+    - condition: or
       conditions:
         - condition: sun
           after: sunset
