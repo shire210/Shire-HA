@@ -100,10 +100,6 @@ sensor.deluge_status:
   friendly_name: Deluge Status
   icon: mdi:water
 
-######GROUPS######
-group.all_switches:
-  hidden: false
-
   ######FRONT LOCK######
 sensor.battery_front_door:
   icon: mdi:battery-70

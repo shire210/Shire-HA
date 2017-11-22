@@ -3,6 +3,7 @@ Main:
   icon: mdi:home
   entities:
   - sensor.thermostat_temperature
+  - switch.main_floor
   - group.alarm
   - group.commute
   - group.Lights
@@ -39,7 +40,6 @@ Automate:
   - group.Lock_Scripts
   - group.TV_Scripts
   - group.Other_Scripts
-  - group.all_switches
 Network:
 - sensor.speedtest_download
 - sensor.speedtest_upload
