@@ -125,6 +125,7 @@ Light_Automations:
     - automation.cabinet_light_with_main
     - automation.cabinet_light_off_with_main
     - automation.morning_for_home
+    - automation.light_on_for_office_trip
     - automation.morning_for_office
     - automation.porch_on_sunset
     - automation.porch_off_11pm
@@ -137,6 +138,7 @@ Lock_Automations:
     - automation.unlock_when_home
     - automation.code_entry_home
     - automation.ios_entry_home
+    - automation.ios_entry_home_with_TV
     - automation.home_exit
 TV_Automations:
   name: TV Automations

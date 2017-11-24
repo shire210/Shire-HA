@@ -5,7 +5,7 @@
 *.key
 OZW_Log.txt
 home-assistant.log
-home-assistant_v2.db
+home-assistant_v2.db*
 emulated_hue_ids.json
 *.db-journal
 lib

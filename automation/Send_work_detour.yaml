@@ -21,4 +21,6 @@ action:
   service: notify.ios_michael_iphone
   data:
     title: "Work Detour"
-    message: "waze://?favorite=work"
+    message: "Navigate using detour"
+    data:
+      url: waze://?favorite=work

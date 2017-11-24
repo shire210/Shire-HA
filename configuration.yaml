@@ -51,6 +51,12 @@ ios:
             authenticationRequired: no
             destructive: yes
             behavior: 'default'
+          - identifier: 'UNLOCK_WITH_TV'
+            title: 'Yes with TV'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'
           - identifier: 'DISMISS'
             title: 'Dismiss'
             activationMode: 'background'
@@ -140,3 +146,10 @@ mqtt:
   password: !secret mqtt_password
 tts:
   - platform: google
+google_assistant:
+  project_id: !secret google_PI
+  client_id: !secret google_client
+  access_token: !secret google_token
+  exposed_domains:
+    - switch
+    - light
