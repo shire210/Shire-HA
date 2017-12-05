@@ -110,8 +110,14 @@ media_player:
     client_secret: !secret spotify_secret
 camera:
   - platform: generic
+    name: Spotify Cover
     still_image_url: >
-      {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
+      {% if is_state("sensor.spotify_song", "Nothing Playing")%}
+        {{ states.sensor.spotify_base_url.state }}/local/spotify_logo.png
+      {% else %}
+        {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
+      {% endif %}
+    limit_refetch_to_url_change: true
 light:
   - platform: lifx
   - platform: hue
@@ -160,6 +166,8 @@ google_assistant:
   project_id: !secret google_PI
   client_id: !secret google_client
   access_token: !secret google_token
+  api_key: !secret google_api_key
+  agent_user_id: !secret google_agent_id
   exposed_domains:
     - switch
     - light
