@@ -111,7 +111,7 @@ media_player:
 camera:
   - platform: generic
     still_image_url: >
-      !secret spotify_url
+      {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
 light:
   - platform: lifx
   - platform: hue

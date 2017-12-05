@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  spotify_base_url:
+    value_template: !secret full_url
+    friendly_name: "Full URL"
