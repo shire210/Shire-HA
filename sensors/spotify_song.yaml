@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  spotify_song:
+    value_template: >
+      {% if is_state("media_player.spotify", "playing")%}
+        {{ states.media_player.spotify.attributes.media_title |truncate(30,True)}}
+      {% else %}
+        Nothing Playing
+      {% endif %}
+    friendly_name: "Spotify Song"

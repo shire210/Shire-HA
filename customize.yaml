@@ -67,7 +67,10 @@ sensor.dark_sky_temperature:
   hidden: true
 sensor.dark_sky_wind_bearing:
   hidden: true
-  
+sensor.spotify_song:
+  hidden: true
+sensor.spotify_artist:
+  hidden: true
 ######FLOORPLAN######
 sensor.floorplan_date:
   hidden: true

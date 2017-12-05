@@ -80,7 +80,7 @@ logbook:
   exclude:
     entities:
       - sensor.time
-#logger:
+logger:
 sun:
 recorder:
   purge_interval: 4
@@ -102,6 +102,16 @@ script: !include_dir_merge_named script/
 
 media_player:
   - platform: plex
+    entity_namespace: 'plex'
+    scan_interval: 5
+    use_episode_art: true
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret
+camera:
+  - platform: generic
+    still_image_url: >
+      !secret spotify_url
 light:
   - platform: lifx
   - platform: hue
@@ -153,3 +163,4 @@ google_assistant:
   exposed_domains:
     - switch
     - light
+    - script

@@ -133,7 +133,7 @@ Lock_Automations:
   name: Lock Automations
   control: hidden
   entities:
-    - automation.lock_at_11_pm
+    - automation.lock_at_12_am
     - automation.lock_when_away
     - automation.unlock_when_home
     - automation.code_entry_home

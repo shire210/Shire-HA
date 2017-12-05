@@ -24,6 +24,12 @@
              - sensor.plex_watch
              - sensor.plex_list
           text_template: '${entity.state ? entity.state : "Empty"}'
+          
+        - name: Songs
+          entities:
+             - sensor.spotify_song
+             - sensor.spotify_artist
+          text_template: '${entity.state ? entity.state : "Not Playing"}'
         
         - name: Speed
           entities:
@@ -108,7 +114,50 @@
             - script.goodbye
           action:
             service: toggle
+            
+    #### ELEMENTS ####
+        - name: TV Selection
+          elements:
+            - tv_select_button
+          action:
+            domain: class
+            service: toggle
+            data:
+              elements:
+                - tv_select_layer
+              classes:
+                - layer-visible
+                - layer-hidden
+              default_class: layer-hidden
               
+        - name: Spotify Select
+          elements:
+            - spotify_select_button
+          action:
+            domain: class
+            service: toggle
+            data:
+              elements:
+                - spotify_select_layer
+              classes:
+                - layer-visible
+                - layer-hidden
+              default_class: layer-hidden
+        
+        - name: Plex List View
+          elements:
+            - plex_list_button
+          action:
+            domain: class
+            service: toggle
+            data:
+              elements:
+                - plex_list_layer
+              classes:
+                - layer-visible
+                - layer-hidden
+              default_class: layer-hidden
+                      
     #### TEMPLATES ####
         - name: TV
           entities:
@@ -190,32 +239,3 @@
 
             return "/local/custom_ui/floorplan/images/weather/" + imageName + ".svg";
             '
-    #### ELEMENTS ####
-        - name: TV Selection
-          elements:
-            - tv_select_button
-          action:
-            domain: class
-            service: toggle
-            data:
-              elements:
-                - tv_select_layer
-              classes:
-                - layer-visible
-                - layer-hidden
-              default_class: layer-hidden
-        
-        - name: Plex List View
-          elements:
-            - plex_list_button
-          action:
-            domain: class
-            service: toggle
-            data:
-              elements:
-                - plex_list_layer
-              classes:
-                - layer-visible
-                - layer-hidden
-              default_class: layer-hidden
-        

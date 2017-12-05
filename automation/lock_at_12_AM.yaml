@@ -1,7 +1,7 @@
-alias: Lock At 11 PM
+alias: Lock At 12 AM
 trigger:
   platform: time
-  at: '23:00:00'
+  at: '00:00:01'
 condition:
   condition: state
   entity_id: lock.front_door
