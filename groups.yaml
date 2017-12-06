@@ -5,6 +5,7 @@ Main:
   - sensor.thermostat_temperature
   - switch.main_floor
   - group.alarm
+  - group.guest_mode
   - group.commute
   - group.Lights
   - group.Location
@@ -107,6 +108,11 @@ Deluge:
 - sensor.deluge_up_speed
 Alarm:
 - input_select.alarm_schedule
+Guest_Mode:
+  name: Guest Mode
+  control: hidden
+  entities:
+    - input_boolean.guest_mode
 Fireplace:
 - switch.fireplace
 Hue_Lights:
