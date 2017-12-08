@@ -1,0 +1,5 @@
+spotify_previous:
+  alias: "Previous Spotify Song"
+  sequence:
+    - service: media_player.media_previous_track
+      entity_id: media_player.spotify

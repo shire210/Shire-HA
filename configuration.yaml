@@ -80,7 +80,7 @@ logbook:
   exclude:
     entities:
       - sensor.time
-logger:
+#logger:
 sun:
 recorder:
   purge_interval: 4

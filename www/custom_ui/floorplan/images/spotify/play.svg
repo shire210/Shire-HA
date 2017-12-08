@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21.5mm"
+   height="21.5mm"
+   viewBox="0 0 21.5 21.5"
+   version="1.1"
+   id="svg4898"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="play.svg">
+  <defs
+     id="defs4892" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="10.469136"
+     inkscape:cx="41.704131"
+     inkscape:cy="46.829635"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4895">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-275.5)">
+    <g
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+       id="script.spotify_play_pause"
+       transform="matrix(0.2143125,0,0,0.2143125,0.04059324,275.53676)"
+       inkscape:label="script.spotify_play_pause">
+      <g
+         style="fill:#000000"
+         id="g8">
+        <path
+           inkscape:connector-curvature="0"
+           d="M 0,50 C 0,22.385762 22.379691,0 50,0 77.614238,0 100,22.379691 100,50 100,77.614238 77.620309,100 50,100 22.385762,100 0,77.620309 0,50 Z m 69.562304,2.450436 -25.823039,16.91724 C 41.674126,70.720594 40,69.829142 40,67.393448 V 32.608075 c 0,-2.443254 1.674252,-3.327063 3.739265,-1.974228 l 25.823039,16.91724 c 2.065139,1.352918 2.065013,3.546514 0,4.899349 z"
+           id="path6-2" />
+      </g>
+    </g>
+  </g>
+</svg>

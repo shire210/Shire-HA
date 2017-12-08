@@ -29,6 +29,16 @@ Climate:
   - group.Weather
   - group.Ecobee
   - switch.fireplace
+Media:
+  view: true
+  icon: mdi:video
+  entities:
+  - group.Harmony
+  - media_player.spotify
+  - media_player.plex_roku
+  - media_player.roku
+  - media_player.living_room_speaker
+  - group.spotify_scripts
 Automate:
   view: true
   icon: mdi:home-automation
@@ -41,6 +51,8 @@ Automate:
   - group.Lock_Scripts
   - group.TV_Scripts
   - group.Other_Scripts
+  - group.spotify_scripts
+
 Network:
 - sensor.speedtest_download
 - sensor.speedtest_upload
@@ -152,6 +164,9 @@ TV_Automations:
   entities:
     - automation.remote_external_update_living_room
     - automation.remote_start_activity_from_input_select_living_room_tv
+    - automation.plex_movie_play
+    - automation.plex_movie_pause
+    - automation.plex_movie_stop
 Other_Automations:
   name: Other Automations
   control: hidden
@@ -159,6 +174,8 @@ Other_Automations:
     - automation.ac_fan_balance
     - automation.janice_limit_test
     - automation.send_work_detour
+    - automation.activate_guest_mode
+    - automation.deactivate_guest_mode
 ####Scripts
 Light_Scripts:
   name: Light Scripts
@@ -176,6 +193,13 @@ Lock_Scripts:
     - script.goodbye
     - script.lock_when_gone
     - script.night_light
+Spotify_Scripts:
+  name: Spotify Scripts
+  control: hidden
+  entities:
+    - script.spotify_play_pause
+    - script.spotify_next
+    - script.spotify_previous
 TV_Scripts:
   name: TV Scripts
   control: hidden

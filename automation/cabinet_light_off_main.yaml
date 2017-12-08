@@ -4,6 +4,9 @@ trigger:
   entity_id: light.kitchen
   from: 'on'
   to: 'off'
+condition:
+  condition: template
+  value_template: '{{ not is_state(media_player.plex_roku, playing) }}'
 action:
   service: light.turn_off
   data:

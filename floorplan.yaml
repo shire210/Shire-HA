@@ -112,6 +112,9 @@
             - script.all_lights_off
             - script.good_night
             - script.goodbye
+            - script.spotify_play_pause
+            - script.spotify_next
+            - script.spotify_previous
           action:
             service: toggle
             
@@ -205,6 +208,27 @@
             }
 
             return "/local/custom_ui/floorplan/images/commute/" + imageName + ".svg";
+            '
+            
+        - name: spotify_play_pause
+          entities:
+            - media_player.spotify
+          image_template: '
+            var imageName = "";
+
+            switch (entity.state) {
+              case "paused":
+                imageName = "play";
+                break;
+              case "stopped":
+                imageName = "play";
+                break;
+              case "playing":
+                imageName = "pause";
+                break;
+            }
+
+            return "/local/custom_ui/floorplan/images/spotify/" + imageName + ".svg";
             '
             
         - name: Dark Sky Icon

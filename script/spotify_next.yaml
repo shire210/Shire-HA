@@ -1,0 +1,5 @@
+spotify_next:
+  alias: "Next Spotify Song"
+  sequence:
+    - service: media_player.media_next_track
+      entity_id: media_player.spotify
