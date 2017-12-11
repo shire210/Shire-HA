@@ -74,6 +74,7 @@ history:
   exclude:
     domains:
       - automation
+      - group
     entities:
       - sensor.time
 logbook:
@@ -88,6 +89,14 @@ recorder:
   exclude:
     domains:
       - media_player
+influxdb:
+  host: 192.168.1.250
+  default_measurement: state
+  exclude:
+    domains:
+      - automation
+      - script
+      - group
 ############################################
 ##Include##
 ############################################

@@ -160,6 +160,11 @@
                 - layer-visible
                 - layer-hidden
               default_class: layer-hidden
+              
+        - name: Camera Images
+          entities:
+            - camera.spotify_cover
+          camera_image_template: '${entity.attributes.entity_picture}'
                       
     #### TEMPLATES ####
         - name: TV
