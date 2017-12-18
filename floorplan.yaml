@@ -163,9 +163,15 @@
               
         - name: Camera Images
           entities:
-            - camera.spotify_cover
+            - entity: media_player.spotify
+              element: camera.spotify_cover
           camera_image_template: '${entity.attributes.entity_picture}'
-                      
+             
+#        - name: Camera Images
+#          entities:
+#            - camera.spotify_cover
+#          camera_image_template: '${entity.attributes.entity_picture}'             
+
     #### TEMPLATES ####
         - name: TV
           entities:
@@ -230,6 +236,9 @@
                 break;
               case "playing":
                 imageName = "pause";
+                break;
+              case "idle":
+                imageName = "play";
                 break;
             }
 

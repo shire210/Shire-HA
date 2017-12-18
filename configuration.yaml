@@ -66,6 +66,7 @@ ios:
 config:
 updater:
 frontend:
+  javascript_version: latest
 conversation:
 map:
 device_tracker:
@@ -126,7 +127,6 @@ camera:
       {% else %}
         {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
       {% endif %}
-    limit_refetch_to_url_change: true
 light:
   - platform: lifx
   - platform: hue
