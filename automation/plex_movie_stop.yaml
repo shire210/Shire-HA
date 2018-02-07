@@ -1,11 +1,11 @@
 alias: Plex Movie Stop
 trigger:
   - platform: state
-    entity_id: media_player.plex_roku
+    entity_id: media_player.plex_media_room
     from: 'playing'
     to: 'idle'
   - platform: state
-    entity_id: media_player.plex_roku
+    entity_id: media_player.plex_media_room
     from: 'paused'
     to: 'idle'
 condition:

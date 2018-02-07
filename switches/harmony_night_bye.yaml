@@ -1,0 +1,9 @@
+platform: template
+switches:
+  harmony_night_bye:
+    friendly_name: "Harmony Goodnight or Bye"
+    value_template: "{{ is_state('lock.front_door', 'unlocked') }}"
+    turn_on:
+      service: script.goodbye
+    turn_off:
+      service: script.good_night

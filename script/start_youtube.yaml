@@ -1,7 +1,7 @@
-start_netflix:
-  alias: "Start Netflix"
+start_youtube:
+  alias: "Start Youtube"
   sequence:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: 31648009
+        activity: 31648039

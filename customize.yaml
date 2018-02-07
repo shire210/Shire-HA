@@ -31,12 +31,17 @@ switch.front_lock:
 switch.main_floor:
   emulated_hue_hidden: false
   emulated_hue_name: Main Floor
+switch.harmony_night_bye:
+  emulated_hue_hidden: false
+  emulated_hue_name: Harmony Night or Bye
 switch.deluge_switch:
   friendly_name: Paused / Active
   icon: mdi:play-pause
 switch.fireplace:
   emulated_hue_hidden: false
   icon: mdi:fire
+input_boolean.ios_home:
+  icon: mdi:cellphone-wireless
 
 ######WEATHER######
 sensor.dark_sky_cloud_coverage:
@@ -121,4 +126,6 @@ binary_sensor.hub:
 sensor.office_temperature_2:
   hidden: true
 climate.thermostat_2:
+  hidden: true
+remote.living_room_2:
   hidden: true

@@ -35,7 +35,7 @@
           entities:
              - sensor.speedtest_download
              - sensor.speedtest_upload
-          text_template: '${entity.state ? Math.ceil(entity.state) : "undefined"}'
+          text_template: '${entity.state ? Math.round(entity.state) : "undefined"}'
           
         - name: Weather
           entities:
@@ -46,12 +46,12 @@
              - sensor.office_temperature
           #text_template: '${entity.state ? entity.state : "unknown"}'
           # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
-          text_template: '${entity.state ? Math.ceil(entity.state) + " °F" : "undefined"}'  
+          text_template: '${entity.state ? Math.round(entity.state) + " °F" : "undefined"}'  
         
         - name: minutes
           entities:
             - sensor.home_to_work_time
-          text_template: '${entity.state ? Math.ceil(entity.state) + " min" : "undefined"}'  
+          text_template: '${entity.state ? Math.round(entity.state) + " min" : "undefined"}'  
 
         - name: Lights
           entities:
@@ -107,6 +107,7 @@
             - script.start_netflix
             - script.start_fios
             - script.start_xbox
+            - script.start_youtube
             - script.tv_off
             - script.all_lights_on
             - script.all_lights_off
@@ -192,6 +193,9 @@
               case "Watch Netflix":
                 imageName = "netflix_tv";
                 break;
+              case "Watch Youtube":
+                imageName = "youtube_tv";
+                break;
               case "Play Xbox One":
                 imageName = "xbox_tv";
                 break;
@@ -272,6 +276,9 @@
                 break;
               case "snow":
                 imageName = "snowy-1";
+                break;
+              case "fog":
+                imageName = "cloudy";
                 break;
             }
 

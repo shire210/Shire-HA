@@ -9,6 +9,8 @@ goodbye:
       entity_id: remote.living_room
     - service: lock.unlock
       entity_id: lock.front_door
+    - service: switch.turn_off
+      entity_id: switch.fireplace
     - service: light.turn_on
       data:
         entity_id: light.living_room

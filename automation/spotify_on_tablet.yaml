@@ -1,0 +1,12 @@
+alias: Spotify on tablet
+trigger:
+  platform: state
+  entity_id: media_player.spotify
+  to: 'playing'
+condition:
+  - condition: state
+    entity_id: input_boolean.ios_home
+    state: 'on'
+action:
+  - service: switch.turn_on
+    entity_id: switch.spotify_switch

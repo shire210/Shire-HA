@@ -1,7 +1,7 @@
 alias: Plex Movie Pause
 trigger:
   platform: state
-  entity_id: media_player.plex_roku
+  entity_id: media_player.plex_media_room
   to: 'paused'
 condition:
   condition: or
@@ -13,8 +13,8 @@ condition:
       before: sunrise
       after_offset: "0:20:00"
 action:
-  service: light.turn_on
-  entity_id: light.living_room
-  data:
-    brightness: 125
-    color_temp: 200
+  - service: light.turn_on
+    data:
+      entity_id: light.living_room
+      brightness: 125
+      color_temp: 200

@@ -1,7 +1,7 @@
 alias: Plex Movie Play
 trigger:
   platform: state
-  entity_id: media_player.plex_roku
+  entity_id: media_player.plex_media_room
   to: 'playing'
 condition:
   condition: or

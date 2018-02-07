@@ -4,11 +4,12 @@ trigger:
   entity_id: input_boolean.guest_mode
   to: 'off'
 action:
-  - service : automation.turn_off
-    entity_id: automation.lock_at_12_am
-  - service : automation.turn_off
-    entity_id: automation.morning_for_home
-  - service : automation.turn_off
-    entity_id: automation.morning_for_office
-  - service : automation.turn_off
-    entity_id: automation.light_on_for_office_trip
+  - service: automation.turn_on
+    entity_id:
+      - automation.lock_at_12_am
+      - automation.morning_for_home
+      - automation.morning_for_office
+      - automation.light_on_for_office_trip
+      - automation.plex_movie_pause
+      - automation.plex_movie_play
+      - automation.plex_movie_stop

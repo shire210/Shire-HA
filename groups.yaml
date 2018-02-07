@@ -2,7 +2,6 @@ Main:
   view: true
   icon: mdi:home
   entities:
-  - sensor.thermostat_temperature
   - switch.main_floor
   - group.alarm
   - group.guest_mode
@@ -17,6 +16,7 @@ Internet:
   icon: mdi:access-point-network
   entities:
   - group.Network
+  - group.Pi_hole
   - group.Deluge
   - group.Shirevision
   - group.Devices
@@ -34,7 +34,10 @@ Media:
   icon: mdi:video
   entities:
   - group.Harmony
+  - switch.spotify_switch
   - media_player.spotify
+  - media_player.media_room
+  - media_player.plex_media_room
   - media_player.plex_roku
   - media_player.roku
   - media_player.living_room_speaker
@@ -118,6 +121,11 @@ Deluge:
 - sensor.deluge_status
 - sensor.deluge_down_speed
 - sensor.deluge_up_speed
+Pi_hole:
+  name: Pi-hole
+  entities:
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
 Alarm:
 - input_select.alarm_schedule
 Guest_Mode:
@@ -132,10 +140,11 @@ Hue_Lights:
   control: hidden
   entities:
     - light.all_hue_lights
+    - light.entertainment_area_1
     - light.left_sofa_lamp
     - light.right_sofa_lamp
     - light.tv_lamp
-####Automations
+##################Automations##################
 Light_Automations:
   name: Light Automations
   control: hidden
@@ -155,8 +164,6 @@ Lock_Automations:
     - automation.lock_when_away
     - automation.unlock_when_home
     - automation.code_entry_home
-    - automation.ios_entry_home
-    - automation.ios_entry_home_with_TV
     - automation.home_exit
 TV_Automations:
   name: TV Automations
@@ -176,6 +183,8 @@ Other_Automations:
     - automation.send_work_detour
     - automation.activate_guest_mode
     - automation.deactivate_guest_mode
+    - automation.spotify_on_tablet
+    - automation.spotify_off_tablet
 ####Scripts
 Light_Scripts:
   name: Light Scripts
@@ -183,9 +192,10 @@ Light_Scripts:
   entities:
     - script.all_lights_on
     - script.all_lights_off
-    - script.bed_time_light
+    - script.bedtime_lamp
     - script.good_morning
     - script.good_night
+    - script.night_light_home
 Lock_Scripts:
   name: Lock Scripts
   control: hidden
@@ -207,6 +217,7 @@ TV_Scripts:
     - script.start_fios
     - script.start_plex
     - script.start_netflix
+    - script.start_youtube
     - script.start_xbox
     - script.input_select_harmony
     - script.tv_off
@@ -214,5 +225,5 @@ Other_Scripts:
   name: Other Scripts
   control: hidden
   entities:
-    - script.turn_on_main_floor
-    - script.turn_off_main_floor
+    - script.main_level_on
+    - script.main_level_off

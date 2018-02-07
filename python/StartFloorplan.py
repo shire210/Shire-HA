@@ -1,0 +1,3 @@
+import requests
+
+requests.get("https://autoremotejoaomgcd.appspot.com/sendmessage?key=APA91bFMCewFfvU-vRJXQ92Oge_6pRH3Xpw4nX4DjSkYs990UNXD_odwq8cLHQR51bSVbZ27nXTk1Ur4K79RBdftJTk2Oylo-xDH4VtkgEcHp8dUDkLJO6NxXNZaKRrazWTQxNvsFQZf&message=StartFloorplan")

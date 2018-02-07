@@ -1,7 +1,7 @@
 alias: Light on for Office Trip
 trigger:
   platform: time
-  at: '06:35:00'
+  at: '06:30:00'
 condition:
   condition: and
   conditions:
@@ -10,7 +10,7 @@ condition:
       state: 'Office'
     - condition: sun
       before: sunrise
-      after_offset: "0:20:00"
+      after_offset: "0:15:00"
 action:
     - service: light.turn_on
       data:

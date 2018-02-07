@@ -4,9 +4,10 @@ trigger:
   entity_id: input_boolean.ios_home
   to: 'on'
 action:
-  - service: notify.ios_michael_iphone
-    data_template:
-      message: 'Unlock Front Door?'
-      data:
-        push:
-          category: 'lock'
+  - service: lock.unlock
+    entity_id: lock.front_door
+  - service: script.night_light_home
+  - service: notify.notify
+    data:
+      message: 'Unlocked Front Door'
+      title: 'Home Assistant'

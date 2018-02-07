@@ -10,8 +10,6 @@ homeassistant:
 http:
   base_url: !secret url
   api_password: !secret api_password
-  ssl_certificate: /config/encrypt/fullchain.pem
-  ssl_key: /config/encrypt/privkey.pem
   ip_ban_enabled: True
   login_attempts_threshold: 5
 ############################################
@@ -65,8 +63,6 @@ ios:
             behavior: 'default'
 config:
 updater:
-frontend:
-  javascript_version: latest
 conversation:
 map:
 device_tracker:
@@ -129,8 +125,9 @@ camera:
       {% endif %}
 light:
   - platform: lifx
-  - platform: hue
-    host: 192.168.1.193
+hue:
+  bridges:
+    - host: 192.168.1.193
 remote:
   platform: harmony
   name: Living Room
@@ -140,7 +137,12 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
-
+  
+panel_iframe:
+  grafana:
+    title: Grafana
+    icon: mdi:chart-bar
+    url: 'https://shire.pw/grafana/'
 panel_custom: 
   - name: floorplan
     sidebar_title: Floorplan

@@ -1,0 +1,12 @@
+alias: Unlock When Home
+trigger:
+  platform: state
+  entity_id: input_boolean.ios_home
+  to: 'on'
+action:
+  - service: notify.ios_michael_iphone
+    data_template:
+      message: 'Unlock Front Door?'
+      data:
+        push:
+          category: 'lock'
