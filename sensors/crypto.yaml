@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  crypto:
+    value_template: "{{ (states.sensor.garlium.state | float * states.sensor.garlicoin.state | float) |round (2)}}"
+    unit_of_measurement: "USD"

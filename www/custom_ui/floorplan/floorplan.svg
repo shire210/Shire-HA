@@ -42,12 +42,12 @@
      id="namedview4395"
      showgrid="false"
      inkscape:zoom="1.4023336"
-     inkscape:cx="391.4029"
+     inkscape:cx="512.98595"
      inkscape:cy="298.45874"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="tv_select_layer"
+     inkscape:current-layer="layer2"
      units="px">
     <inkscape:grid
        type="xygrid"
@@ -1713,8 +1713,8 @@
        xml:space="preserve"
        x="813.64508"
        y="530.67365"
-       id="sensor.plex_watch"
-       inkscape:label="sensor.plex_watch"
+       id="sensor.tautulli_total"
+       inkscape:label="sensor.tautulli_total"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#f9f9f9;fill-opacity:1"><tspan
          sodipodi:role="line"
          id="tspan3909-5-4-2"

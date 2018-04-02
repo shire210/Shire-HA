@@ -2,8 +2,8 @@ platform: template
 sensors:
   plex_list:
     value_template: >-
-      {% for attr in states.sensor.plex_watch.attributes %}
-      {%- if not attr=="friendly_name" and not attr=="unit_of_measurement" %}
+      {% for attr in states.sensor.tautulli_total.attributes %}
+      {%- if not attr=="friendly_name" and not attr=="unit_of_measurement" and not attr=="icon" %}
         {{ attr }}
       {%- endif %}
       {%- endfor -%}

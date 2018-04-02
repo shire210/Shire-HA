@@ -21,7 +21,7 @@
           entities:
              - sensor.floorplan_time
              - sensor.floorplan_date
-             - sensor.plex_watch
+             - sensor.tautulli_total
              - sensor.plex_list
           text_template: '${entity.state ? entity.state : "Empty"}'
           

@@ -2,6 +2,7 @@ Main:
   view: true
   icon: mdi:home
   entities:
+  - sensor.crypto
   - switch.main_floor
   - group.alarm
   - group.guest_mode
@@ -16,6 +17,7 @@ Internet:
   icon: mdi:access-point-network
   entities:
   - group.Network
+  - group.Plex_Streams
   - group.Pi_hole
   - group.Deluge
   - group.Shirevision
@@ -55,7 +57,6 @@ Automate:
   - group.TV_Scripts
   - group.Other_Scripts
   - group.spotify_scripts
-
 Network:
 - sensor.speedtest_download
 - sensor.speedtest_upload
@@ -68,6 +69,14 @@ Lights:
 - light.foyer
 - light.bedroom
 - light.porch
+Plex_Streams:
+  name: Plex Streams
+  entities:
+    - sensor.tautulli_total
+    - sensor.tautulli_transcode
+    - sensor.tautulli_direct_play
+    - sensor.tautulli_direct_stream
+    - sensor.tautulli_total_bandwidth
 Devices:
 - device_tracker.michael_iphone
 - sensor.michael_iphone_battery_level
@@ -78,6 +87,9 @@ Devices:
 Location:
 - input_boolean.ios_home
 - device_tracker.michael_iphone
+Cryptocurrency:
+- sensor.garlium
+- sensor.garlicoin
 Weather:
 - sun.sun
 - sensor.dark_sky_apparent_temperature
@@ -152,6 +164,7 @@ Light_Automations:
     - automation.cabinet_light_with_main
     - automation.cabinet_light_off_with_main
     - automation.morning_for_home
+    - automation.morning_downstairs_for_office
     - automation.light_on_for_office_trip
     - automation.morning_for_office
     - automation.porch_on_sunset

@@ -1,0 +1,6 @@
+platform: rest
+resource: !secret garlicoin_url
+name: Garlium
+value_template: '{{value_json | float}}'
+unit_of_measurement: "Coins"
+force_update: true

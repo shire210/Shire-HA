@@ -12,11 +12,6 @@ main_level_on:
         brightness: 200
     - service: light.turn_on
       data:
-        entity_id: light.cabinet
-        brightness: 255
-        color_temp: 240
-    - service: light.turn_on
-      data:
         entity_id: light.foyer
         brightness: 255
     - service: remote.turn_on

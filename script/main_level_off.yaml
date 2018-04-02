@@ -6,8 +6,6 @@ main_level_off:
     - service: light.turn_off
       entity_id: light.kitchen
     - service: light.turn_off
-      entity_id: light.cabinet
-    - service: light.turn_off
       entity_id: light.foyer
     - service: remote.turn_off
       data_template:

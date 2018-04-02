@@ -7,7 +7,7 @@ trigger:
 condition:
   condition: template
   value_template: >
-    {{ not is_state('media_player.plex_roku', 'playing') }}
+    {{ not is_state('media_player.plex_media_room', 'playing') }}
 action:
   service: light.turn_off
   data:
