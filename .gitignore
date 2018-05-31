@@ -17,6 +17,7 @@ secrets.yaml
 *.conf
 plex.conf
 phue.conf
+entity_registry.yaml
 harmony_media_room.conf
 pyozw.sqlite
 .*
