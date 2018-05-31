@@ -111,6 +111,8 @@ media_player:
     entity_namespace: 'plex'
     scan_interval: 5
     use_episode_art: true
+    remove_unavailable_clients: false
+    include_non_clients: true
   - platform: spotify
     client_id: !secret spotify_id
     client_secret: !secret spotify_secret
@@ -137,12 +139,7 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
-  
-panel_iframe:
-  grafana:
-    title: Grafana
-    icon: mdi:chart-bar
-    url: 'https://shire.pw/grafana/'
+
 panel_custom: 
   - name: floorplan
     sidebar_title: Floorplan

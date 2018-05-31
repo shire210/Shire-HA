@@ -8,15 +8,10 @@ condition:
   conditions:
     - condition: time
       after: '06:30:00'
-      before: '07:00:00'
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
+      before: '08:00:00'
     - condition: state
-      entity_id: binary_sensor.alternate_route
-      state: 'on'
+      entity_id: input_select.alarm_schedule
+      state: 'Work'
 action:
   service: notify.ios_michael_iphone
   data:

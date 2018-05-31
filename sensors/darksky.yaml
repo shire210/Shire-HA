@@ -1,12 +1,13 @@
 platform: darksky
 api_key: !secret darksky_api
 name: "Dark Sky"
+forecast:
+  - 1
+  - 2
 monitored_conditions:
   - summary
   - temperature
   - wind_speed
-  - pressure
-  - wind_bearing
   - icon
   - precip_intensity
   - precip_probability

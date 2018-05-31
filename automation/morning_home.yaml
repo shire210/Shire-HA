@@ -1,7 +1,7 @@
 alias: Morning for Home
 trigger:
   platform: time
-  at: '07:00:00'
+  at: '07:06:00'
 condition:
   condition: state
   entity_id: input_select.alarm_schedule

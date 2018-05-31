@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  date_tomorrow:
+    friendly_name: 'Date Tomorrow'
+    value_template: >-
+      {%- set date = as_timestamp(now()) + (1 * 86400 ) -%}
+          {{ date|timestamp_custom("%-A") }}

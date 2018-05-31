@@ -5,6 +5,13 @@ goodbye:
       entity_id:
         - light.kitchen
         - light.cabinet
+        - light.bedroom
+        - light.bedroom_ceiling
+        - light.living_room_ceiling
+    - service: fan.turn_off
+      entity_id:
+        - fan.bedroom_fan
+        - fan.living_room_fan
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: lock.unlock

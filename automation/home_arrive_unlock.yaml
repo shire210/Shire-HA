@@ -7,7 +7,7 @@ action:
   - service: lock.unlock
     entity_id: lock.front_door
   - service: script.night_light_home
-  - service: notify.notify
+  - service: notify.ios_michael_iphone
     data:
       message: 'Unlocked Front Door'
       title: 'Home Assistant'

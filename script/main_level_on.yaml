@@ -14,6 +14,10 @@ main_level_on:
       data:
         entity_id: light.foyer
         brightness: 255
+    - service: fan.turn_on
+      data:
+        entity_id: fan.living_room_fan
+        speed: low
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room

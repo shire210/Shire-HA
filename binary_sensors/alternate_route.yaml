@@ -1,6 +1,6 @@
 platform: template
 sensors:
   alternate_route:
-    value_template: '{{ states.sensor.home_to_work_time.attributes.distance | replace(" mi","")|float != 23.4 }}'
+    value_template: '{{ state_attr( "sensor.home_to_work_time", "distance") | replace(" mi","")|float != 23.6 }}'
     friendly_name: 'Alternate Route'
     device_class: moving

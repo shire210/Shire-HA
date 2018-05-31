@@ -66,3 +66,15 @@ media_player.plex_aftt:
   name:
   platform: plex
   unique_id: 782f326c884407ce-com-plexapp-android
+media_player.roku_2:
+  name:
+  platform: plex
+  unique_id: dd1b755944f830e8db777a8210372d36
+media_player.plex_desktop6ud4l2v:
+  name:
+  platform: plex
+  unique_id: k1x7e5i111vav0bglr45i2j4
+media_player.ipad_2:
+  name:
+  platform: plex
+  unique_id: D800BDAE-8152-4605-B370-9E393E08E9E0

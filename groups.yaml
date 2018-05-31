@@ -6,6 +6,7 @@ Main:
   - switch.main_floor
   - group.alarm
   - group.guest_mode
+  - group.fans
   - group.commute
   - group.Lights
   - group.Location
@@ -30,6 +31,9 @@ Climate:
   - sensor.dark_sky_apparent_temperature
   - group.Weather
   - group.Ecobee
+  - group.fans
+  - group.Tomorrow
+  - group.After_Tomorrow
   - switch.fireplace
 Media:
   view: true
@@ -69,6 +73,8 @@ Lights:
 - light.foyer
 - light.bedroom
 - light.porch
+- light.bedroom_ceiling
+- light.living_room_ceiling
 Plex_Streams:
   name: Plex Streams
   entities:
@@ -77,6 +83,10 @@ Plex_Streams:
     - sensor.tautulli_direct_play
     - sensor.tautulli_direct_stream
     - sensor.tautulli_total_bandwidth
+Fans:
+- fan.living_room_fan
+- fan.bedroom_fan
+- sensor.fan_mode
 Devices:
 - device_tracker.michael_iphone
 - sensor.michael_iphone_battery_level
@@ -84,12 +94,11 @@ Devices:
 - device_tracker.ipad
 - sensor.ipad_battery_level
 - sensor.ipad_battery_state
+- binary_sensor.bedroom_fan
+- binary_sensor.living_room_fan
 Location:
 - input_boolean.ios_home
 - device_tracker.michael_iphone
-Cryptocurrency:
-- sensor.garlium
-- sensor.garlicoin
 Weather:
 - sun.sun
 - sensor.dark_sky_apparent_temperature
@@ -101,9 +110,30 @@ Weather:
 - sensor.dark_sky_humidity
 - sensor.dark_sky_daily_high_apparent_temperature
 - sensor.dark_sky_daily_low_apparent_temperature
+Tomorrow:
+- sensor.date_tomorrow
+- sensor.dark_sky_icon_1
+- sensor.dark_sky_cloud_coverage_1
+- sensor.dark_sky_precip_probability_1
+- sensor.dark_sky_precip_intensity_1
+- sensor.dark_sky_wind_speed_1
+- sensor.dark_sky_humidity_1
+- sensor.dark_sky_daily_high_apparent_temperature_1
+- sensor.dark_sky_daily_low_apparent_temperature_1
+After_Tomorrow:
+- sensor.date_two_days
+- sensor.dark_sky_icon_2
+- sensor.dark_sky_cloud_coverage_2
+- sensor.dark_sky_precip_probability_2
+- sensor.dark_sky_precip_intensity_2
+- sensor.dark_sky_wind_speed_2
+- sensor.dark_sky_humidity_2
+- sensor.dark_sky_daily_high_apparent_temperature_2
+- sensor.dark_sky_daily_low_apparent_temperature_2
 Ecobee:
 - binary_sensor.thermostat_occupancy
 - binary_sensor.office_occupancy
+- sensor.thermostat_mode
 - sensor.thermostat_temperature
 - sensor.office_temperature
 - sensor.thermostat_humidity

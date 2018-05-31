@@ -5,11 +5,18 @@ good_night:
       entity_id:
         - light.kitchen
         - light.cabinet
+        - light.living_room_ceiling
     - service: script.turn_on
       entity_id: script.bedtime_lamp
+    - service: fan.turn_off
+      entity_id: fan.living_room_fan
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: lock.lock
       entity_id: lock.front_door
     - service: switch.turn_off
       entity_id: switch.fireplace
+    - service: fan.turn_on
+      data:
+        entity_id: fan.bedroom_fan
+        speed: low

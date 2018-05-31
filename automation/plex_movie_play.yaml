@@ -4,14 +4,12 @@ trigger:
   entity_id: media_player.plex_media_room
   to: 'playing'
 condition:
-  condition: or
+  condition: and
   conditions:
-    - condition: sun
-      after: sunset
-      after_offset: "-0:20:00"
-    - condition: sun
-      before: sunrise
-      after_offset: "0:20:00"
+    - condition: template
+      value_template: '{{ states.media_player.plex_media_room.attributes.media_content_type == "movie" }}'
+    - condition: template
+      value_template: '{{ states.sun.sun.attributes.elevation <= 4 }}'
 action:
   - service: light.turn_on
     data:
@@ -23,3 +21,4 @@ action:
       - light.foyer
       - light.kitchen
       - light.living_room
+      - light.living_room_ceiling

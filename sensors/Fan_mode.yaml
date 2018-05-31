@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  fan_mode:
+    value_template: >
+      {% if is_state("fan.living_room_fan", "on")%}
+        {{ states.fan.living_room_fan.attributes.speed }}
+      {% else %}
+        Off
+      {% endif %}
+    friendly_name: "Fan Mode"

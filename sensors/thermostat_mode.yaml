@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  thermostat_mode:
+    value_template: '{{ states.climate.thermostat.attributes.operation }}'
+    friendly_name: "Thermostat Mode"

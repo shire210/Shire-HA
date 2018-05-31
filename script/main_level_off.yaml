@@ -7,6 +7,8 @@ main_level_off:
       entity_id: light.kitchen
     - service: light.turn_off
       entity_id: light.foyer
+    - service: fan.turn_off
+      entity_id: fan.living_room_fan
     - service: remote.turn_off
       data_template:
         entity_id: remote.living_room

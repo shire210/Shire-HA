@@ -8,7 +8,11 @@ good_morning:
         color_temp: 200
         transition: 90
     - delay:
-        minutes: 20
+        minutes: 8
+    - service: light.turn_on
+      entity_id: light.bedroom_ceiling
+    - delay:
+        minutes: 12
     - service: light.turn_off
       data:
         entity_id: light.bedroom
