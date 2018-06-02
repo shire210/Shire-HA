@@ -78,3 +78,15 @@ media_player.ipad_2:
   name:
   platform: plex
   unique_id: D800BDAE-8152-4605-B370-9E393E08E9E0
+media_player.plex_chrome_2:
+  name:
+  platform: plex
+  unique_id: mdyr5h3dods4otcx769i8j5u
+media_player.roku:
+  name:
+  platform: roku
+  unique_id: 5S56AL454414
+media_player.media_room:
+  name:
+  platform: roku
+  unique_id: YH0093788744

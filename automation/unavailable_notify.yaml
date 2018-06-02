@@ -1,0 +1,13 @@
+alias: notify that a device is offline
+trigger:
+  - platform: state
+    entity_id: fan.bedroom_fan
+    to: 'unavailable'
+  - platform: state
+    entity_id: fan.living_room_fan
+    to: 'unavailable'
+action:
+  service: notify.ios_michael_iphone
+  data_template:
+    message: >
+      {{ trigger.entity_id.split('.')[1] }} is offline.

@@ -1,0 +1,7 @@
+platform: history_stats
+name: Plex Movie Time
+entity_id: sensor.plex_video_type
+state: 'movie'
+type: count
+end: '{{ now() }}'
+duration: '00:00:30'

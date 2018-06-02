@@ -83,6 +83,8 @@ Plex_Streams:
     - sensor.tautulli_direct_play
     - sensor.tautulli_direct_stream
     - sensor.tautulli_total_bandwidth
+    - sensor.plex_video_type
+    - sensor.plex_movie_time
 Fans:
 - fan.living_room_fan
 - fan.bedroom_fan
@@ -108,8 +110,8 @@ Weather:
 - sensor.dark_sky_precip_intensity
 - sensor.dark_sky_wind_speed
 - sensor.dark_sky_humidity
-- sensor.dark_sky_daily_high_apparent_temperature
-- sensor.dark_sky_daily_low_apparent_temperature
+- sensor.dark_sky_daytime_high_temperature
+- sensor.dark_sky_overnight_low_temperature
 Tomorrow:
 - sensor.date_tomorrow
 - sensor.dark_sky_icon_1
@@ -118,8 +120,8 @@ Tomorrow:
 - sensor.dark_sky_precip_intensity_1
 - sensor.dark_sky_wind_speed_1
 - sensor.dark_sky_humidity_1
-- sensor.dark_sky_daily_high_apparent_temperature_1
-- sensor.dark_sky_daily_low_apparent_temperature_1
+- sensor.dark_sky_daytime_high_temperature_1
+- sensor.dark_sky_overnight_low_temperature_1
 After_Tomorrow:
 - sensor.date_two_days
 - sensor.dark_sky_icon_2
@@ -128,8 +130,8 @@ After_Tomorrow:
 - sensor.dark_sky_precip_intensity_2
 - sensor.dark_sky_wind_speed_2
 - sensor.dark_sky_humidity_2
-- sensor.dark_sky_daily_high_apparent_temperature_2
-- sensor.dark_sky_daily_low_apparent_temperature_2
+- sensor.dark_sky_daytime_high_temperature_2
+- sensor.dark_sky_overnight_low_temperature_2
 Ecobee:
 - binary_sensor.thermostat_occupancy
 - binary_sensor.office_occupancy
@@ -228,6 +230,7 @@ Other_Automations:
     - automation.deactivate_guest_mode
     - automation.spotify_on_tablet
     - automation.spotify_off_tablet
+    - automation.notify_that_a_device_is_offline
 ####Scripts
 Light_Scripts:
   name: Light Scripts

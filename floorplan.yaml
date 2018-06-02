@@ -44,12 +44,12 @@
         - name: Weather
           entities:
              - sensor.dark_sky_apparent_temperature
-             - sensor.dark_sky_daily_high_apparent_temperature
-             - sensor.dark_sky_daily_low_apparent_temperature
-             - sensor.dark_sky_daily_high_apparent_temperature_1
-             - sensor.dark_sky_daily_low_apparent_temperature_1
-             - sensor.dark_sky_daily_high_apparent_temperature_2
-             - sensor.dark_sky_daily_low_apparent_temperature_2
+             - sensor.dark_sky_daytime_high_temperature
+             - sensor.dark_sky_overnight_low_temperature
+             - sensor.dark_sky_daytime_high_temperature_1
+             - sensor.dark_sky_overnight_low_temperature_1
+             - sensor.dark_sky_daytime_high_temperature_2
+             - sensor.dark_sky_overnight_low_temperature_2
              - sensor.thermostat_temperature
              - sensor.office_temperature
           #text_template: '${entity.state ? entity.state : "unknown"}'
@@ -79,7 +79,7 @@
              - light.cabinet
              - light.porch
              - light.foyer
-             - fan.living_room_fan
+             - light.living_room_ceiling
           states:
             - state: 'on'
               class: 'light-on'
@@ -143,15 +143,23 @@
           entities:
              - switch.main_floor
              - switch.fireplace
+             - input_boolean.guest_mode
           states:
             - state: 'on'
               class: 'switch-on'
             - state: 'off'
               class: 'switch-off'
           action:
-            domain: switch
+            domain: homeassistant
             service: toggle
             
+        - name: Spotify
+          entities:
+             - switch.spotify_switch
+          action:
+            domain: switch
+            service: turn_on
+
         - name: Buttons
           entities:
             - script.start_plex

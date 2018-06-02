@@ -14,5 +14,5 @@ monitored_conditions:
   - apparent_temperature
   - cloud_cover
   - humidity
-  - apparent_temperature_max
-  - apparent_temperature_min
+  - temperature_high
+  - temperature_low

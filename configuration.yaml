@@ -64,6 +64,8 @@ ios:
 config:
 updater:
 conversation:
+frontend:
+  javascript_version: latest
 map:
 device_tracker:
   - platform: owntracks_http

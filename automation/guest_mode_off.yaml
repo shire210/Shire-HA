@@ -13,3 +13,6 @@ action:
       - automation.plex_movie_pause
       - automation.plex_movie_play
       - automation.plex_movie_stop
+      - automation.morning_downstairs_for_office
+      - automation.lock_when_away
+      - automation.unlock_when_home

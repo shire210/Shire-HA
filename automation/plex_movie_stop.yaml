@@ -11,8 +11,9 @@ trigger:
 condition:
   condition: and
   conditions:
-    - condition: template
-      value_template: '{{ states.media_player.plex_media_room.attributes.media_content_type == "movie" }}'
+    - condition: numeric_state
+      entity_id: sensor.plex_movie_time
+      above: '0.00'
     - condition: template
       value_template: '{{ states.sun.sun.attributes.elevation <= 4 }}'
 action:
