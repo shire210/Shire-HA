@@ -14,3 +14,7 @@ switches:
     command_on: "curl -X POST http://192.168.1.220:8060/keypress/PowerOn"
     command_off: "curl -X POST http://192.168.1.220:8060/launch/837?contentId=5EydPiL-S64&mediaType=live"
     friendly_name: Bedroom Funhaus
+  bedroom_plex:
+    command_on: "curl -X POST http://192.168.1.220:8060/keypress/PowerOn"
+    command_off: "curl -X POST http://192.168.1.220:8060/launch/13535"
+    friendly_name: Bedroom Plex

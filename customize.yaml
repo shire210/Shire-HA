@@ -63,8 +63,13 @@ switch.bedroom_funhaus:
 switch.bedroom_roku:
   emulated_hue_hidden: false
   emulated_hue_name: Bedroom TV
+switch.bedroom_plex:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom Plex
 
 ######WEATHER######
+weather.thermostat:
+  friendly_name: Weather
 sensor.dark_sky_cloud_coverage:
   friendly_name: Cloud Coverage
   icon: mdi:cloud

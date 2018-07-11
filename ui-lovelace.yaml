@@ -1,34 +1,10 @@
 title: Home Assistant
-# Exclude entites from "Unused entities" view
+
 resources:
   - url: /local/cards/gauge-card.js?v=1
     type: js
 
 views:
-#  - title: Example
-#    # Each view can have a different theme applied.
-#    theme: midnight
-#    cards:
-#        # The filter card will filter entities for their state
-#      - type: entity-filter
-#        entities:
-#          - device_tracker.paulus
-#          - device_tracker.anne_there
-#        state_filter:
-#          - 'home'
-#        card_config:
-#          type: glance
-#          title: People that are home
-#      - type: entities
-#        title: Example
-#        entities:
-#          - entity: light.living_room
-#            # Override the name to use
-#            name: LR Lights
-#      - type: markdown
-#        title: Lovelace
-#        content: >
-#          Welcome to your **Lovelace UI**.
   - icon: mdi:home
     title: Main
     id: main
@@ -73,6 +49,11 @@ views:
         show_header_toggle: false
         entities:
           - switch.fireplace
+      - type: entities
+        title: Outdoor Lights
+        show_header_toggle: false
+        entities:
+          - light.porch
   - icon: mdi:hotel
     title: Bedroom
     id: bedroom
@@ -87,6 +68,7 @@ views:
         show_header_toggle: true
         entities:
           - switch.bedroom_roku
+          - switch.bedroom_plex
           - light.bedroom
           - light.bedroom_ceiling
           - fan.bedroom_fan
@@ -117,8 +99,8 @@ views:
                 max: 120
                 severity:
                   red: 0
-                  amber: 60
-                  green: 100
+                  amber: 70
+                  green: 95
               - type: custom:gauge-card
                 title: Upload
                 entity: sensor.speedtest_upload
@@ -126,8 +108,8 @@ views:
                 max: 120
                 severity:
                   red: 0
-                  amber: 60
-                  green: 100
+                  amber: 70
+                  green: 95
           - type: custom:gauge-card
             title: Ping
             entity: sensor.speedtest_ping
@@ -152,38 +134,60 @@ views:
         entities:
           - sensor.pihole_ads_blocked_today
           - sensor.pihole_ads_percentage_blocked_today
+      - type: entities
+        title: Device Status
+        entities:
+          - entity: binary_sensor.hub
+            name: Wink Hub
+          - binary_sensor.living_room_fan
+          - binary_sensor.bedroom_fan
+      - type: entities
+        title: Battery Status
+        entities:
+          - entity: sensor.michael_iphone_battery_level
+            name: iPhone Battery
+          - entity: sensor.ipad_battery_level
+            name: iPad Battery
+          - sensor.battery_front_door
   - icon: mdi:thermometer-lines
     title: Weather
     id: weather
     cards:
+      - type: weather-forecast
+        entity: weather.thermostat
       - type: custom:gauge-card
         title: Rain
         entity: sensor.dark_sky_precip_probability
         min: 0
         max: 100
-      - type: glance
-        title: Thermostat
-        entities:
-          - entity: sensor.thermostat_temperature
-            name: Downstairs
-          - entity: sensor.office_temperature
-            name: Upstairs
-          - entity: sensor.thermostat_humidity
-            name: Humidity
-      - type: glance
-        title: Weather
-        entities:
-          - entity: sensor.dark_sky_daytime_high_temperature
-            name: High
-          - entity: sensor.dark_sky_overnight_low_temperature
-            name: Low
-          - entity: sensor.dark_sky_temperature
-            name: Current
-      - type: history-graph
-        title: "Thermostat Mode"
-        hours_to_show: 4
-        entities:
-          - sensor.thermostat_mode
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Ecobee
+            entities:
+              - climate.thermostat
+              - sensor.thermostat_mode
+              - entity: binary_sensor.thermostat_occupancy
+                name: 1st Floor Occupancy
+              - entity: binary_sensor.office_occupancy
+                name: 2nd Floor Occupancy
+              - sensor.24_hour_ac_running
+          - type: glance
+            title: Thermostat
+            entities:
+              - entity: sensor.thermostat_temperature
+                name: Downstairs
+              - entity: sensor.office_temperature
+                name: Upstairs
+              - entity: binary_sensor.temp_balance
+                name: Difference
+              - entity: sensor.thermostat_humidity
+                name: Humidity
+          - type: history-graph
+            title: "Thermostat Mode"
+            hours_to_show: 4
+            entities:
+              - sensor.thermostat_mode
   - icon: mdi:plex
     title: Plex
     id: plex
@@ -200,6 +204,10 @@ views:
         entities:
           - entity: sensor.plex_list
             name: Users Streaming
+      - type: entities
+        entities:
+          - entity: sensor.tautulli_total_bandwidth
+            name: Streaming Bandwith
       - type: media-control
         entity: media_player.plex_media_room
       - type: media-control
@@ -270,6 +278,7 @@ views:
           - automation.remote_start_activity_from_input_select_living_room_tv
           - automation.youtube_on_office
           - automation.youtube_on_bedroom
+          - automation.plex_on_bedroom
 excluded_entities:
   - media_player.michaels_alexa_apps
   - media_player.michaels_fire

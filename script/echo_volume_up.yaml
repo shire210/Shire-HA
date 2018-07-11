@@ -41,9 +41,3 @@ echo_volume_up:
       data:
         entity_id: media_player.spotify
         volume_level: .5
-    - delay:
-        seconds: 30
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.spotify
-        volume_level: .6

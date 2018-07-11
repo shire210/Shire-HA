@@ -1,0 +1,7 @@
+platform: history_stats
+name: 24 Hour AC Running
+entity_id: sensor.thermostat_mode
+state: 'cool'
+type: time
+end: '{{ now() }}'
+duration: '24:00:00'
