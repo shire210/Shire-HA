@@ -1,0 +1,11 @@
+alias: Schedule Set Weekend
+trigger:
+  platform: event
+  event_type: ios.notification_action_fired
+  event_data:
+    actionName: WEEKEND
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.alarm_schedule
+      option: Weekend

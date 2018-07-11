@@ -19,3 +19,7 @@ night_light_home:
       data:
         entity_id: light.foyer
         brightness: 255
+    - service: light.turn_on
+      data:
+        entity_id: light.porch
+        brightness: 255

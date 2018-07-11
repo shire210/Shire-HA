@@ -4,7 +4,7 @@ light.kitchen:
   emulated_hue_name: Kitchen
 light.living_room:
   emulated_hue_hidden: false
-  emulated_hue_name: Living Room Lamps
+  emulated_hue_name: Lamps
 light.cabinet:
   emulated_hue_hidden: false
   emulated_hue_name: Cabinet
@@ -54,6 +54,15 @@ switch.fireplace:
   icon: mdi:fire
 input_boolean.ios_home:
   icon: mdi:cellphone-wireless
+switch.office_funhaus:
+  emulated_hue_hidden: false
+  emulated_hue_name: Office Fun House
+switch.bedroom_funhaus:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom Fun House
+switch.bedroom_roku:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom TV
 
 ######WEATHER######
 sensor.dark_sky_cloud_coverage:
@@ -101,8 +110,13 @@ sensor.floorplan_time:
 ######COMPUTER######
 sensor.speedtest_download:
   icon: mdi:cloud-download
+  friendly_name: Download
 sensor.speedtest_upload:
   icon: mdi:cloud-upload
+  friendly_name: Upload
+sensor.speedtest_ping:
+  icon: mdi:speedometer
+  friendly_name: Ping
 switch.wake_on_lan:
   friendly_name: Desktop
   icon: mdi:desktop-tower
@@ -115,10 +129,10 @@ media_player.shires_roku:
 device_tracker.ipad:
   icon: tablet-ipad
 sensor.deluge_down_speed:
-  friendly_name: Deluge Download Speed
+  friendly_name: Deluge Download
   icon: mdi:download-network  
 sensor.deluge_up_speed:
-  friendly_name: Deluge Upload Speed
+  friendly_name: Deluge Upload
   icon: mdi:upload-network
 sensor.deluge_status:
   friendly_name: Deluge Status
@@ -140,4 +154,10 @@ sensor.office_temperature_2:
 climate.thermostat_2:
   hidden: true
 remote.living_room_2:
+  hidden: true
+media_player.this_device:
+  hidden: true
+media_player.michaels_fire:
+  hidden: true
+media_player.michaels_alexa_apps:
   hidden: true

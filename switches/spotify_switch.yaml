@@ -1,5 +1,0 @@
-platform: command_line
-switches:
-  spotify_switch:
-    command_on: "python3 /config/python/StartSpotify.py"
-    command_off: "python3 /config/python/StartFloorplan.py"

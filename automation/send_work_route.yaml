@@ -1,4 +1,4 @@
-alias: Send work detour
+alias: Send work Route
 trigger:
   platform: state
   entity_id: input_boolean.ios_home
@@ -11,11 +11,14 @@ condition:
       before: '08:00:00'
     - condition: state
       entity_id: input_select.alarm_schedule
-      state: 'Work'
+      state: 'Office'
 action:
   service: notify.ios_michael_iphone
   data:
-    title: "Work Detour"
-    message: "Navigate using detour"
+    title: "Navigation"
+    message: |
+      The trip to work will take {{states.sensor.home_to_work_time.state}} minutes.
+      {% if is_state('binary_sensor.alternate_route', 'on')%}{{"ALTERNATE ROUTE!"}}
+      {% endif%}Click to navigate
     data:
       url: waze://?favorite=work

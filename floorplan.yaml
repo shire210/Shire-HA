@@ -235,16 +235,12 @@
                 - layer-hidden
               default_class: layer-hidden
               
-        - name: Camera Images
-          entities:
-            - entity: media_player.spotify
-              element: camera.spotify_cover
-          camera_image_template: '${entity.attributes.entity_picture}'
-             
 #        - name: Camera Images
 #          entities:
-#            - camera.spotify_cover
-#          camera_image_template: '${entity.attributes.entity_picture}'             
+#            - entity: media_player.spotify
+#              element: camera.spotify_cover
+#          camera_image_template: '${entity.attributes.entity_picture}'
+            
 
     #### TEMPLATES ####
         - name: TV

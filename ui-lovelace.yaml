@@ -1,0 +1,315 @@
+title: Home Assistant
+# Exclude entites from "Unused entities" view
+resources:
+  - url: /local/cards/gauge-card.js?v=1
+    type: js
+
+views:
+#  - title: Example
+#    # Each view can have a different theme applied.
+#    theme: midnight
+#    cards:
+#        # The filter card will filter entities for their state
+#      - type: entity-filter
+#        entities:
+#          - device_tracker.paulus
+#          - device_tracker.anne_there
+#        state_filter:
+#          - 'home'
+#        card_config:
+#          type: glance
+#          title: People that are home
+#      - type: entities
+#        title: Example
+#        entities:
+#          - entity: light.living_room
+#            # Override the name to use
+#            name: LR Lights
+#      - type: markdown
+#        title: Lovelace
+#        content: >
+#          Welcome to your **Lovelace UI**.
+  - icon: mdi:home
+    title: Main
+    id: main
+    cards:
+      - type: entities
+        title: Entry
+        show_header_toggle: false
+        entities:
+          - lock.front_door
+          - input_boolean.ios_home
+          - sensor.battery_front_door
+          - light.porch
+      - type: entities
+        title: TV
+        show_header_toggle: false
+        entities:
+          - remote.living_room
+          - sensor.living_room
+          - input_select.living_room_tv
+      - type: entities
+        title: Fan
+        show_header_toggle: false
+        entities:
+          - fan.living_room_fan
+      - type: entities
+        title: Commute
+        entities:
+          - binary_sensor.alternate_route
+          - sensor.home_to_work_time
+          - sensor.commute_home_time
+      - type: entities
+        title: Lights
+        show_header_toggle: true
+        entities:
+          - light.living_room
+          - light.living_room_ceiling
+          - light.foyer
+          - light.kitchen
+          - light.cabinet
+      - type: entities
+        title: Fireplace
+        show_header_toggle: false
+        entities:
+          - switch.fireplace
+  - icon: mdi:hotel
+    title: Bedroom
+    id: bedroom
+    cards:
+      - type: entities
+        entities:
+          - input_select.alarm_schedule
+          - input_boolean.morning_alexa
+          - input_boolean.night_youtube
+      - type: entities
+        title: Bedroom Switches
+        show_header_toggle: true
+        entities:
+          - switch.bedroom_roku
+          - light.bedroom
+          - light.bedroom_ceiling
+          - fan.bedroom_fan
+      - type: media-control
+        entity: media_player.roku_yn00yp848585
+      - type: media-control
+        entity: media_player.bedroom
+      - type: media-control
+        entity: media_player.49_tcl_roku_tv
+  - icon: mdi:access-point-network
+    title: Network
+    id: network
+    cards:
+      - type: entities
+        entities:
+          - switch.wake_on_lan
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              # SPEEDTEST
+          - type: horizontal-stack
+            cards:
+              - type: custom:gauge-card
+                title: Download
+                entity: sensor.speedtest_download
+                min: 0
+                max: 120
+                severity:
+                  red: 0
+                  amber: 60
+                  green: 100
+              - type: custom:gauge-card
+                title: Upload
+                entity: sensor.speedtest_upload
+                min: 0
+                max: 120
+                severity:
+                  red: 0
+                  amber: 60
+                  green: 100
+          - type: custom:gauge-card
+            title: Ping
+            entity: sensor.speedtest_ping
+            min: 0
+            max: 50
+            severity:
+              green: 0
+              amber: 10
+              red: 20
+      - type: entities
+        title: Plex Downloads
+        show_header_toggle: false
+        entities:
+          - switch.deluge_switch
+          - entity: sensor.sonarr_disk_space
+            name: Disk Space
+          - sensor.deluge_status
+          - sensor.deluge_down_speed
+          - sensor.deluge_up_speed
+      - type: entities
+        title: Pi-Hole
+        entities:
+          - sensor.pihole_ads_blocked_today
+          - sensor.pihole_ads_percentage_blocked_today
+  - icon: mdi:thermometer-lines
+    title: Weather
+    id: weather
+    cards:
+      - type: custom:gauge-card
+        title: Rain
+        entity: sensor.dark_sky_precip_probability
+        min: 0
+        max: 100
+      - type: glance
+        title: Thermostat
+        entities:
+          - entity: sensor.thermostat_temperature
+            name: Downstairs
+          - entity: sensor.office_temperature
+            name: Upstairs
+          - entity: sensor.thermostat_humidity
+            name: Humidity
+      - type: glance
+        title: Weather
+        entities:
+          - entity: sensor.dark_sky_daytime_high_temperature
+            name: High
+          - entity: sensor.dark_sky_overnight_low_temperature
+            name: Low
+          - entity: sensor.dark_sky_temperature
+            name: Current
+      - type: history-graph
+        title: "Thermostat Mode"
+        hours_to_show: 4
+        entities:
+          - sensor.thermostat_mode
+  - icon: mdi:plex
+    title: Plex
+    id: plex
+    cards:
+      - type: custom:gauge-card
+        entity: sensor.tautulli_total
+        min: 0
+        max: 3
+        severity:
+          green: 0
+          amber: 2
+          red: 3
+      - type: entities
+        entities:
+          - entity: sensor.plex_list
+            name: Users Streaming
+      - type: media-control
+        entity: media_player.plex_media_room
+      - type: media-control
+        entity: media_player.49_tcl_roku_tv
+      - type: media-control
+        entity: media_player.roku_2
+  - icon: mdi:music
+    title: Music
+    id: music
+    cards:
+      - type: media-control
+        entity: media_player.spotify
+      - type: media-control
+        entity: media_player.kitchen
+      - type: media-control
+        entity: media_player.office
+      - type: media-control
+        entity: media_player.bedroom
+      - type: media-control
+        entity: media_player.everywhere
+  - icon: mdi:home-automation
+    title: Automations
+    id: automation
+    cards:
+      - type: picture-entity
+        image: https://www.home-assistant.io/images/default-social.png
+        entity: input_boolean.guest_mode
+        tap_action: toggle
+      - type: entities
+        title: Lock
+        entities:
+          - automation.lock_when_away
+          - automation.unlock_when_home
+          - automation.lock_at_12_am
+          - automation.code_entry_home
+      - type: entities
+        title: Lights
+        entities:
+          - automation.cabinet_light_with_main
+          - automation.cabinet_light_off_with_main
+          - automation.porch_on_sunset
+          - automation.porch_off_11pm
+      - type: entities
+        title: Plex
+        entities:
+          - automation.plex_movie_play
+          - automation.plex_movie_pause
+          - automation.plex_movie_stop
+      - type: entities
+        title: Morning
+        entities:
+          - automation.morning_for_home
+          - automation.morning_for_office
+          - automation.morning_downstairs_for_office
+          - automation.light_on_for_office_trip
+          - automation.schedule_set_home
+          - automation.schedule_set_office
+          - automation.schedule_set_weekend
+          - automation.send_work_route
+      - type: entities
+        title: Other
+        entities:
+          - automation.ac_fan_balance
+          - automation.activate_guest_mode
+          - automation.deactivate_guest_mode
+          - automation.notify_that_a_device_is_offline
+          - automation.remote_external_update_living_room
+          - automation.remote_start_activity_from_input_select_living_room_tv
+          - automation.youtube_on_office
+          - automation.youtube_on_bedroom
+excluded_entities:
+  - media_player.michaels_alexa_apps
+  - media_player.michaels_fire
+  - media_player.this_device
+  - scene.lock_door
+  - scene.unlock_door
+  - switch.front_lock
+  - switch.harmony_night_bye
+  - switch.office_funhaus
+  - switch.bedroom_funhaus
+  - script.start_fios
+  - script.start_netflix
+  - script.start_plex
+  - script.start_xbox
+  - script.start_youtube
+  - script.tv_off
+  - script.input_select_harmony
+  - script.bedtime_lamp
+  - script.lock_when_gone
+  - script.night_light_home
+  - script.echo_volume_up
+  - script.youtube_for_bedroom
+  - script.main_level_on
+  - script.main_level_off
+  - script.all_lights_on
+  - script.all_lights_off
+  - script.spotify_next
+  - script.spotify_play_pause
+  - script.spotify_previous
+  - sensor.floorplan_date
+  - sensor.floorplan_time
+  - sensor.plex_movie_time
+  - sensor.living_room
+  - sensor.spotify_artist
+  - sensor.spotify_song
+  - sensor.spotify_base_url
+  - sensor.plex_video_type
+  - history_graph.ac_fan
+  - light.entertainment_area_1
+  - light.left_sofa_lamp
+  - light.right_sofa_lamp
+  - light.tv_lamp
+  

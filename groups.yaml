@@ -152,7 +152,7 @@ Harmony:
 - input_select.living_room_tv
 Shirevision:
 - sensor.plex_watch
-- binary_sensor.plex_limit
+- binary_sensor.plex_in_use
 - sensor.sonarr_disk_space
 - sensor.sonarr_queue
 - sensor.sonarr_upcoming
@@ -225,12 +225,15 @@ Other_Automations:
   entities:
     - automation.ac_fan_balance
     - automation.janice_limit_test
-    - automation.send_work_detour
+    - automation.send_work_route
     - automation.activate_guest_mode
     - automation.deactivate_guest_mode
     - automation.spotify_on_tablet
     - automation.spotify_off_tablet
     - automation.notify_that_a_device_is_offline
+    - automation.schedule_set_home
+    - automation.schedule_set_office
+    - automation.schedule_set_weekend
 ####Scripts
 Light_Scripts:
   name: Light Scripts
@@ -273,3 +276,7 @@ Other_Scripts:
   entities:
     - script.main_level_on
     - script.main_level_off
+    - script.echo_volume_up
+    - script.youtube_for_bedroom
+    - input_boolean.morning_alexa
+    - input_boolean.night_youtube

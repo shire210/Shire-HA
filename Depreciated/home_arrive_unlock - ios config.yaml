@@ -1,0 +1,24 @@
+ios:
+  push:
+    categories:
+      - name: door
+        identifier: 'lock'
+        actions:
+          - identifier: 'UNLOCK_DOOR'
+            title: 'Yes'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: yes
+            behavior: 'default'
+          - identifier: 'UNLOCK_WITH_TV'
+            title: 'Yes with TV'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'
+          - identifier: 'DISMISS'
+            title: 'Dismiss'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'

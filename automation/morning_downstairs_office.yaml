@@ -1,7 +1,7 @@
 alias: Morning Downstairs for Office
 trigger:
   platform: time
-  at: '06:18:00'
+  at: '06:21:00'
 condition:
   condition: state
   entity_id: input_select.alarm_schedule

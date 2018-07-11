@@ -11,3 +11,12 @@ action:
     data:
       message: 'Unlocked Front Door'
       title: 'Home Assistant'
+  - condition: state
+    entity_id: light.porch
+    state: 'off'
+  - service: light.turn_on
+    entity_id: light.porch
+  - delay:
+      minutes: 2
+  - service: light.turn_off
+    entity_id: light.porch

@@ -1,6 +1,6 @@
 platform: template
 sensors:
-  plex_limit:
-    value_template: '{{ states.sensor.tautulli_total.state | int < 2 }}'
-    friendly_name: 'Plex for all'
-    device_class: connectivity
+  plex_in_use:
+    value_template: '{{ states.sensor.tautulli_total.state | int > 0 }}'
+    friendly_name: 'Plex Streaming'
+    device_class: moving

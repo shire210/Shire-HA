@@ -8,7 +8,10 @@ good_morning:
         color_temp: 200
         transition: 90
     - delay:
-        minutes: 8
+        minutes: 6
+    - service: script.echo_volume_up
+    - delay:
+        minutes: 2
     - service: light.turn_on
       entity_id: light.bedroom_ceiling
     - delay:

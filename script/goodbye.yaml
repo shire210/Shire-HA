@@ -1,6 +1,17 @@
 goodbye:
   alias: "Goodbye"
   sequence:
+    - service: lock.unlock
+      entity_id: lock.front_door
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 200
+        color_temp: 200
+    - service: light.turn_on
+      data:
+        entity_id: light.foyer
+        brightness: 200
     - service: light.turn_off
       entity_id:
         - light.kitchen
@@ -8,14 +19,8 @@ goodbye:
         - light.bedroom
         - light.bedroom_ceiling
         - light.living_room_ceiling
-    - service: fan.turn_off
-      entity_id:
-        - fan.bedroom_fan
-        - fan.living_room_fan
     - service: remote.turn_off
       entity_id: remote.living_room
-    - service: lock.unlock
-      entity_id: lock.front_door
     - service: switch.turn_off
       entity_id: switch.fireplace
     - service: light.turn_on
@@ -27,9 +32,15 @@ goodbye:
       data:
         entity_id: light.foyer
         brightness: 200
+    - service: fan.turn_off
+      entity_id:
+        - fan.bedroom_fan
+        - fan.living_room_fan
     - delay:
         seconds: 30
     - service: light.turn_off
       entity_id: light.living_room
     - service: light.turn_off
       entity_id: light.foyer
+    - service: switch.turn_off
+      entity_id: switch.bedroom_roku

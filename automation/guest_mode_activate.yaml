@@ -16,3 +16,11 @@ action:
       - automation.morning_downstairs_for_office
       - automation.lock_when_away
       - automation.unlock_when_home
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.alarm_schedule
+      option: Weekend
+  - service: input_boolean.turn_off
+    entity_id:
+      - input_boolean.night_youtube
+      - input_boolean.morning_alexa

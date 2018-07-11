@@ -1,0 +1,49 @@
+echo_volume_up:
+  alias: "Morning Echo Volume"
+  sequence:
+    - condition: state
+      entity_id: input_boolean.morning_alexa
+      state: 'on'
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.spotify
+        source: Bedroom
+    - delay:
+        seconds: 3
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .1
+    - service: media_player.media_play
+      data:
+        entity_id: media_player.spotify
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .2
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .3
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .4
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .5
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .6

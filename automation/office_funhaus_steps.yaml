@@ -1,0 +1,10 @@
+alias: Youtube on Office
+trigger:
+  platform: state
+  entity_id: switch.office_funhaus
+  to: 'on'
+action:
+  - delay:
+      seconds: 6
+  - service: switch.turn_off
+    entity_id: switch.office_funhaus

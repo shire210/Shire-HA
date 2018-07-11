@@ -40,32 +40,34 @@ discovery:
 ios:
   push:
     categories:
-      - name: door
-        identifier: 'lock'
+      - name: schedule
+        identifier: 'sched'
         actions:
-          - identifier: 'UNLOCK_DOOR'
-            title: 'Yes'
-            activationMode: 'background'
-            authenticationRequired: no
-            destructive: yes
-            behavior: 'default'
-          - identifier: 'UNLOCK_WITH_TV'
-            title: 'Yes with TV'
+          - identifier: 'HOME'
+            title: 'Home'
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
             behavior: 'default'
-          - identifier: 'DISMISS'
-            title: 'Dismiss'
+          - identifier: 'OFFICE'
+            title: 'Office'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'
+          - identifier: 'WEEKEND'
+            title: 'Weekend'
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
             behavior: 'default'
 config:
 updater:
+python_script:
 conversation:
 frontend:
   javascript_version: latest
+  themes: !include_dir_merge_named themes
 map:
 device_tracker:
   - platform: owntracks_http
@@ -118,15 +120,22 @@ media_player:
   - platform: spotify
     client_id: !secret spotify_id
     client_secret: !secret spotify_secret
-camera:
-  - platform: generic
-    name: Spotify Cover
-    still_image_url: >
-      {% if is_state("sensor.spotify_song", "Nothing Playing")%}
-        {{ states.sensor.spotify_base_url.state }}/local/spotify_logo.png
-      {% else %}
-        {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
-      {% endif %}
+  - platform: alexa
+    host: 192.168.1.250
+history_graph:
+  gr1:
+    name: AC Fan
+    entities:
+      - sensor.thermostat_mode
+#camera:
+#  - platform: generic
+#    name: Spotify Cover
+#    still_image_url: >
+#      {% if is_state("sensor.spotify_song", "Nothing Playing")%}
+#        {{ states.sensor.spotify_base_url.state }}/local/spotify_logo.png
+#      {% else %}
+#        {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
+#      {% endif %}
 light:
   - platform: lifx
 hue:
