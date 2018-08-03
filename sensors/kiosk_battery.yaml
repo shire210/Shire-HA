@@ -1,0 +1,5 @@
+platform: rest
+name: Kiosk Battery
+resource: !secret kiosk_rest
+value_template: '{{ value_json.batteryLevel }}'
+unit_of_measurement: "%"

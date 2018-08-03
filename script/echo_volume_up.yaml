@@ -22,22 +22,22 @@ echo_volume_up:
     - service: media_player.volume_set
       data:
         entity_id: media_player.spotify
+        volume_level: .15
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
         volume_level: .2
     - delay:
         seconds: 30
     - service: media_player.volume_set
       data:
         entity_id: media_player.spotify
+        volume_level: .25
+    - delay:
+        seconds: 30
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
         volume_level: .3
-    - delay:
-        seconds: 30
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.spotify
-        volume_level: .4
-    - delay:
-        seconds: 30
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.spotify
-        volume_level: .5

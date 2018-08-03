@@ -142,6 +142,8 @@ sensor.deluge_up_speed:
 sensor.deluge_status:
   friendly_name: Deluge Status
   icon: mdi:water
+sensor.kiosk_battery:
+  device_class: battery
 
   ######FRONT LOCK######
 sensor.battery_front_door:

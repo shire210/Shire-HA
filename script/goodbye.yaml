@@ -3,6 +3,8 @@ goodbye:
   sequence:
     - service: lock.unlock
       entity_id: lock.front_door
+    - service: media_player.media_pause
+      entity_id: media_player.spotify
     - service: light.turn_on
       data:
         entity_id: light.living_room

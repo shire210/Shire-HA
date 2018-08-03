@@ -1,0 +1,14 @@
+alias: Schedule Weekend Auto
+trigger:
+  platform: time
+  at: '20:01:15'
+condition:
+  condition: time
+  weekday:
+    - fri
+    - sat
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.alarm_schedule
+      option: Weekend

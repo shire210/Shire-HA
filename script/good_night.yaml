@@ -15,8 +15,6 @@ good_night:
       entity_id: remote.living_room
     - service: lock.lock
       entity_id: lock.front_door
-    - service: switch.turn_on
-      entity_id: switch.bedroom_roku
     - service: switch.turn_off
       entity_id: switch.fireplace
     - service: fan.turn_on
@@ -24,6 +22,15 @@ good_night:
         entity_id: fan.bedroom_fan
         speed: low
     - service: script.youtube_for_bedroom
+    - delay:
+        seconds: 5
+    - condition: time
+      weekday:
+        - sun
+        - mon
+        - tue
+        - wed
+        - thu
     - service: notify.ios_michael_iphone
       data_template:
         message: 'Schedule Tomorrow? Currently: {{states.input_select.alarm_schedule.state}}'

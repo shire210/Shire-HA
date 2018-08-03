@@ -133,9 +133,9 @@ media_player.49_tcl_roku_tv:
   name: Bedroom Plex
   platform: plex
   unique_id: c7dac6b647910026ee17365a0b46b248
-media_player.bedroom:
+media_player.bathroom:
   config_entry_id:
-  name: Bedroom Dot
+  name: Bathroom Dot
   platform: alexa
   unique_id: G090LF09637700GT
 media_player.michaels_fire:
@@ -143,11 +143,6 @@ media_player.michaels_fire:
   name: Fire Tablet
   platform: alexa
   unique_id: G0W0MA07720200D5
-media_player.everywhere:
-  config_entry_id:
-  name:
-  platform: alexa
-  unique_id: 5e6648b395044140968e5c8fb944a8cf
 media_player.kitchen:
   config_entry_id:
   name: Kitchen Echo
@@ -173,3 +168,23 @@ media_player.michaels_alexa_apps:
   name:
   platform: alexa
   unique_id: 832545C5C12F414E98A8898E116031E7
+media_player.bedroom:
+  config_entry_id:
+  name: Bedroom Echo
+  platform: alexa
+  unique_id: G090P3087452160D
+media_player.everywhere:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 3e36ca3efe944ae49292ffaf70fe9ae6
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: x72ks9f78ugeyz8f2dtvxvj4
+media_player.chrome_3:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: z5q9gaqj85jdecihjs50mhm3
