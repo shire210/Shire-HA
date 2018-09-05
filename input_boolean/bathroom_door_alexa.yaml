@@ -1,0 +1,3 @@
+bathroom_door_alexa:
+  name: Play Alexa on Door Close - Bath 
+  initial: off

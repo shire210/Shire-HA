@@ -28,6 +28,8 @@ views:
         show_header_toggle: false
         entities:
           - lock.front_door
+          - entity: binary_sensor.patio_door_opened
+            name: Patio Door
           - input_boolean.ios_home
           - sensor.battery_front_door
           - light.porch
@@ -75,6 +77,8 @@ views:
           - input_select.alarm_schedule
           - input_boolean.morning_alexa
           - input_boolean.night_youtube
+          - input_boolean.bathroom_door_alexa
+          - binary_sensor.bathroom_door_opened
       - type: entities
         title: Bedroom Switches
         show_header_toggle: true
@@ -366,6 +370,7 @@ views:
           - automation.activate_guest_mode
           - automation.deactivate_guest_mode
           - automation.notify_that_a_device_is_offline
+          - automation.notify_that_a_device_is_back_online
 excluded_entities:
   - media_player.michaels_alexa_apps
   - media_player.michaels_fire

@@ -1,0 +1,12 @@
+alias: Alexa in Bathroom Off
+trigger:
+  platform: state
+  entity_id: binary_sensor.bathroom_door_opened
+  to: 'on'
+condition:
+  condition: template
+  value_template: "{{ is_state_attr('media_player.spotify', 'source','Bathroom')}}"
+action:
+    - service: media_player.media_pause
+      data:
+        entity_id: media_player.spotify

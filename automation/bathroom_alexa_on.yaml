@@ -1,0 +1,30 @@
+alias: Alexa in Bathroom On
+trigger:
+  platform: state
+  entity_id: binary_sensor.bathroom_door_opened
+  to: 'off'
+condition:
+  condition: state
+  entity_id: input_boolean.bathroom_door_alexa
+  state: 'on'
+action:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.spotify
+        source: Bathroom
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: .6
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.spotify
+        media_content_type: playlist
+        media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DWSqmBTGDYngZ'
+    - service: media_player.shuffle_set
+      data:
+        entity_id: media_player.spotify
+        shuffle: 'true'
+    - service: media_player.media_next_track
+      data:
+        entity_id: media_player.spotify

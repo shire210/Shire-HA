@@ -1,0 +1,13 @@
+alias: notify that a device is back online
+trigger:
+  - platform: state
+    entity_id: binary_sensor.bedroom_fan
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.living_room_fan
+    to: 'on'
+action:
+  service: notify.ios_michael_iphone
+  data_template:
+    message: >
+      {{ trigger.entity_id.split('.')[1] }} is back online.

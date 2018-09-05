@@ -24,3 +24,4 @@ action:
     entity_id:
       - input_boolean.night_youtube
       - input_boolean.morning_alexa
+      - input_boolean.bathroom_door_alexa
