@@ -1,28 +1,28 @@
 title: Home Assistant
 
 resources:
-  - url: /local/cards/gauge-card.js?v=1
-    type: js
-  - url: /local/cards/dark-sky-weather-card.js?v=2
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=6.8
     type: js
 
 views:
   - icon: mdi:home
     title: Main
-    id: main
+    path: main
     cards:
       - type: horizontal-stack
         cards:
           - type: picture-entity
             entity: script.goodbye
-            image: /local/goodbye.jpg
+            image: /local/goodbye2.jpg
             show_info: false
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - type: picture-entity
             entity: script.good_night
-            image: /local/good_night.jpg
+            image: /local/good_night2.jpg
             show_info: false
-            tap_action: toggle
+            tap_action:
+              action: toggle
       - type: entities
         title: Entry
         show_header_toggle: false
@@ -33,7 +33,7 @@ views:
           - input_boolean.ios_home
           - sensor.battery_front_door
           - light.porch
-          - entity: device_tracker.michael_iphone
+          - entity: device_tracker.michaels_iphone
             name: Michael
       - type: entities
         title: TV
@@ -63,14 +63,13 @@ views:
           - light.foyer
           - light.kitchen
           - light.cabinet
-      - type: entities
-        title: Fireplace
-        show_header_toggle: false
-        entities:
-          - switch.fireplace
+      - type: entity-button
+        entity: switch.fireplace
+        tap_action:
+          action: toggle
   - icon: mdi:hotel
     title: Bedroom
-    id: bedroom
+    path: bedroom
     cards:
       - type: entities
         entities:
@@ -78,6 +77,7 @@ views:
           - input_boolean.morning_alexa
           - input_boolean.night_youtube
           - input_boolean.bathroom_door_alexa
+          - input_text.text1
           - binary_sensor.bathroom_door_opened
       - type: entities
         title: Bedroom Switches
@@ -94,7 +94,7 @@ views:
         entity: media_player.bedroom
       - type: entity-filter
         entities:
-          - media_player.49_tcl_roku_tv
+          - media_player.plex_bedroom_2
         state_filter:
           - 'unavailable'
           - 'playing'
@@ -102,41 +102,40 @@ views:
           - 'idle'
         card:
           type: media-control
-          entity: media_player.49_tcl_roku_tv
+          entity: media_player.plex_bedroom_2
   - icon: mdi:access-point-network
     title: Network
-    id: network
+    path: network
     cards:
-      - type: entities
-        entities:
-          - switch.wake_on_lan
+      - type: entity-button
+        entity: switch.wake_on_lan
+        tap_action:
+          action: toggle
       - type: vertical-stack
         cards:
           - type: markdown
             content: >
               # SPEEDTEST
-          - type: horizontal-stack
-            cards:
-              - type: custom:gauge-card
-                title: Download
-                entity: sensor.speedtest_download
-                min: 0
-                max: 120
-                severity:
-                  red: 0
-                  amber: 70
-                  green: 95
-              - type: custom:gauge-card
-                title: Upload
-                entity: sensor.speedtest_upload
-                min: 0
-                max: 120
-                severity:
-                  red: 0
-                  amber: 70
-                  green: 95
-          - type: custom:gauge-card
-            title: Ping
+          - type: gauge
+            name: Download
+            entity: sensor.speedtest_download
+            min: 0
+            max: 120
+            severity:
+              red: 0
+              amber: 70
+              green: 95
+          - type: gauge
+            name: Upload
+            entity: sensor.speedtest_upload
+            min: 0
+            max: 120
+            severity:
+              red: 0
+              amber: 70
+              green: 95
+          - type: gauge
+            name: Ping
             entity: sensor.speedtest_ping
             min: 0
             max: 50
@@ -175,7 +174,7 @@ views:
         title: Battery Status
         column_width: calc(100% / 4)
         entities:
-          - entity: sensor.michael_iphone_battery_level
+          - entity: sensor.michaels_iphone_battery_level
             name: iPhone
           - entity: sensor.ipad_battery_level
             name: iPad
@@ -185,19 +184,25 @@ views:
             name: Tablet
   - icon: mdi:thermometer-lines
     title: Weather
-    id: weather
+    path: weather
     cards:
       - type: vertical-stack
         cards:
+          - type: thermostat
+            entity: climate.thermostat
           - type: entities
             title: Ecobee
             entities:
               - climate.thermostat
               - sensor.thermostat_mode
+              - entity: binary_sensor.temp_balance
+                name: Difference
               - entity: binary_sensor.thermostat_occupancy
                 name: 1st Floor Occupancy
               - entity: binary_sensor.office_occupancy
                 name: 2nd Floor Occupancy
+              - entity: sensor.thermostat_humidity
+                name: Humidity
               - sensor.24_hour_ac_running
           - type: glance
             title: Thermostat
@@ -205,55 +210,24 @@ views:
             entities:
               - entity: sensor.thermostat_temperature
                 name: Downstairs
+              - entity: sensor.patio_door_temperature
+                name: Kitchen
               - entity: sensor.office_temperature
                 name: Upstairs
-              - entity: binary_sensor.temp_balance
-                name: Difference
-              - entity: sensor.thermostat_humidity
-                name: Humidity
+              - entity: sensor.bathroom_door_temperature
+                name: Bathroom
           - type: history-graph
             title: "Thermostat - Prior 4 Hours"
             hours_to_show: 4
             entities:
               - sensor.thermostat_mode
-      - type: custom:dark-sky-weather-card
-        entity_sun: sun.sun
-        entity_daily_summary: sensor.dark_sky_daily_summary
-        entity_current_conditions: sensor.dark_sky_icon  
-        entity_humidity: sensor.dark_sky_humidity
-        entity_pressure: sensor.dark_sky_pressure
-        entity_temperature: sensor.dark_sky_temperature
-        entity_visibility: sensor.dark_sky_visibility
-        entity_wind_bearing: sensor.dark_sky_wind_bearing
-        entity_wind_speed: sensor.dark_sky_wind_speed
-        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature
-        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_1
-        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_2
-        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_3
-        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_4
-        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature
-        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1
-        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2
-        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3
-        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4
-        entity_forecast_icon_1: sensor.dark_sky_icon
-        entity_forecast_icon_2: sensor.dark_sky_icon_1
-        entity_forecast_icon_3: sensor.dark_sky_icon_2
-        entity_forecast_icon_4: sensor.dark_sky_icon_3
-        entity_forecast_icon_5: sensor.dark_sky_icon_4
-      - type: horizontal-stack
-        cards:
-          - type: custom:gauge-card
-            title: Rain Today
-            entity: sensor.dark_sky_precip_probability
-          - type: custom:gauge-card
-            title: Rain Tomorrow
-            entity: sensor.dark_sky_precip_probability_1
+      - type: weather-forecast
+        entity: weather.dark_sky
   - icon: mdi:plex
     title: Plex
-    id: plex
+    path: plex
     cards:
-      - type: custom:gauge-card
+      - type: gauge
         entity: sensor.tautulli_total
         min: 0
         max: 3
@@ -271,7 +245,7 @@ views:
             name: Streaming Bandwith
       - type: entity-filter
         entities:
-          - media_player.plex_media_room
+          - media_player.plex_media_room_3
         state_filter:
           - 'unavailable'
           - 'playing'
@@ -279,10 +253,10 @@ views:
           - 'idle'
         card:
           type: media-control
-          entity: media_player.plex_media_room
+          entity: media_player.plex_media_room_3
       - type: entity-filter
         entities:
-          - media_player.49_tcl_roku_tv
+          - media_player.plex_bedroom_2
         state_filter:
           - 'unavailable'
           - 'playing'
@@ -290,18 +264,18 @@ views:
           - 'idle'
         card:
           type: media-control
-          entity: media_player.49_tcl_roku_tv
+          entity: media_player.plex_bedroom_2
       - type: entity-filter
         entities:
-          - media_player.roku_2
+          - media_player.plex_roku
         state_filter:
           - 'playing'
         card:
           type: media-control
-          entity: media_player.roku_2
+          entity: media_player.plex_roku
   - icon: mdi:music
     title: Music
-    id: music
+    path: music
     cards:
       - type: media-control
         entity: media_player.spotify
@@ -317,14 +291,16 @@ views:
         entity: media_player.bathroom
   - icon: mdi:home-automation
     title: Automations
-    id: automation
+    path: automation
     cards:
       - type: picture-entity
         image: /local/guest_mode.jpg
         entity: input_boolean.guest_mode
-        tap_action: toggle
+        tap_action:
+          action: toggle
       - type: entities
         title: Lock
+        show_header_toggle: false
         entities:
           - automation.lock_when_away
           - automation.unlock_when_home
@@ -332,6 +308,7 @@ views:
           - automation.code_entry_home
       - type: entities
         title: Lights
+        show_header_toggle: false
         entities:
           - automation.cabinet_light_with_main
           - automation.cabinet_light_off_with_main
@@ -339,12 +316,14 @@ views:
           - automation.porch_off_11pm
       - type: entities
         title: Plex
+        show_header_toggle: false
         entities:
           - automation.plex_movie_play
           - automation.plex_movie_pause
           - automation.plex_movie_stop
       - type: entities
         title: Morning
+        show_header_toggle: false
         entities:
           - automation.morning_for_home
           - automation.morning_for_office
@@ -357,6 +336,7 @@ views:
           - automation.send_work_route
       - type: entities
         title: TV
+        show_header_toggle: false
         entities:
           - automation.remote_external_update_living_room
           - automation.remote_start_activity_from_input_select_living_room_tv
@@ -365,12 +345,17 @@ views:
           - automation.plex_on_bedroom
       - type: entities
         title: Other
+        show_header_toggle: false
         entities:
           - automation.ac_fan_balance
           - automation.activate_guest_mode
           - automation.deactivate_guest_mode
           - automation.notify_that_a_device_is_offline
           - automation.notify_that_a_device_is_back_online
+          - automation.alexa_in_bathroom_on
+          - automation.alexa_in_bathroom_off
+          - automation.update_dates
+          - automation.update_floorplan_time
 excluded_entities:
   - media_player.michaels_alexa_apps
   - media_player.michaels_fire
@@ -400,6 +385,9 @@ excluded_entities:
   - script.spotify_next
   - script.spotify_play_pause
   - script.spotify_previous
+  - script.good_morning
+  - script.patio_closed
+  - script.patio_closed_night
   - sensor.floorplan_date
   - sensor.floorplan_time
   - sensor.plex_movie_time
@@ -416,4 +404,6 @@ excluded_entities:
   - binary_sensor.plex_in_use
   - binary_sensor.mike
   - binary_sensor.parents
+  - sensor.date_tomorrow
+  - sensor.date_two_days
   

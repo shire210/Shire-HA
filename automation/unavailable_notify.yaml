@@ -7,7 +7,7 @@ trigger:
     entity_id: binary_sensor.living_room_fan
     to: 'unavailable'
 action:
-  service: notify.ios_michael_iphone
+  service: notify.ios_michaels_iphone
   data_template:
     message: >
       {{ trigger.entity_id.split('.')[1] }} is offline.

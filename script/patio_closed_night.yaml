@@ -1,0 +1,22 @@
+patio_closed_night:
+  alias: Patio Door Closed at Night
+  sequence:
+    - condition: state
+      entity_id: binary_sensor.patio_door_opened
+      state: 'on'
+    - service: notify.notify
+      data:
+        message: 'Patio Door is Open!'
+        title: 'Home Assistant'
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 255
+        color_name: red
+    - delay:
+        seconds: 25
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 125
+        color_temp: 200

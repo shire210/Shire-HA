@@ -11,6 +11,8 @@ good_night:
       entity_id: script.bedtime_lamp
     - service: fan.turn_off
       entity_id: fan.living_room_fan
+    - service: script.turn_on
+      entity_id: script.patio_closed_night
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: lock.lock
@@ -31,7 +33,7 @@ good_night:
         - tue
         - wed
         - thu
-    - service: notify.ios_michael_iphone
+    - service: notify.ios_michaels_iphone
       data_template:
         message: 'Schedule Tomorrow? Currently: {{states.input_select.alarm_schedule.state}}'
         data:

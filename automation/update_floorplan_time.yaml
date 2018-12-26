@@ -1,0 +1,8 @@
+alias: Update Floorplan Time
+trigger:
+  platform: time
+  minutes: '/5'
+  seconds: 00
+action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.floorplan_time

@@ -1,0 +1,16 @@
+- id: '1541621770207'
+  alias: Update Dates
+  trigger:
+  - at: 00:01
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: sensor.floorplan_date
+    service: homeassistant.update_entity
+  - data:
+      entity_id: sensor.date_tomorrow
+    service: homeassistant.update_entity
+  - data:
+      entity_id: sensor.date_two_days
+    service: homeassistant.update_entity

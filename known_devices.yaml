@@ -1,15 +1,15 @@
 
-michael_iphone:
-  hide_if_away: false
-  mac:
-  name: michael iphone
-  picture: /local/Logo.jpg
-  track: true
-  vendor:
-
 ipad:
   hide_if_away: false
   mac:
   name: ipad
   track: true
   vendor:
+
+michaels_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: michaels iphone
+  picture: /local/Logo.jpg
+  track: true

@@ -69,8 +69,7 @@ frontend:
   javascript_version: latest
   themes: !include_dir_merge_named themes
 map:
-device_tracker:
-  - platform: owntracks_http
+
 history:
   exclude:
     domains:
@@ -99,17 +98,44 @@ influxdb:
       - script
       - group
 ############################################
+##Alexa##
+############################################
+alexa:
+  smart_home:
+    filter:
+      include_domains:
+        - light
+        - fan
+    entity_config:
+      fan.living_room_fan:
+        display_categories: SWITCH
+      fan.bedroom_fan:
+        display_categories: SWITCH
+
+
+############################################
 ##Include##
 ############################################
-automation: !include_dir_list automation/
+automation old: !include_dir_list automation/
+automation: !include automations.yaml
 sensor: !include_dir_list sensors/
 binary_sensor: !include_dir_list binary_sensors/
 input_boolean: !include_dir_merge_named input_boolean/
 input_select: !include_dir_merge_named input_select/
 switch: !include_dir_list switches/
-group: !include groups.yaml
+#group: !include groups.yaml
 script: !include_dir_merge_named script/
 
+input_text:
+  text1:
+    name: Youtube Link
+
+vacuum:
+  - platform: roomba
+    host: 192.168.1.226
+    username: !secret roomba_user
+    password: !secret roomba_pass
+    
 media_player:
   - platform: plex
     entity_namespace: 'plex'
@@ -137,8 +163,6 @@ history_graph:
 #      {% else %}
 #        {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
 #      {% endif %}
-light:
-  - platform: lifx
 hue:
   bridges:
     - host: 192.168.1.193
@@ -151,7 +175,13 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
-
+lovelace:
+  mode: yaml
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api
+    name: Dark Sky
+    mode: daily
 panel_custom: 
   - name: floorplan
     sidebar_title: Floorplan
@@ -182,13 +212,3 @@ mqtt:
   password: !secret mqtt_password
 tts:
   - platform: google
-google_assistant:
-  project_id: !secret google_PI
-  client_id: !secret google_client
-  access_token: !secret google_token
-  api_key: !secret google_api_key
-  agent_user_id: !secret google_agent_id
-  exposed_domains:
-    - switch
-    - light
-    - script

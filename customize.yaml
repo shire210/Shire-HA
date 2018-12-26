@@ -1,31 +1,7 @@
 ######LIGHTS######
-light.kitchen:
-  emulated_hue_hidden: false
-  emulated_hue_name: Kitchen
 light.living_room:
   emulated_hue_hidden: false
   emulated_hue_name: Lamps
-light.cabinet:
-  emulated_hue_hidden: false
-  emulated_hue_name: Cabinet
-light.bedroom:
-  emulated_hue_hidden: false
-  emulated_hue_name: Bedroom Lamp
-light.foyer:
-  emulated_hue_hidden: false
-  emulated_hue_name: Foyer
-light.living_room_ceiling:
-  emulated_hue_hidden: false
-  emulated_hue_name: Living Room Ceiling
-fan.living_room_fan:
-  emulated_hue_hidden: false
-  emulated_hue_name: Living Room Fan
-light.bedroom_ceiling:
-  emulated_hue_hidden: false
-  emulated_hue_name: Bedroom Ceiling
-fan.bedroom_fan:
-  emulated_hue_hidden: false
-  emulated_hue_name: Bedroom Fan
   
 ######SCRIPTS######
 script.good_night:

@@ -2,10 +2,10 @@ platform: template
 sensors:
   plex_video_type:
     value_template: >
-      {% if is_state("media_player.plex_media_room", "unknown")%}
+      {% if is_state("media_player.plex_media_room_3", "unknown")%}
         Off
-      {% elif not is_state("media_player.plex_media_room", "idle")%}
-        {{ states.media_player.plex_media_room.attributes.media_content_type }}
+      {% elif not is_state("media_player.plex_media_room_3", "idle")%}
+        {{ states.media_player.plex_media_room_3.attributes.media_content_type }}
       {% else %}
         Off
       {% endif %}
