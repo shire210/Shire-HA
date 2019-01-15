@@ -1,0 +1,7 @@
+alias: Jenna Visiting Off
+trigger:
+  - platform: webhook
+    webhook_id: jenna_visiting_off
+action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.jenna_visiting

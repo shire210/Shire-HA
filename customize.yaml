@@ -28,8 +28,6 @@ switch.deluge_switch:
 switch.fireplace:
   emulated_hue_hidden: false
   icon: mdi:fire
-input_boolean.ios_home:
-  icon: mdi:cellphone-wireless
 switch.office_funhaus:
   emulated_hue_hidden: false
   emulated_hue_name: Office Fun House

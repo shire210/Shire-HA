@@ -1,3 +1,4 @@
 ios_home:
   name: Phone at home
   initial: on
+  icon: mdi:cellphone-wireless

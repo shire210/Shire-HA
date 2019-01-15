@@ -7,6 +7,8 @@ resources:
 views:
   - icon: mdi:home
     title: Main
+    badges:
+      - updater.updater
     path: main
     cards:
       - type: horizontal-stack
@@ -21,6 +23,14 @@ views:
             entity: script.good_night
             image: /local/good_night2.jpg
             show_info: false
+            tap_action:
+              action: toggle
+      - type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.living_room
+          - type: entity-button
+            entity: lock.front_door
             tap_action:
               action: toggle
       - type: entities
@@ -67,6 +77,10 @@ views:
         entity: switch.fireplace
         tap_action:
           action: toggle
+      - type: entity-button
+        entity: vacuum.roomba
+        tap_action:
+          action: more-info
   - icon: mdi:hotel
     title: Bedroom
     path: bedroom
@@ -227,6 +241,14 @@ views:
     title: Plex
     path: plex
     cards:
+#      - type: picture
+#        image: /local/ombi.png
+#        tap_action:
+#          action: navigate
+#          navigation_path: https://shire.pw/request
+      - type: markdown
+        content: >
+          [![Image](/local/plex-logo.png)](https://shire.pw/request)
       - type: gauge
         entity: sensor.tautulli_total
         min: 0
@@ -281,6 +303,8 @@ views:
         entity: media_player.spotify
       - type: media-control
         entity: media_player.everywhere
+      - type: media-control
+        entity: media_player.upstairs
       - type: media-control
         entity: media_player.kitchen
       - type: media-control
@@ -360,6 +384,7 @@ excluded_entities:
   - media_player.michaels_alexa_apps
   - media_player.michaels_fire
   - media_player.this_device
+  - weather.thermostat
   - scene.lock_door
   - scene.unlock_door
   - switch.front_lock

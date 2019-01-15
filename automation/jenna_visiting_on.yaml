@@ -1,0 +1,7 @@
+alias: Jenn Visiting On
+trigger:
+  - platform: webhook
+    webhook_id: jenna_visiting_on
+action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.jenna_visiting
