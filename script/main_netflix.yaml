@@ -1,5 +1,5 @@
-start_netflix:
-  alias: "Start Netflix"
+main_netflix:
+  alias: "Turn on Main Netflix"
   sequence:
     - service: remote.turn_on
       data_template:

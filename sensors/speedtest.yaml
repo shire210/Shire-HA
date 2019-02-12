@@ -1,5 +1,5 @@
 platform: speedtest
-#  minute: 30
+minute: 10
 #  hour:
 #    - 0
 #    - 6

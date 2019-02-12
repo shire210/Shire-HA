@@ -14,3 +14,26 @@
   - data:
       entity_id: sensor.date_two_days
     service: homeassistant.update_entity
+- id: '1548894176255'
+  alias: Notify Water Heater Leak
+  trigger:
+  - entity_id: binary_sensor.water_heater_liquid_detected
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: WATER HEATER IS LEAKING
+    service: notify.ios_michaels_iphone
+  - data:
+      entity_id: media_player.office, media_player.office
+      message: The Water Heater is Leaking!
+    service: media_player.alexa_tts
+  - data:
+      entity_id: media_player.office, media_player.bedroom
+      message: The Water Heater is Leaking!
+    service: media_player.alexa_tts
+  - data:
+      entity_id: media_player.office, media_player.kitchen
+      message: The Water Heater is Leaking!
+    service: media_player.alexa_tts

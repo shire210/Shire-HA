@@ -1,0 +1,10 @@
+alias: Netflix on Bedroom
+trigger:
+  platform: state
+  entity_id: switch.bedroom_netflix
+  to: 'on'
+action:
+  - delay:
+      seconds: 2
+  - service: switch.turn_off
+    entity_id: switch.bedroom_netflix

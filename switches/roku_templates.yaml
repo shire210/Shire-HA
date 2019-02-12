@@ -1,0 +1,60 @@
+platform: template
+switches:
+#####Office#####
+  office_plex:
+    friendly_name: "Office Plex"
+    value_template: "{{ is_state_attr('media_player.roku', 'app_name', 'Plex') }}"
+    turn_on:
+      service: script.office_plex_on
+    turn_off:
+      service: shell_command.office_roku_on
+  office_youtube:
+    friendly_name: "Office Youtube"
+    value_template: "{{ is_state_attr('media_player.roku', 'app_name', 'YouTube') }}"
+    turn_on:
+      service: script.office_youtube_on
+    turn_off:
+      service: shell_command.office_roku_on
+  office_netflix:
+    friendly_name: "Office Netflix"
+    value_template: "{{ is_state_attr('media_player.roku', 'app_name', 'Netflix') }}"
+    turn_on:
+      service: script.office_netflix_on
+    turn_off:
+      service: shell_command.office_roku_on
+  office_tv:
+    friendly_name: "Office TV"
+    value_template: "{{ is_state_attr('media_player.roku', 'app_name', 'YouTube TV') }}"
+    turn_on:
+      service: script.office_tv_on
+    turn_off:
+      service: shell_command.office_roku_on
+#####Bedroom#####
+  bedroom_plex:
+    friendly_name: "Bedroom Plex"
+    value_template: "{{ is_state_attr('media_player.roku_yn00yp848585', 'app_name', 'Plex') }}"
+    turn_on:
+      service: script.bedroom_plex_on
+    turn_off:
+      service: shell_command.bedroom_roku_off
+  bedroom_youtube:
+    friendly_name: "Bedroom Youtube"
+    value_template: "{{ is_state_attr('media_player.roku_yn00yp848585', 'app_name', 'YouTube') }}"
+    turn_on:
+      service: script.bedroom_youtube_on
+    turn_off:
+      service: shell_command.bedroom_roku_off
+  bedroom_netflix:
+    friendly_name: "Bedroom Netflix"
+    value_template: "{{ is_state_attr('media_player.roku_yn00yp848585', 'app_name', 'Netflix') }}"
+    turn_on:
+      service: script.bedroom_netflix_on
+    turn_off:
+      service: shell_command.bedroom_roku_off
+  bedroom_tv:
+    friendly_name: "Bedroom TV"
+    value_template: "{{ is_state_attr('media_player.roku_yn00yp848585', 'app_name', 'YouTube TV') }}"
+    turn_on:
+      service: script.bedroom_tv_on
+    turn_off:
+      service: shell_command.bedroom_roku_off

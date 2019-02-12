@@ -1,7 +1,7 @@
-start_youtube:
-  alias: "Start Youtube"
+main_xbox_360:
+  alias: "Turn on Main Xbox 360"
   sequence:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: 31648039
+        activity: 22567878

@@ -1,0 +1,10 @@
+alias: TV on Office
+trigger:
+  platform: state
+  entity_id: switch.office_tv
+  to: 'on'
+action:
+  - delay:
+      seconds: 2
+  - service: switch.turn_off
+    entity_id: switch.office_tv

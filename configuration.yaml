@@ -65,6 +65,7 @@ config:
 updater:
 python_script:
 conversation:
+system_health:
 frontend:
   javascript_version: latest
   themes: !include_dir_merge_named themes
@@ -126,9 +127,24 @@ switch: !include_dir_list switches/
 #group: !include groups.yaml
 script: !include_dir_merge_named script/
 
-input_text:
-  text1:
-    name: Youtube Link
+shell_command:
+  office_roku_on: "curl -X POST http://192.168.1.180:8060/keypress/home"
+  office_plex: "curl -X POST http://192.168.1.180:8060/launch/13535"
+  office_youtube: "curl -X POST http://192.168.1.180:8060/launch/837"
+  office_tv: "curl -X POST http://192.168.1.180:8060/launch/195316"
+  office_netflix: "curl -X POST http://192.168.1.180:8060/launch/12"
+  bedroom_roku_on: "curl -X POST http://192.168.1.219:8060/keypress/PowerOn"
+  bedroom_roku_off: "curl -X POST http://192.168.1.219:8060/keypress/PowerOff"
+  bedroom_plex: "curl -X POST http://192.168.1.219:8060/launch/13535"
+  bedroom_youtube: "curl -X POST http://192.168.1.219:8060/launch/837"
+  bedroom_tv: "curl -X POST http://192.168.1.219:8060/launch/195316"
+  bedroom_netflix: "curl -X POST http://192.168.1.219:8060/launch/12"
+    
+shopping_list:
+
+lifx:
+  light:
+    - broadcast: 192.168.1.159
 
 vacuum:
   - platform: roomba
@@ -175,8 +191,6 @@ remote:
 ecobee:
   api_key: !secret ecobee_key
   hold_temp: True
-lovelace:
-  mode: yaml
 weather:
   - platform: darksky
     api_key: !secret darksky_api

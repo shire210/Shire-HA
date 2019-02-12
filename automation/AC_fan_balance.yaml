@@ -1,6 +1,6 @@
 alias: AC Fan Balance
 trigger:
-  platform: time
+  platform: time_pattern
   hours: '/2'
   minutes: 00
   seconds: 00

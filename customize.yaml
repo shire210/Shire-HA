@@ -1,17 +1,12 @@
-######LIGHTS######
 light.living_room:
-  emulated_hue_hidden: false
   emulated_hue_name: Lamps
-  
-######SCRIPTS######
+  icon: mdi:floor-lamp
 script.good_night:
   emulated_hue_hidden: false
   emulated_hue_name: Good Night
 script.goodbye:
   emulated_hue_hidden: false
   emulated_hue_name: Goodbye
-
-######SWITCHES######
 switch.front_lock:
   emulated_hue_hidden: false
   emulated_hue_name: Front lock
@@ -40,53 +35,18 @@ switch.bedroom_roku:
 switch.bedroom_plex:
   emulated_hue_hidden: false
   emulated_hue_name: Bedroom Plex
-
-######WEATHER######
 weather.thermostat:
   friendly_name: Weather
-sensor.dark_sky_cloud_coverage:
-  friendly_name: Cloud Coverage
-  icon: mdi:cloud
-sensor.dark_sky__humidity:
-  friendly_name: Humidity
-  icon: mdi:water
-sensor.dark_sky__wind_speed:
-  icon: mdi:weather-windy
-  friendly_name: Wind Speed
-sensor.dark_sky__summary:
-  friendly_name: Condition
-sensor.dark_sky__precip_probability:
-  icon: mdi:water-percent
-  friendly_name: Precipitation Probability
-sensor.dark_sky__precip_intensity:
-  icon: mdi:weather-rainy
-  friendly_name: Precipitation Intensity
-sensor.dark_sky__apparent_temperature:
-  icon: mdi:thermometer
-  friendly_name: Real Feel
-sensor.dark_sky_icon:
-  hidden: true
-sensor.dark_sky_pressure:
-  hidden: true
-sensor.dark_sky_temperature:
-  hidden: true
-sensor.dark_sky_wind_bearing:
-  hidden: true
-  
-######SENSORS#####
 sensor.spotify_song:
   hidden: true
 sensor.spotify_artist:
   hidden: true
 sensor.spotify_base_url:
   hidden: true
-######FLOORPLAN######
 sensor.floorplan_date:
   hidden: true
 sensor.floorplan_time:
   hidden: true
-
-######COMPUTER######
 sensor.speedtest_download:
   icon: mdi:cloud-download
   friendly_name: Download
@@ -109,7 +69,7 @@ device_tracker.ipad:
   icon: tablet-ipad
 sensor.deluge_down_speed:
   friendly_name: Deluge Download
-  icon: mdi:download-network  
+  icon: mdi:download-network
 sensor.deluge_up_speed:
   friendly_name: Deluge Upload
   icon: mdi:upload-network
@@ -118,16 +78,12 @@ sensor.deluge_status:
   icon: mdi:water
 sensor.kiosk_battery:
   device_class: battery
-
-  ######FRONT LOCK######
 sensor.battery_front_door:
   icon: mdi:battery-70
   friendly_name: Front Door Battery
 input_boolean.lock_boolean:
   emulated_hue_hidden: false
   emulated_hue_name: Front Lock
-
-######Other######
 binary_sensor.hub:
   hidden: true
 sensor.office_temperature_2:
@@ -142,3 +98,5 @@ media_player.michaels_fire:
   hidden: true
 media_player.michaels_alexa_apps:
   hidden: true
+light.kitchen:
+  icon: mdi:light-switch

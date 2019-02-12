@@ -1,0 +1,45 @@
+platform: template
+switches:
+#####Main#####
+  main_plex:
+    friendly_name: "Main Plex"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Watch Plex') }}"
+    turn_on:
+      service: script.main_plex
+    turn_off:
+      service: script.main_off
+  main_youtube:
+    friendly_name: "Main Youtube"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Watch Youtube') }}"
+    turn_on:
+      service: script.main_youtube
+    turn_off:
+      service: script.main_off
+  main_netflix:
+    friendly_name: "Main Netflix"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Watch Netflix') }}"
+    turn_on:
+      service: script.main_netflix
+    turn_off:
+      service: script.main_off
+  main_tv:
+    friendly_name: "Main TV"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Watch TV') }}"
+    turn_on:
+      service: script.main_tv
+    turn_off:
+      service: script.main_off
+  main_xbox:
+    friendly_name: "Main Xbox"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Play Xbox One') }}"
+    turn_on:
+      service: script.main_xbox
+    turn_off:
+      service: script.main_off
+  main_xbox_360:
+    friendly_name: "Main Xbox 360"
+    value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Play Xbox 360') }}"
+    turn_on:
+      service: script.main_xbox_360
+    turn_off:
+      service: script.main_off

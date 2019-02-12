@@ -1,24 +1,8 @@
 platform: command_line
 switches:
-  office_funhaus:
-    command_on: "curl -X POST http://192.168.1.180:8060/keypress/home"
-    command_off: "curl -X POST http://192.168.1.180:8060/launch/837?contentId={{states.input_text.text1.state}}&mediaType=live"
-    friendly_name: Office Funhaus
   bedroom_roku:
-    command_on: "curl -X POST http://192.168.1.220:8060/keypress/PowerOn"
-    command_off: "curl -X POST http://192.168.1.220:8060/keypress/PowerOff"
-    command_state: 'curl -s GET http://192.168.1.220:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
+    command_on: "curl -X POST http://192.168.1.219:8060/keypress/PowerOn"
+    command_off: "curl -X POST http://192.168.1.219:8060/keypress/PowerOff"
+    command_state: 'curl -s GET http://192.168.1.219:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
     value_template: '{{ value == "ON" }}'
     friendly_name: Bedroom Roku
-  bedroom_funhaus:
-    command_on: "curl -X POST http://192.168.1.220:8060/keypress/PowerOn"
-    command_off: "curl -X POST http://192.168.1.220:8060/launch/837?contentId={{states.input_text.text1.state}}&mediaType=live"
-    friendly_name: Bedroom Funhaus
-  bedroom_plex:
-    command_on: "curl -X POST http://192.168.1.220:8060/keypress/PowerOn"
-    command_off: "curl -X POST http://192.168.1.220:8060/launch/13535"
-    friendly_name: Bedroom Plex
-  remote_test:
-    command_on: "curl -X POST https://ha.shire.pw/api/webhook/jenna_visiting_on"
-    command_off: "curl -X POST https://ha.shire.pw/api/webhook/jenna_visiting_off"
-    friendly_name: Remote Test

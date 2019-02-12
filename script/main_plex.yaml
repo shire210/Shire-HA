@@ -1,7 +1,7 @@
-start_xbox:
-  alias: "Start Xbox"
+main_plex:
+  alias: "Turn on Main Plex"
   sequence:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: 21325006
+        activity: 23903903

@@ -1,6 +1,6 @@
 alias: Update Floorplan Time
 trigger:
-  platform: time
+  platform: time_pattern
   minutes: '/5'
   seconds: 00
 action:

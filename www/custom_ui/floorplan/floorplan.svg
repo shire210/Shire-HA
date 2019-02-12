@@ -37,16 +37,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2560"
-     inkscape:window-height="1017"
+     inkscape:window-width="1278"
+     inkscape:window-height="1008"
      id="namedview4395"
      showgrid="false"
-     inkscape:zoom="0.88634789"
-     inkscape:cx="191.1071"
+     inkscape:zoom="0.77614174"
+     inkscape:cx="513.27443"
      inkscape:cy="302.45678"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:window-x="1273"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      units="px">
     <inkscape:grid
@@ -826,8 +826,8 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="41.007145"
        y="247.27145"
-       id="sensor.dark_sky_apparent_temperature"
-       inkscape:label="sensor.dark_sky_apparent_temperature"><tspan
+       id="sensor.dark_sky_current"
+       inkscape:label="sensor.dark_sky_current"><tspan
          sodipodi:role="line"
          id="tspan4707"
          x="41.007145"
@@ -838,8 +838,8 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="197.70071"
        y="214.39258"
-       id="sensor.dark_sky_daytime_high_temperature"
-       inkscape:label="sensor.dark_sky_daytime_high_temperature"><tspan
+       id="sensor.dark_sky_high_today"
+       inkscape:label="sensor.dark_sky_high_today"><tspan
          sodipodi:role="line"
          id="tspan4707-2"
          x="197.70071"
@@ -850,8 +850,8 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="198.7338"
        y="247.09845"
-       id="sensor.dark_sky_overnight_low_temperature"
-       inkscape:label="sensor.dark_sky_overnight_low_temperature"><tspan
+       id="sensor.dark_sky_low_today"
+       inkscape:label="sensor.dark_sky_low_today"><tspan
          sodipodi:role="line"
          id="tspan4707-2-1"
          x="198.7338"
@@ -1272,7 +1272,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#718792;fill-opacity:1;stroke-width:0.99999994">All Lights</tspan></text>
     <rect
        style="opacity:0.56099997;fill:#718792;fill-opacity:1;stroke:#718792;stroke-width:1.056;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="sensor.dark_sky_icon_1"
+       id="sensor.dark_sky_condition_1"
        width="73.943596"
        height="73.943596"
        x="42.272938"
@@ -1280,7 +1280,7 @@
        inkscape:label="#rect4816-2" />
     <rect
        style="opacity:0.56099997;fill:#718792;fill-opacity:1;stroke:#718792;stroke-width:1.05640376;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="sensor.dark_sky_icon_2"
+       id="sensor.dark_sky_condition_2"
        width="73.943596"
        height="73.943596"
        x="159.08534"
@@ -1288,12 +1288,12 @@
        inkscape:label="#rect4816-2-6" />
     <rect
        style="display:inline;fill:#718792;fill-opacity:1;stroke-width:1.96725261"
-       id="sensor.dark_sky_icon"
+       id="sensor.dark_sky_condition"
        width="119"
        height="119"
        x="79.461426"
        y="57.954651"
-       inkscape:label="test" />
+       inkscape:label="sensor.dark_sky_condition" />
     <g
        style="display:inline;fill:#455a64;fill-opacity:1"
        id="climate.thermostat"
@@ -1649,7 +1649,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="178.60571"
        y="387.34485"
-       id="sensor.dark_sky_daytime_high_temperature_2"
+       id="sensor.dark_sky_high_2"
        inkscape:label="sensor.dark_sky_daytime_high_temperature_2"><tspan
          sodipodi:role="line"
          id="tspan4603-9-7-1-1-84"
@@ -1661,7 +1661,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="202.03741"
        y="387.34485"
-       id="sensor.dark_sky_overnight_low_temperature_2"
+       id="sensor.dark_sky_low_2"
        inkscape:label="sensor.dark_sky_overnight_low_temperature_2"><tspan
          sodipodi:role="line"
          id="tspan4603-9-7-1-1-8-1"
@@ -1699,8 +1699,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="50.371948"
        y="386.90991"
-       id="sensor.dark_sky_daytime_high_temperature_1"
-       inkscape:label="sensor.dark_sky_daytime_high_temperature_1"><tspan
+       id="sensor.dark_sky_high_1"
+       inkscape:label="sensor.dark_sky_high_1"><tspan
          sodipodi:role="line"
          id="tspan4603-9-7-1-1-84-6"
          x="50.371948"
@@ -1711,8 +1711,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="73.80365"
        y="386.90991"
-       id="sensor.dark_sky_overnight_low_temperature_1"
-       inkscape:label="sensor.dark_sky_overnight_low_temperature_1"><tspan
+       id="sensor.dark_sky_low_1"
+       inkscape:label="sensor.dark_sky_low_1"><tspan
          sodipodi:role="line"
          id="tspan4603-9-7-1-1-8-1-5"
          x="73.80365"
@@ -1749,8 +1749,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0.99999994"
        x="150.94978"
        y="251.9126"
-       id="sensor.dark_sky_precip_probability"
-       inkscape:label="sensor.dark_sky_precip_probability"><tspan
+       id="sensor.dark_sky_precip_today"
+       inkscape:label="sensor.dark_sky_precip_today"><tspan
          sodipodi:role="line"
          id="tspan4603-9-7-1-1-8-9-8-5-1"
          x="150.94978"

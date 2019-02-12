@@ -5,6 +5,6 @@ trigger:
   to: 'on'
 action:
   - delay:
-      seconds: 6
+      seconds: 2
   - service: switch.turn_off
     entity_id: switch.office_funhaus

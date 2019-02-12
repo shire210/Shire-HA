@@ -1,6 +1,0 @@
-platform: template
-sensors:
-  dark_sky_high_today:
-    value_template: >
-      {{ states.weather.dark_sky.attributes.forecast[0].temperature }}
-    friendly_name: "Dark Sky High Today"

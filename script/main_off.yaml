@@ -1,7 +1,7 @@
-start_plex:
-  alias: "Start Plex"
+main_off:
+  alias: "Turn Off TV"
   sequence:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: 23903903
+        activity: -1

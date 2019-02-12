@@ -43,13 +43,13 @@
           
         - name: Weather
           entities:
-             - sensor.dark_sky_apparent_temperature
-             - sensor.dark_sky_daytime_high_temperature
-             - sensor.dark_sky_overnight_low_temperature
-             - sensor.dark_sky_daytime_high_temperature_1
-             - sensor.dark_sky_overnight_low_temperature_1
-             - sensor.dark_sky_daytime_high_temperature_2
-             - sensor.dark_sky_overnight_low_temperature_2
+             - sensor.dark_sky_high_today
+             - sensor.dark_sky_low_today
+             - sensor.dark_sky_current
+             - sensor.dark_sky_high_1
+             - sensor.dark_sky_low_1
+             - sensor.dark_sky_high_2
+             - sensor.dark_sky_low_2
              - sensor.thermostat_temperature
              - sensor.office_temperature
           #text_template: '${entity.state ? entity.state : "unknown"}'
@@ -59,7 +59,7 @@
         - name: Percent
           entities:
              - sensor.thermostat_humidity
-             - sensor.dark_sky_precip_probability
+             - sensor.dark_sky_precip_today
              - sensor.dark_sky_precip_probability_1
              - sensor.dark_sky_precip_probability_2
           text_template: '${entity.state ? Math.round(entity.state) + "%" : "00%"}'  
@@ -278,41 +278,41 @@
             
         - name: Dark Sky Icon
           entities:
-            - sensor.dark_sky_icon
-            - sensor.dark_sky_icon_1
-            - sensor.dark_sky_icon_2
+            - sensor.dark_sky_condition
+            - sensor.dark_sky_condition_1
+            - sensor.dark_sky_condition_2
           image_template: '
             var imageName = "";
 
             switch (entity.state) {
-              case "clear-day":
+              case "sunny":
                 imageName = "day";
                 break;
               case "clear-night":
                 imageName = "night";
                 break;
-              case "partly-cloudy-day":
+              case "partlycloudy":
                 imageName = "cloudy-day-1";
                 break;
-              case "partly-cloudy-night":
+              case "partlycloudy":
                 imageName = "cloudy-night-1";
                 break;
               case "cloudy":
                 imageName = "cloudy";
                 break;
-              case "rain":
+              case "rainy":
                 imageName = "rainy-1";
                 break;
-              case "snow":
+              case "snowy":
                 imageName = "snowy-1";
                 break;
               case "fog":
                 imageName = "cloudy";
                 break;
-              case "sleet":
+              case "snowy-rainy":
                 imageName = "rainy-1";
                 break;
-              case "wind":
+              case "windy":
                 imageName = "cloudy";
                 break;
             }

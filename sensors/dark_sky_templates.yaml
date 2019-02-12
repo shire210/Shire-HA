@@ -1,0 +1,54 @@
+platform: template
+sensors:
+  dark_sky_high_today:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[0].temperature }}
+    friendly_name: "Dark Sky High Today"
+    unit_of_measurement: '°F'
+  dark_sky_low_today:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[0].templow }}
+    friendly_name: "Dark Sky Low Today"
+    unit_of_measurement: '°F'
+  dark_sky_current:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.temperature }}
+    friendly_name: "Dark Sky Current Temp"
+    unit_of_measurement: '°F'
+  dark_sky_precip_today:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[0].precipitation }}
+    friendly_name: "Dark Sky Precip Today"
+    unit_of_measurement: '%'
+  dark_sky_condition:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[0].condition }}
+    friendly_name: "Dark Sky Condition Today"
+  dark_sky_high_1:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[1].temperature }}
+    friendly_name: "Dark Sky High 1"
+    unit_of_measurement: '°F'
+  dark_sky_low_1:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[1].templow }}
+    friendly_name: "Dark Sky Low 1"
+    unit_of_measurement: '°F'
+  dark_sky_condition_1:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[1].condition }}
+    friendly_name: "Dark Sky Condition 1"
+  dark_sky_high_2:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[2].temperature }}
+    friendly_name: "Dark Sky High 2"
+    unit_of_measurement: '°F'
+  dark_sky_low_2:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[2].templow }}
+    friendly_name: "Dark Sky Low 2"
+    unit_of_measurement: '°F'
+  dark_sky_condition_2:
+    value_template: >
+      {{ states.weather.dark_sky.attributes.forecast[2].condition }}
+    friendly_name: "Dark Sky Condition 2"

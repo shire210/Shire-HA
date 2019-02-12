@@ -1,0 +1,7 @@
+office_plex_on:
+  alias: "Turn on Office Plex"
+  sequence:
+    - service: shell_command.office_roku_on
+    - delay:
+        seconds: 2
+    - service: shell_command.office_plex

@@ -1,7 +1,7 @@
-tv_off:
-  alias: "TV Off"
+main_youtube:
+  alias: "Turn on Main Youtube"
   sequence:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: -1
+        activity: 31648039
