@@ -1,0 +1,8 @@
+alias: Update Alternate Route
+trigger:
+  platform: time_pattern
+  minutes: '/5'
+  seconds: 00
+action:
+  - service: homeassistant.update_entity
+    entity_id: binary_sensor.alternate_route

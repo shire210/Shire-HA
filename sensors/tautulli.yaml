@@ -1,9 +1,4 @@
 platform: tautulli
-host: 192.168.1.250:8181/plexpy
-token: 'cc3d103dd4844514b806cf0d7ec20546'
-monitored_conditions:
-  - stream_count
-  - stream_count_transcode
-  - stream_count_direct_play
-  - stream_count_direct_stream
-  - total_bandwidth
+host: 192.168.1.250
+path: '/plexpy'
+api_key: 'cc3d103dd4844514b806cf0d7ec20546'

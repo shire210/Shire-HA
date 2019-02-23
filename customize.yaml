@@ -1,4 +1,5 @@
 light.living_room:
+  emulated_hue_hidden: false
   emulated_hue_name: Lamps
   icon: mdi:floor-lamp
 script.good_night:

@@ -9,7 +9,6 @@ homeassistant:
   packages: !include_dir_named packages
 http:
   base_url: !secret url
-  api_password: !secret api_password
   ip_ban_enabled: True
   login_attempts_threshold: 5
 ############################################
@@ -133,18 +132,26 @@ shell_command:
   office_youtube: "curl -X POST http://192.168.1.180:8060/launch/837"
   office_tv: "curl -X POST http://192.168.1.180:8060/launch/195316"
   office_netflix: "curl -X POST http://192.168.1.180:8060/launch/12"
+  office_cnbc: "curl -X POST http://192.168.1.180:8060/launch/195316?contentId=cuR5rpHUIxk&mediaType=movie"
+  office_espn: "curl -X POST http://192.168.1.180:8060/launch/195316?contentId=cqH1uQ4ilPI&mediaType=movie"
   bedroom_roku_on: "curl -X POST http://192.168.1.219:8060/keypress/PowerOn"
   bedroom_roku_off: "curl -X POST http://192.168.1.219:8060/keypress/PowerOff"
   bedroom_plex: "curl -X POST http://192.168.1.219:8060/launch/13535"
   bedroom_youtube: "curl -X POST http://192.168.1.219:8060/launch/837"
   bedroom_tv: "curl -X POST http://192.168.1.219:8060/launch/195316"
   bedroom_netflix: "curl -X POST http://192.168.1.219:8060/launch/12"
+  bedroom_cnbc: "curl -X POST http://192.168.1.168:8060/launch/195316?contentId=cuR5rpHUIxk&mediaType=movie"
+  bedroom_espn: "curl -X POST http://192.168.1.168:8060/launch/195316?contentId=cqH1uQ4ilPI&mediaType=movie"
     
 shopping_list:
 
-lifx:
-  light:
-    - broadcast: 192.168.1.159
+speedtestdotnet:
+
+alexa_media:
+  accounts:
+    - email: !secret amazon_email
+      password: !secret amazon_pass
+      url: amazon.com
 
 vacuum:
   - platform: roomba
@@ -152,19 +159,6 @@ vacuum:
     username: !secret roomba_user
     password: !secret roomba_pass
     
-media_player:
-  - platform: plex
-    entity_namespace: 'plex'
-    scan_interval: 5
-    use_episode_art: true
-    remove_unavailable_clients: false
-  - platform: spotify
-    client_id: !secret spotify_id
-    client_secret: !secret spotify_secret
-  - platform: alexa
-    email: !secret amazon_email
-    password: !secret amazon_pass
-    url: amazon.com
 history_graph:
   gr1:
     name: AC Fan
