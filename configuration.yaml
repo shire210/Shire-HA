@@ -9,8 +9,8 @@ homeassistant:
   packages: !include_dir_named packages
 http:
   base_url: !secret url
-  ip_ban_enabled: True
-  login_attempts_threshold: 5
+  use_x_forwarded_for: true
+  trusted_proxies: 172.17.0.7
 ############################################
 ##Zones##
 ############################################
@@ -158,12 +158,17 @@ vacuum:
     host: 192.168.1.226
     username: !secret roomba_user
     password: !secret roomba_pass
+
+media_player:
+  - platform: plex
+    entity_namespace: 'plex'
+    scan_interval: 5
+    use_episode_art: true
+    remove_unavailable_clients: false
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret
     
-history_graph:
-  gr1:
-    name: AC Fan
-    entities:
-      - sensor.thermostat_mode
 #camera:
 #  - platform: generic
 #    name: Spotify Cover
@@ -176,6 +181,16 @@ history_graph:
 hue:
   bridges:
     - host: 192.168.1.193
+homekit:
+  auto_start: false
+  filter:
+    include_domains:
+      - light
+      - lock
+      - switch
+      - input_boolean
+      - script
+      - fan
 remote:
   platform: harmony
   name: Living Room

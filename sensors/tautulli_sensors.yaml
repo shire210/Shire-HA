@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  tautulli_bandwidth:
+    value_template: '{{ (states.sensor.tautulli.attributes.total_bandwidth/1000)|round(1) }}'
+    friendly_name: "Total Bandwidth"
+    unit_of_measurement: 'mbps'
+  tautulli_streams:
+    value_template: '{{ states.sensor.tautulli.attributes.stream_count }}'
+    friendly_name: "Stream Count"
+    unit_of_measurement: 'Users'

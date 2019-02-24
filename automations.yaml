@@ -37,3 +37,22 @@
       entity_id: media_player.office, media_player.kitchen
       message: The Water Heater is Leaking!
     service: media_player.alexa_tts
+- id: '1551023960476'
+  alias: Set Theme at Startup
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      name: slate
+    service: frontend.set_theme
+- id: '1551026675204'
+  alias: Start Homekit
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - delay: 00:02
+  - service: homekit.start
