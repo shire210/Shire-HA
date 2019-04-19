@@ -39,6 +39,17 @@ zone 3:
 discovery:
   ignore:
     - igd
+zwave:
+  usb_path: /dev/ttyUSB0
+  network_key: !secret network_key_z_wave
+  device_config:
+    light.kitchen:
+      refresh_value: true
+      delay: 3
+      polling_intensity: 1
+zha:
+  usb_path: /dev/ttyUSB1
+  database_path: /config/zigbee.db
 ios:
   push:
     categories:
@@ -186,6 +197,13 @@ media_player:
 #      {% else %}
 #        {{ states.sensor.spotify_base_url.state }}{{ states.media_player.spotify.attributes.entity_picture }}
 #      {% endif %}
+light:
+  - platform: switch
+    name: Bedroom Ceiling
+    entity_id: switch.bedroom_ceiling_light
+  - platform: switch
+    name: Living Room Ceiling
+    entity_id: switch.living_room_ceiling
 hue:
   bridges:
     - host: 192.168.1.193

@@ -28,15 +28,7 @@
   - data:
       entity_id: media_player.office, media_player.office
       message: The Water Heater is Leaking!
-    service: media_player.alexa_tts
-  - data:
-      entity_id: media_player.office, media_player.bedroom
-      message: The Water Heater is Leaking!
-    service: media_player.alexa_tts
-  - data:
-      entity_id: media_player.office, media_player.kitchen
-      message: The Water Heater is Leaking!
-    service: media_player.alexa_tts
+    service: notify.alexa_media_everywhere
 - id: '1551023960476'
   alias: Set Theme at Startup
   trigger:
