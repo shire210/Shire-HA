@@ -240,11 +240,6 @@ panel_custom:
 ############################################
 ## Services ##
 ############################################
-wink:
-  email: !secret wink_email
-  password: !secret wink_password
-  client_id: !secret wink_client_id
-  client_secret: !secret wink_client_secret
 ifttt:
   key: !secret ifttt_key
 notify:
