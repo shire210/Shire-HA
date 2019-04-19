@@ -1,0 +1,5 @@
+platform: waze_travel_time
+origin: device_tracker.michaels_iphone
+destination: zone.home
+name: "Commute Home Time"
+region: 'US'

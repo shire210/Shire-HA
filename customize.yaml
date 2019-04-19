@@ -24,18 +24,30 @@ switch.deluge_switch:
 switch.fireplace:
   emulated_hue_hidden: false
   icon: mdi:fire
-switch.office_funhaus:
-  emulated_hue_hidden: false
-  emulated_hue_name: Office Fun House
-switch.bedroom_funhaus:
-  emulated_hue_hidden: false
-  emulated_hue_name: Bedroom Fun House
-switch.bedroom_roku:
+switch.bedroom_tv:
   emulated_hue_hidden: false
   emulated_hue_name: Bedroom TV
 switch.bedroom_plex:
   emulated_hue_hidden: false
   emulated_hue_name: Bedroom Plex
+switch.bedroom_youtube:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom Youtube
+switch.bedroom_netflix:
+  emulated_hue_hidden: false
+  emulated_hue_name: Bedroom Netflix
+switch.office_tv:
+  emulated_hue_hidden: false
+  emulated_hue_name: Office TV
+switch.office_plex:
+  emulated_hue_hidden: false
+  emulated_hue_name: Office Plex
+switch.office_youtube:
+  emulated_hue_hidden: false
+  emulated_hue_name: Office Youtube
+switch.office_netflix:
+  emulated_hue_hidden: false
+  emulated_hue_name: Office Netflix
 weather.thermostat:
   friendly_name: Weather
 sensor.spotify_song:
@@ -101,3 +113,5 @@ media_player.michaels_alexa_apps:
   hidden: true
 light.kitchen:
   icon: mdi:light-switch
+light.bedroom:
+  icon: mdi:floor-lamp

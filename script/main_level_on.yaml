@@ -9,7 +9,7 @@ main_level_on:
     - service: light.turn_on
       data:
         entity_id: light.kitchen
-        brightness: 200
+        brightness: 255
     - service: light.turn_on
       data:
         entity_id: light.foyer
@@ -21,4 +21,4 @@ main_level_on:
     - service: remote.turn_on
       data_template:
         entity_id: remote.living_room
-        activity: 21316292
+        activity: 38478245

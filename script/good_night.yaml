@@ -7,14 +7,15 @@ good_night:
         - light.cabinet
         - light.living_room_ceiling
         - light.porch
-    - service: script.turn_on
-      entity_id: script.bedtime_lamp
+    - service: remote.turn_off
+      entity_id: remote.living_room
     - service: fan.turn_off
       entity_id: fan.living_room_fan
     - service: script.turn_on
-      entity_id: script.patio_closed_night
-    - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id:
+        - script.bedtime_lamp
+        - script.patio_closed_night
+        - script.youtube_for_bedroom
     - service: lock.lock
       entity_id: lock.front_door
     - service: switch.turn_off
@@ -23,7 +24,6 @@ good_night:
       data:
         entity_id: fan.bedroom_fan
         speed: low
-    - service: script.youtube_for_bedroom
     - delay:
         seconds: 5
     - condition: time

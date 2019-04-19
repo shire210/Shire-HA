@@ -8,3 +8,27 @@ sensors:
     value_template: '{{ states.sensor.tautulli.attributes.stream_count }}'
     friendly_name: "Stream Count"
     unit_of_measurement: 'Users'
+  me_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.shire210.Activity }}'
+    friendly_name: "Me"
+  drew_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.andrew2209.Activity }}'
+    friendly_name: "Drew"
+  eric_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.ebrownstein.Activity }}'
+    friendly_name: "Eric"
+  mike_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.Mscoulso.Activity }}'
+    friendly_name: "Mike"
+  parents_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.dlrossiter.Activity }}'
+    friendly_name: "Parents"
+  kelly_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.kellydoc21.Activity }}'
+    friendly_name: "Kelly"
+  janice_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes.Jaws363.Activity }}'
+    friendly_name: "Janice"
+  mack_streaming:
+    value_template: '{{ states.sensor.tautulli.attributes["Lisa mack"].Activity }}'
+    friendly_name: "Mack"

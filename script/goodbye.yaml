@@ -25,15 +25,6 @@ goodbye:
       entity_id: remote.living_room
     - service: switch.turn_off
       entity_id: switch.fireplace
-    - service: light.turn_on
-      data:
-        entity_id: light.living_room
-        brightness: 200
-        color_temp: 200
-    - service: light.turn_on
-      data:
-        entity_id: light.foyer
-        brightness: 200
     - service: fan.turn_off
       entity_id:
         - fan.bedroom_fan

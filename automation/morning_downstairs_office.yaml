@@ -9,13 +9,3 @@ condition:
 action:
   - service: script.turn_on
     entity_id: script.main_level_on
-  - delay: '00:00:40'
-  - service: remote.send_command
-    data_template:
-      entity_id: remote.living_room
-      command:
-        - 5
-        - 0
-        - 6
-        - Select
-      device: 36789856

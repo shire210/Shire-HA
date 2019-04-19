@@ -1,0 +1,46 @@
+platform: template
+switches:
+  bed_remote_1:
+    friendly_name: "Remote 1"
+    value_template: "{{ is_state('sensor.hue_switch', '1_click_up') }}"
+    turn_on:
+      service: automation.trigger
+      data:
+        entity_id: automation.bedroom_lights_on
+    turn_off:
+      service: automation.trigger
+      data:
+        entity_id: automation.bedroom_lights_on
+  bed_remote_2:
+    friendly_name: "Remote 2"
+    value_template: "{{ is_state('sensor.hue_switch', '2_click_up') }}"
+    turn_on:
+      service: automation.trigger
+      data:
+        entity_id: automation.main_floor_from_bedroom_on
+    turn_off:
+      service: automation.trigger
+      data:
+        entity_id: automation.main_floor_from_bedroom_on
+  bed_remote_3:
+    friendly_name: "Remote 3"
+    value_template: "{{ is_state('sensor.hue_switch', '3_click_up') }}"
+    turn_on:
+      service: automation.trigger
+      data:
+        entity_id: automation.main_floor_from_bedroom_on
+    turn_off:
+      service: automation.trigger
+      data:
+        entity_id: automation.main_floor_from_bedroom_on
+  bed_remote_4:
+    friendly_name: "Remote 4"
+    value_template: "{{ is_state('sensor.hue_switch', '4_click_up') }}"
+    turn_on:
+      service: automation.trigger
+      data:
+        entity_id: automation.bedroom_lights_off
+    turn_off:
+      service: automation.trigger
+      data:
+        entity_id: automation.bedroom_lights_off

@@ -2,4 +2,4 @@ platform: google_travel_time
 api_key: !secret google_maps_api
 origin: zone.home
 destination: zone.work
-name: "Home to Work Time"
+name: "Home to Work Google"

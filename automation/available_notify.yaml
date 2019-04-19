@@ -6,6 +6,9 @@ trigger:
   - platform: state
     entity_id: binary_sensor.living_room_fan
     to: 'on'
+  - platform: state
+    entity_id: binary_sensor.hub
+    to: 'on'
 action:
   service: notify.ios_michaels_iphone
   data_template:
