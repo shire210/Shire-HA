@@ -17,7 +17,7 @@ good_night:
         - script.patio_closed_night
         - script.youtube_for_bedroom
     - service: lock.lock
-      entity_id: lock.front_door
+      entity_id: lock.schlage_allegion_be469_touchscreen_deadbolt_locked_2
     - service: switch.turn_off
       entity_id: switch.fireplace
     - service: fan.turn_on

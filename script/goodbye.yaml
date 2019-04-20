@@ -2,7 +2,7 @@ goodbye:
   alias: "Goodbye"
   sequence:
     - service: lock.unlock
-      entity_id: lock.front_door
+      entity_id: lock.schlage_allegion_be469_touchscreen_deadbolt_locked_2
     - service: media_player.media_pause
       entity_id: media_player.spotify
     - service: light.turn_on

@@ -5,7 +5,7 @@ trigger:
   to: 'on'
 action:
   - service: lock.unlock
-    entity_id: lock.front_door
+    entity_id: lock.schlage_allegion_be469_touchscreen_deadbolt_locked_2
   - service: script.night_light_home
   - service: notify.ios_michaels_iphone
     data:
