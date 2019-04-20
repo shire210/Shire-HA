@@ -219,13 +219,26 @@ hue:
 homekit:
   auto_start: false
   filter:
-    include_domains:
-      - light
-      - lock
-      - switch
-      - input_boolean
-      - script
-      - fan
+    include_entities:
+      - switch.phone_at_home
+      - fan.living_room_fan
+      - fan.bedroom_fan
+      - lock.schlage_allegion_be469_touchscreen_deadbolt_locked_2
+      - light.foyer
+      - light.kitchen
+      - light.living_room
+      - light.cabinet
+      - light.porch
+      - light.bedroom_ceiling_2
+      - light.living_room_ceiling
+
+    #include_domains:
+    #  - light
+    #  - lock
+    #  - switch
+    #  - input_boolean
+    #  - script
+    #  - fan
 remote:
   platform: harmony
   name: Living Room
