@@ -26,7 +26,8 @@
       message: WATER HEATER IS LEAKING
     service: notify.ios_michaels_iphone
   - data:
-      entity_id: media_player.office, media_player.office
+      data:
+        type: announce
       message: The Water Heater is Leaking!
     service: notify.alexa_media_everywhere
 - id: '1551023960476'
