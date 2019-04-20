@@ -231,6 +231,7 @@ homekit:
       - light.porch
       - light.bedroom_ceiling_2
       - light.living_room_ceiling
+      - switch.fireplace
 
     #include_domains:
     #  - light
