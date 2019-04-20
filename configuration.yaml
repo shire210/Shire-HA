@@ -39,6 +39,7 @@ zone 3:
 discovery:
   ignore:
     - igd
+    - google_cast
 zwave:
   usb_path: /dev/ttyUSB0
   network_key: !secret network_key_z_wave
