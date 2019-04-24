@@ -1,0 +1,10 @@
+platform: template
+sensors:
+  battery_vacuum:
+    unit_of_measurement: '%'
+    value_template: >-
+        {%- if states.vacuum.roomba.attributes.battery_level %}
+            {{ states.lock.vacuum.roomba.battery_level|round(1) }}
+        {% else %}
+            {{ states.sensor.battery_vacuum.state|round(1) }}
+        {%- endif %}
