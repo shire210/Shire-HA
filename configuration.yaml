@@ -46,15 +46,15 @@ zwave:
   device_config:
     light.kitchen:
       refresh_value: true
-      delay: 3
+      delay: 2
       polling_intensity: 1
     light.foyer:
       refresh_value: true
-      delay: 3
+      delay: 2
       polling_intensity: 1
     light.porch:
       refresh_value: true
-      delay: 3
+      delay: 2
       polling_intensity: 1
 zha:
   usb_path: /dev/ttyUSB1
